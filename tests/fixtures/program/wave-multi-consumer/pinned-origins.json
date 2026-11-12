@@ -1,0 +1,2454 @@
+[
+  {
+    "key": "named-transport-alternate",
+    "input_sha256": "dbd856636d8585a81d1048d03e64a6d4696dcf6c75dff60b351026402114c410",
+    "selected_origins": [
+      0,
+      1
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 399813,
+          "end": 400037
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 399803,
+          "end": 400037,
+          "line": 10936,
+          "text": "$KEY_92 = [$THREAD_8_31842, $THREAD_1_95412, $THREAD_8_45172, $THREAD_6_74394, $THREAD_8_75313, $THREAD_6_135135, $THREAD_1_31891, $THREAD_9_93830, $THREAD_1_115674, $THREAD_0_87638, $THREAD_1_116174, $THREAD_8_12265, $T"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 7582,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_8_31842",
+            "function_span": {
+              "start": 392712,
+              "end": 397278
+            },
+            "declaration_line": 10748
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_1_95412",
+            "function_span": {
+              "start": 341043,
+              "end": 392596
+            },
+            "declaration_line": 9506
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_8_45172",
+            "function_span": {
+              "start": 295598,
+              "end": 338429
+            },
+            "declaration_line": 8284
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_74394",
+            "function_span": {
+              "start": 289169,
+              "end": 295412
+            },
+            "declaration_line": 8122
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_8_75313",
+            "function_span": {
+              "start": 278779,
+              "end": 289043
+            },
+            "declaration_line": 7811
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_6_135135",
+            "function_span": {
+              "start": 267250,
+              "end": 278295
+            },
+            "declaration_line": 7595
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_1_31891",
+            "function_span": {
+              "start": 249808,
+              "end": 266647
+            },
+            "declaration_line": 7030
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_9_93830",
+            "function_span": {
+              "start": 229665,
+              "end": 249803
+            },
+            "declaration_line": 6435
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_1_115674",
+            "function_span": {
+              "start": 220245,
+              "end": 229313
+            },
+            "declaration_line": 6178
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_0_87638",
+            "function_span": {
+              "start": 152951,
+              "end": 183840
+            },
+            "declaration_line": 4504
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_1_116174",
+            "function_span": {
+              "start": 206953,
+              "end": 216642
+            },
+            "declaration_line": 5833
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_8_12265",
+            "function_span": {
+              "start": 194989,
+              "end": 205378
+            },
+            "declaration_line": 5570
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_5_45408",
+            "function_span": {
+              "start": 183845,
+              "end": 193780
+            },
+            "declaration_line": 5232
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 595625,
+          "end": 595861
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 595615,
+          "end": 595861,
+          "line": 16380,
+          "text": "$KEY_92 = [$THREAD_8_31842_2, $THREAD_1_95412_2, $THREAD_8_45172_2, $THREAD_6_74394_2, $THREAD_8_75313_2, $THREAD_6_135135_2, $THREAD_1_31891, $THREAD_9_93830, $THREAD_1_115674, $THREAD_0_87638, $THREAD_1_116174, $THREAD"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_8_31842_2",
+            "function_span": {
+              "start": 588710,
+              "end": 593157
+            },
+            "declaration_line": 16192
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_1_95412_2",
+            "function_span": {
+              "start": 538281,
+              "end": 588597
+            },
+            "declaration_line": 14950
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_8_45172_2",
+            "function_span": {
+              "start": 494052,
+              "end": 535720
+            },
+            "declaration_line": 13728
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_74394_2",
+            "function_span": {
+              "start": 487783,
+              "end": 493871
+            },
+            "declaration_line": 13566
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_8_75313_2",
+            "function_span": {
+              "start": 477702,
+              "end": 487660
+            },
+            "declaration_line": 13255
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_6_135135_2",
+            "function_span": {
+              "start": 466387,
+              "end": 477235
+            },
+            "declaration_line": 13039
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_1_31891",
+            "function_span": {
+              "start": 249808,
+              "end": 266647
+            },
+            "declaration_line": 7030
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_9_93830",
+            "function_span": {
+              "start": 229665,
+              "end": 249803
+            },
+            "declaration_line": 6435
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_1_115674",
+            "function_span": {
+              "start": 220245,
+              "end": 229313
+            },
+            "declaration_line": 6178
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_0_87638",
+            "function_span": {
+              "start": 152951,
+              "end": 183840
+            },
+            "declaration_line": 4504
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_1_116174",
+            "function_span": {
+              "start": 206953,
+              "end": 216642
+            },
+            "declaration_line": 5833
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_8_12265",
+            "function_span": {
+              "start": 194989,
+              "end": 205378
+            },
+            "declaration_line": 5570
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_5_45408",
+            "function_span": {
+              "start": 183845,
+              "end": 193780
+            },
+            "declaration_line": 5232
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reaching-registry-alternate",
+    "input_sha256": "64179c85b2942af698c04c58e135a6a5fd52310bdd5def220fd403dc1846eb74",
+    "selected_origins": [
+      0,
+      1
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 494430,
+          "end": 494787
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 494419,
+          "end": 494787,
+          "line": 12479,
+          "text": "$KEY_395 = [\n\t\t\t\t\t\t$THREAD_5_157312,\n\t\t\t\t\t\t$THREAD_9_146856,\n\t\t\t\t\t\t$THREAD_5_76540,\n\t\t\t\t\t\t$THREAD_9_76247,\n\t\t\t\t\t\t$THREAD_9_150621,\n\t\t\t\t\t\t$THREAD_0_73692,\n\t\t\t\t\t\t$THREAD_5_71104,\n\t\t\t\t\t\t$THREAD_5_42595,\n\t\t\t\t\t\t$THREAD_3_1530"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 8780,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_157312",
+            "function_span": {
+              "start": 356520,
+              "end": 400552
+            },
+            "declaration_line": 9135
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_9_146856",
+            "function_span": {
+              "start": 400558,
+              "end": 444885
+            },
+            "declaration_line": 10125
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_76540",
+            "function_span": {
+              "start": 444891,
+              "end": 489693
+            },
+            "declaration_line": 11287
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_9_76247",
+            "function_span": {
+              "start": 344290,
+              "end": 356191
+            },
+            "declaration_line": 8788
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_9_150621",
+            "function_span": {
+              "start": 333883,
+              "end": 344005
+            },
+            "declaration_line": 8544
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_0_73692",
+            "function_span": {
+              "start": 324633,
+              "end": 332475
+            },
+            "declaration_line": 8285
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_71104",
+            "function_span": {
+              "start": 306373,
+              "end": 324628
+            },
+            "declaration_line": 7791
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_42595",
+            "function_span": {
+              "start": 296106,
+              "end": 306330
+            },
+            "declaration_line": 7502
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_3_153001",
+            "function_span": {
+              "start": 277631,
+              "end": 291014
+            },
+            "declaration_line": 6920
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_84076",
+            "function_span": {
+              "start": 267600,
+              "end": 277511
+            },
+            "declaration_line": 6662
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_0_49022",
+            "function_span": {
+              "start": 255791,
+              "end": 263752
+            },
+            "declaration_line": 6310
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_87502",
+            "function_span": {
+              "start": 244378,
+              "end": 255313
+            },
+            "declaration_line": 5994
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_42027",
+            "function_span": {
+              "start": 212676,
+              "end": 238471
+            },
+            "declaration_line": 4976
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_3_133449",
+            "function_span": {
+              "start": 238476,
+              "end": 243633
+            },
+            "declaration_line": 5824
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_62953",
+            "function_span": {
+              "start": 196671,
+              "end": 212504
+            },
+            "declaration_line": 4566
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 709904,
+          "end": 710253
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 709893,
+          "end": 710253,
+          "line": 18310,
+          "text": "$KEY_395 = [\n\t\t\t\t\t$THREAD_5_157312_2,\n\t\t\t\t\t$THREAD_9_146856_2,\n\t\t\t\t\t$THREAD_5_76540_2,\n\t\t\t\t\t$THREAD_9_76247_2,\n\t\t\t\t\t$THREAD_9_150621,\n\t\t\t\t\t$THREAD_0_73692,\n\t\t\t\t\t$THREAD_5_71104,\n\t\t\t\t\t$THREAD_5_42595,\n\t\t\t\t\t$THREAD_3_15300"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_157312_2",
+            "function_span": {
+              "start": 575328,
+              "end": 618373
+            },
+            "declaration_line": 14966
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_9_146856_2",
+            "function_span": {
+              "start": 618378,
+              "end": 661546
+            },
+            "declaration_line": 15956
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_76540_2",
+            "function_span": {
+              "start": 661551,
+              "end": 705266
+            },
+            "declaration_line": 17118
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_9_76247_2",
+            "function_span": {
+              "start": 563443,
+              "end": 575006
+            },
+            "declaration_line": 14619
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_9_150621",
+            "function_span": {
+              "start": 333883,
+              "end": 344005
+            },
+            "declaration_line": 8544
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_0_73692",
+            "function_span": {
+              "start": 324633,
+              "end": 332475
+            },
+            "declaration_line": 8285
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_71104",
+            "function_span": {
+              "start": 306373,
+              "end": 324628
+            },
+            "declaration_line": 7791
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_42595",
+            "function_span": {
+              "start": 296106,
+              "end": 306330
+            },
+            "declaration_line": 7502
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_3_153001",
+            "function_span": {
+              "start": 277631,
+              "end": 291014
+            },
+            "declaration_line": 6920
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_84076",
+            "function_span": {
+              "start": 267600,
+              "end": 277511
+            },
+            "declaration_line": 6662
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_0_49022",
+            "function_span": {
+              "start": 255791,
+              "end": 263752
+            },
+            "declaration_line": 6310
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_87502",
+            "function_span": {
+              "start": 244378,
+              "end": 255313
+            },
+            "declaration_line": 5994
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_42027",
+            "function_span": {
+              "start": 212676,
+              "end": 238471
+            },
+            "declaration_line": 4976
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_3_133449",
+            "function_span": {
+              "start": 238476,
+              "end": 243633
+            },
+            "declaration_line": 5824
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_62953",
+            "function_span": {
+              "start": 196671,
+              "end": 212504
+            },
+            "declaration_line": 4566
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "registry-callable-aliases",
+    "input_sha256": "282a9359d71601a00002692e32cdbbb6852f40cabac4fdbc2349e5cccb78f70b",
+    "selected_origins": [
+      0,
+      1
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 466616,
+          "end": 466891
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 466606,
+          "end": 466891,
+          "line": 12029,
+          "text": "$KEY_13 = [$THREAD_5_136154, $THREAD_1_49192, $THREAD_5_127105, $THREAD_3_147992, $THREAD_4_86482, $THREAD_1_91784, $THREAD_1_16445, $THREAD_1_16829, $THREAD_7_85172, $THREAD_2_108446, $THREAD_5_40460, $THREAD_1_147012, "
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 9169,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_136154",
+            "function_span": {
+              "start": 439016,
+              "end": 463575
+            },
+            "declaration_line": 11424
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_1_49192",
+            "function_span": {
+              "start": 422198,
+              "end": 438714
+            },
+            "declaration_line": 10992
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_127105",
+            "function_span": {
+              "start": 400333,
+              "end": 420478
+            },
+            "declaration_line": 10610
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_147992",
+            "function_span": {
+              "start": 374604,
+              "end": 399798
+            },
+            "declaration_line": 9931
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_86482",
+            "function_span": {
+              "start": 363017,
+              "end": 374554
+            },
+            "declaration_line": 9598
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_1_91784",
+            "function_span": {
+              "start": 348431,
+              "end": 363011
+            },
+            "declaration_line": 9190
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_1_16445",
+            "function_span": {
+              "start": 323791,
+              "end": 326826
+            },
+            "declaration_line": 8424
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_1_16829",
+            "function_span": {
+              "start": 330020,
+              "end": 347654
+            },
+            "declaration_line": 8605
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_7_85172",
+            "function_span": {
+              "start": 300501,
+              "end": 323691
+            },
+            "declaration_line": 7697
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_2_108446",
+            "function_span": {
+              "start": 291496,
+              "end": 300386
+            },
+            "declaration_line": 7446
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_5_40460",
+            "function_span": {
+              "start": 278969,
+              "end": 291338
+            },
+            "declaration_line": 7142
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_1_147012",
+            "function_span": {
+              "start": 238085,
+              "end": 278886
+            },
+            "declaration_line": 6035
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_8961",
+            "function_span": {
+              "start": 221398,
+              "end": 236358
+            },
+            "declaration_line": 5537
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_0_61118",
+            "function_span": {
+              "start": 213916,
+              "end": 220525
+            },
+            "declaration_line": 5298
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_45329",
+            "function_span": {
+              "start": 191732,
+              "end": 213445
+            },
+            "declaration_line": 4675
+          },
+          {
+            "slot": 15,
+            "name": "$THREAD_5_8649",
+            "function_span": {
+              "start": 177217,
+              "end": 186596
+            },
+            "declaration_line": 4222
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 651653,
+          "end": 652026
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 651643,
+          "end": 652026,
+          "line": 17003,
+          "text": "$KEY_13 = [\n\t\t\t\t\t$THREAD_5_136154_2,\n\t\t\t\t\t$THREAD_1_49192_2,\n\t\t\t\t\t$THREAD_5_127105_2,\n\t\t\t\t\t$THREAD_3_147992_2,\n\t\t\t\t\t$THREAD_4_86482_2,\n\t\t\t\t\t$THREAD_1_91784_2,\n\t\t\t\t\t$THREAD_1_16445,\n\t\t\t\t\t$THREAD_1_16829,\n\t\t\t\t\t$THREAD_7_85"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_136154_2",
+            "function_span": {
+              "start": 624656,
+              "end": 648692
+            },
+            "declaration_line": 16398
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_1_49192_2",
+            "function_span": {
+              "start": 608268,
+              "end": 624360
+            },
+            "declaration_line": 15966
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_127105_2",
+            "function_span": {
+              "start": 586783,
+              "end": 606557
+            },
+            "declaration_line": 15584
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_147992_2",
+            "function_span": {
+              "start": 561731,
+              "end": 586257
+            },
+            "declaration_line": 14905
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_86482_2",
+            "function_span": {
+              "start": 550475,
+              "end": 561683
+            },
+            "declaration_line": 14572
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_1_91784_2",
+            "function_span": {
+              "start": 536295,
+              "end": 550470
+            },
+            "declaration_line": 14164
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_1_16445",
+            "function_span": {
+              "start": 323791,
+              "end": 326826
+            },
+            "declaration_line": 8424
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_1_16829",
+            "function_span": {
+              "start": 330020,
+              "end": 347654
+            },
+            "declaration_line": 8605
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_7_85172",
+            "function_span": {
+              "start": 300501,
+              "end": 323691
+            },
+            "declaration_line": 7697
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_2_108446",
+            "function_span": {
+              "start": 291496,
+              "end": 300386
+            },
+            "declaration_line": 7446
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_5_40460",
+            "function_span": {
+              "start": 278969,
+              "end": 291338
+            },
+            "declaration_line": 7142
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_1_147012",
+            "function_span": {
+              "start": 238085,
+              "end": 278886
+            },
+            "declaration_line": 6035
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_8961",
+            "function_span": {
+              "start": 221398,
+              "end": 236358
+            },
+            "declaration_line": 5537
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_0_61118",
+            "function_span": {
+              "start": 213916,
+              "end": 220525
+            },
+            "declaration_line": 5298
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_45329",
+            "function_span": {
+              "start": 191732,
+              "end": 213445
+            },
+            "declaration_line": 4675
+          },
+          {
+            "slot": 15,
+            "name": "$THREAD_5_8649",
+            "function_span": {
+              "start": 177217,
+              "end": 186596
+            },
+            "declaration_line": 4222
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "branched-registry",
+    "input_sha256": "33fb216d95fa24bd24fd56f3f61bbde6ef562a94db9d737e2ea9f96c300b3133",
+    "selected_origins": [
+      0,
+      1
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 466077,
+          "end": 466377
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 466066,
+          "end": 466377,
+          "line": 12027,
+          "text": "$KEY_198 = [$THREAD_4_157555_2, $THREAD_2_162654_2, $THREAD_5_159022_2, $THREAD_6_160698_2, $THREAD_6_109337_2, $THREAD_3_136377_2, $THREAD_4_48132_2, $THREAD_9_112456_2, $THREAD_9_137730_2, $THREAD_5_111350, $THREAD_6_1"
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "line": 7288,
+            "arm": "then",
+            "test": "$BM === \"done\""
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_4_157555_2",
+            "function_span": {
+              "start": 452932,
+              "end": 463033
+            },
+            "declaration_line": 11754
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_2_162654_2",
+            "function_span": {
+              "start": 443272,
+              "end": 452651
+            },
+            "declaration_line": 11528
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_159022_2",
+            "function_span": {
+              "start": 434704,
+              "end": 442851
+            },
+            "declaration_line": 11293
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_160698_2",
+            "function_span": {
+              "start": 369881,
+              "end": 434098
+            },
+            "declaration_line": 9748
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_6_109337_2",
+            "function_span": {
+              "start": 350758,
+              "end": 368393
+            },
+            "declaration_line": 9221
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_136377_2",
+            "function_span": {
+              "start": 322653,
+              "end": 350723
+            },
+            "declaration_line": 8530
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_4_48132_2",
+            "function_span": {
+              "start": 302216,
+              "end": 322492
+            },
+            "declaration_line": 7906
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_9_112456_2",
+            "function_span": {
+              "start": 291298,
+              "end": 302166
+            },
+            "declaration_line": 7600
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_9_137730_2",
+            "function_span": {
+              "start": 279492,
+              "end": 291219
+            },
+            "declaration_line": 7295
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_111350",
+            "function_span": {
+              "start": 251273,
+              "end": 278575
+            },
+            "declaration_line": 6572
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_6_130371",
+            "function_span": {
+              "start": 240799,
+              "end": 250802
+            },
+            "declaration_line": 6312
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_6_48060",
+            "function_span": {
+              "start": 227678,
+              "end": 240561
+            },
+            "declaration_line": 5911
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_3457",
+            "function_span": {
+              "start": 216665,
+              "end": 227118
+            },
+            "declaration_line": 5608
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_3_152449",
+            "function_span": {
+              "start": 179211,
+              "end": 181861
+            },
+            "declaration_line": 4477
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_24733",
+            "function_span": {
+              "start": 210936,
+              "end": 214690
+            },
+            "declaration_line": 5482
+          },
+          {
+            "slot": 15,
+            "name": "$THREAD_7_35422",
+            "function_span": {
+              "start": 184617,
+              "end": 210899
+            },
+            "declaration_line": 4646
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 722725,
+          "end": 723007
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 722714,
+          "end": 723007,
+          "line": 18896,
+          "text": "$KEY_198 = [$THREAD_4_157555, $THREAD_2_162654, $THREAD_5_159022, $THREAD_6_160698, $THREAD_6_109337, $THREAD_3_136377, $THREAD_4_48132, $THREAD_9_112456, $THREAD_9_137730, $THREAD_5_111350, $THREAD_6_130371, $THREAD_6_4"
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "line": 7288,
+            "arm": "else",
+            "test": "$BM === \"done\""
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_4_157555",
+            "function_span": {
+              "start": 709582,
+              "end": 719681
+            },
+            "declaration_line": 18623
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_2_162654",
+            "function_span": {
+              "start": 699924,
+              "end": 709301
+            },
+            "declaration_line": 18397
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_5_159022",
+            "function_span": {
+              "start": 691358,
+              "end": 699503
+            },
+            "declaration_line": 18162
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_160698",
+            "function_span": {
+              "start": 626541,
+              "end": 690756
+            },
+            "declaration_line": 16617
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_6_109337",
+            "function_span": {
+              "start": 607420,
+              "end": 625053
+            },
+            "declaration_line": 16090
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_136377",
+            "function_span": {
+              "start": 579317,
+              "end": 607385
+            },
+            "declaration_line": 15399
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_4_48132",
+            "function_span": {
+              "start": 558882,
+              "end": 579156
+            },
+            "declaration_line": 14775
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_9_112456",
+            "function_span": {
+              "start": 547966,
+              "end": 558832
+            },
+            "declaration_line": 14469
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_9_137730",
+            "function_span": {
+              "start": 536162,
+              "end": 547887
+            },
+            "declaration_line": 14164
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_111350",
+            "function_span": {
+              "start": 251273,
+              "end": 278575
+            },
+            "declaration_line": 6572
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_6_130371",
+            "function_span": {
+              "start": 240799,
+              "end": 250802
+            },
+            "declaration_line": 6312
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_6_48060",
+            "function_span": {
+              "start": 227678,
+              "end": 240561
+            },
+            "declaration_line": 5911
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_3457",
+            "function_span": {
+              "start": 216665,
+              "end": 227118
+            },
+            "declaration_line": 5608
+          },
+          {
+            "slot": 13,
+            "name": "$THREAD_3_152449",
+            "function_span": {
+              "start": 179211,
+              "end": 181861
+            },
+            "declaration_line": 4477
+          },
+          {
+            "slot": 14,
+            "name": "$THREAD_0_24733",
+            "function_span": {
+              "start": 210936,
+              "end": 214690
+            },
+            "declaration_line": 5482
+          },
+          {
+            "slot": 15,
+            "name": "$THREAD_7_35422",
+            "function_span": {
+              "start": 184617,
+              "end": 210899
+            },
+            "declaration_line": 4646
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "registry-consumer-heldout",
+    "input_sha256": "8de0affee1459cc13e01972a76d55c1efdeb289be958ae426e9fbce6f0cd3f45",
+    "selected_origins": [
+      0,
+      1
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 439490,
+          "end": 439799
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 439480,
+          "end": 439799,
+          "line": 11328,
+          "text": "$KEY_88 = [\n\t\t\t\t\t\t$THREAD_6_93598,\n\t\t\t\t\t\t$THREAD_7_42133,\n\t\t\t\t\t\t$THREAD_8_93816,\n\t\t\t\t\t\t$THREAD_2_69357,\n\t\t\t\t\t\t$THREAD_5_74349,\n\t\t\t\t\t\t$THREAD_7_94441,\n\t\t\t\t\t\t$THREAD_6_107438,\n\t\t\t\t\t\t$THREAD_7_29994,\n\t\t\t\t\t\t$THREAD_5_109541,"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 8892,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_6_93598",
+            "function_span": {
+              "start": 420519,
+              "end": 436021
+            },
+            "declaration_line": 10883
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_7_42133",
+            "function_span": {
+              "start": 375594,
+              "end": 419996
+            },
+            "declaration_line": 9826
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_8_93816",
+            "function_span": {
+              "start": 356914,
+              "end": 375268
+            },
+            "declaration_line": 9323
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_2_69357",
+            "function_span": {
+              "start": 343237,
+              "end": 356759
+            },
+            "declaration_line": 8901
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_5_74349",
+            "function_span": {
+              "start": 330811,
+              "end": 341839
+            },
+            "declaration_line": 8583
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_7_94441",
+            "function_span": {
+              "start": 280366,
+              "end": 330051
+            },
+            "declaration_line": 7233
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_6_107438",
+            "function_span": {
+              "start": 268850,
+              "end": 277600
+            },
+            "declaration_line": 6891
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_7_29994",
+            "function_span": {
+              "start": 256253,
+              "end": 268845
+            },
+            "declaration_line": 6581
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_5_109541",
+            "function_span": {
+              "start": 243525,
+              "end": 256248
+            },
+            "declaration_line": 6250
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_28183",
+            "function_span": {
+              "start": 215842,
+              "end": 243258
+            },
+            "declaration_line": 5367
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_5_24483",
+            "function_span": {
+              "start": 203156,
+              "end": 215438
+            },
+            "declaration_line": 5092
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_6_36370",
+            "function_span": {
+              "start": 192788,
+              "end": 202043
+            },
+            "declaration_line": 4800
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_105279",
+            "function_span": {
+              "start": 179501,
+              "end": 191696
+            },
+            "declaration_line": 4461
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 604489,
+          "end": 604792
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 604479,
+          "end": 604792,
+          "line": 15997,
+          "text": "$KEY_88 = [\n\t\t\t\t\t$THREAD_6_93598_2,\n\t\t\t\t\t$THREAD_7_42133_2,\n\t\t\t\t\t$THREAD_8_93816_2,\n\t\t\t\t\t$THREAD_2_69357_2,\n\t\t\t\t\t$THREAD_5_74349,\n\t\t\t\t\t$THREAD_7_94441,\n\t\t\t\t\t$THREAD_6_107438,\n\t\t\t\t\t$THREAD_7_29994,\n\t\t\t\t\t$THREAD_5_109541,\n"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_6_93598_2",
+            "function_span": {
+              "start": 585957,
+              "end": 601112
+            },
+            "declaration_line": 15552
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_7_42133_2",
+            "function_span": {
+              "start": 542087,
+              "end": 585440
+            },
+            "declaration_line": 14495
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_8_93816_2",
+            "function_span": {
+              "start": 523908,
+              "end": 541768
+            },
+            "declaration_line": 13992
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_2_69357_2",
+            "function_span": {
+              "start": 510651,
+              "end": 523756
+            },
+            "declaration_line": 13570
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_5_74349",
+            "function_span": {
+              "start": 330811,
+              "end": 341839
+            },
+            "declaration_line": 8583
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_7_94441",
+            "function_span": {
+              "start": 280366,
+              "end": 330051
+            },
+            "declaration_line": 7233
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_6_107438",
+            "function_span": {
+              "start": 268850,
+              "end": 277600
+            },
+            "declaration_line": 6891
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_7_29994",
+            "function_span": {
+              "start": 256253,
+              "end": 268845
+            },
+            "declaration_line": 6581
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_5_109541",
+            "function_span": {
+              "start": 243525,
+              "end": 256248
+            },
+            "declaration_line": 6250
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_5_28183",
+            "function_span": {
+              "start": 215842,
+              "end": 243258
+            },
+            "declaration_line": 5367
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_5_24483",
+            "function_span": {
+              "start": 203156,
+              "end": 215438
+            },
+            "declaration_line": 5092
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_6_36370",
+            "function_span": {
+              "start": 192788,
+              "end": 202043
+            },
+            "declaration_line": 4800
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_7_105279",
+            "function_span": {
+              "start": 179501,
+              "end": 191696
+            },
+            "declaration_line": 4461
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "single-guarded-registry",
+    "input_sha256": "57e8744a9dd88626d566abb935396bc1f171b501045a91f099170c65d2a8fe86",
+    "selected_origins": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 454585,
+          "end": 454920
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 454574,
+          "end": 454920,
+          "line": 12140,
+          "text": "$KEY_397 = [\n\t\t\t\t\t\t\t\t$THREAD_5_84400,\n\t\t\t\t\t\t\t\t$THREAD_5_104551,\n\t\t\t\t\t\t\t\t$THREAD_3_19982,\n\t\t\t\t\t\t\t\t$THREAD_3_62619,\n\t\t\t\t\t\t\t\t$THREAD_4_6609,\n\t\t\t\t\t\t\t\t$THREAD_3_148934,\n\t\t\t\t\t\t\t\t$THREAD_5_79094,\n\t\t\t\t\t\t\t\t$THREAD_5_37567,\n\t\t\t\t\t\t"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 3292,
+            "arm": "body"
+          },
+          {
+            "kind": "if",
+            "line": 3293,
+            "arm": "then",
+            "test": "typeof document.createEvent === \"function\""
+          },
+          {
+            "kind": "if",
+            "line": 3306,
+            "arm": "else",
+            "test": "$H === void 0"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_84400",
+            "function_span": {
+              "start": 443019,
+              "end": 451668
+            },
+            "declaration_line": 11857
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_5_104551",
+            "function_span": {
+              "start": 418534,
+              "end": 440418
+            },
+            "declaration_line": 11175
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_3_19982",
+            "function_span": {
+              "start": 368808,
+              "end": 418526
+            },
+            "declaration_line": 10017
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_62619",
+            "function_span": {
+              "start": 329739,
+              "end": 368464
+            },
+            "declaration_line": 9018
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_6609",
+            "function_span": {
+              "start": 322432,
+              "end": 329703
+            },
+            "declaration_line": 8825
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_148934",
+            "function_span": {
+              "start": 299137,
+              "end": 322239
+            },
+            "declaration_line": 8275
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_79094",
+            "function_span": {
+              "start": 288756,
+              "end": 299027
+            },
+            "declaration_line": 8013
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_37567",
+            "function_span": {
+              "start": 230111,
+              "end": 260703
+            },
+            "declaration_line": 6479
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_0_50296",
+            "function_span": {
+              "start": 261885,
+              "end": 287743
+            },
+            "declaration_line": 7381
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_3_43811",
+            "function_span": {
+              "start": 213758,
+              "end": 229822
+            },
+            "declaration_line": 6066
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_3_56870",
+            "function_span": {
+              "start": 199867,
+              "end": 212672
+            },
+            "declaration_line": 5735
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_92433",
+            "function_span": {
+              "start": 188686,
+              "end": 196526
+            },
+            "declaration_line": 5434
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_88766",
+            "function_span": {
+              "start": 172899,
+              "end": 187283
+            },
+            "declaration_line": 5064
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 871592,
+          "end": 871925
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 871581,
+          "end": 871925,
+          "line": 23045,
+          "text": "$KEY_397 = [\n\t\t\t\t\t\t$THREAD_5_84400_2,\n\t\t\t\t\t\t$THREAD_5_104551_2,\n\t\t\t\t\t\t$THREAD_3_19982_2,\n\t\t\t\t\t\t$THREAD_3_62619_2,\n\t\t\t\t\t\t$THREAD_4_6609_2,\n\t\t\t\t\t\t$THREAD_3_148934_2,\n\t\t\t\t\t\t$THREAD_5_79094_2,\n\t\t\t\t\t\t$THREAD_5_37567_2,\n\t\t\t\t\t\t"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 3292,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_84400_2",
+            "function_span": {
+              "start": 860590,
+              "end": 868819
+            },
+            "declaration_line": 22762
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_5_104551_2",
+            "function_span": {
+              "start": 837457,
+              "end": 858163
+            },
+            "declaration_line": 22080
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_3_19982_2",
+            "function_span": {
+              "start": 790045,
+              "end": 837451
+            },
+            "declaration_line": 20922
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_62619_2",
+            "function_span": {
+              "start": 753013,
+              "end": 789715
+            },
+            "declaration_line": 19927
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_6609_2",
+            "function_span": {
+              "start": 746090,
+              "end": 752981
+            },
+            "declaration_line": 19734
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_148934_2",
+            "function_span": {
+              "start": 723893,
+              "end": 745905
+            },
+            "declaration_line": 19184
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_79094_2",
+            "function_span": {
+              "start": 714034,
+              "end": 723789
+            },
+            "declaration_line": 18922
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_37567_2",
+            "function_span": {
+              "start": 658449,
+              "end": 687245
+            },
+            "declaration_line": 17388
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_0_50296_2",
+            "function_span": {
+              "start": 688421,
+              "end": 713081
+            },
+            "declaration_line": 18290
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_3_43811_2",
+            "function_span": {
+              "start": 642920,
+              "end": 658168
+            },
+            "declaration_line": 16975
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_3_56870_2",
+            "function_span": {
+              "start": 629685,
+              "end": 641904
+            },
+            "declaration_line": 16644
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_92433_2",
+            "function_span": {
+              "start": 619100,
+              "end": 626554
+            },
+            "declaration_line": 16343
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_88766_2",
+            "function_span": {
+              "start": 604049,
+              "end": 617739
+            },
+            "declaration_line": 15973
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 1282207,
+          "end": 1282540
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 1282196,
+          "end": 1282540,
+          "line": 33947,
+          "text": "$KEY_397 = [\n\t\t\t\t\t\t$THREAD_5_84400_3,\n\t\t\t\t\t\t$THREAD_5_104551_3,\n\t\t\t\t\t\t$THREAD_3_19982_3,\n\t\t\t\t\t\t$THREAD_3_62619_3,\n\t\t\t\t\t\t$THREAD_4_6609_3,\n\t\t\t\t\t\t$THREAD_3_148934_3,\n\t\t\t\t\t\t$THREAD_5_79094_3,\n\t\t\t\t\t\t$THREAD_5_37567_3,\n\t\t\t\t\t\t"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 27227,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_84400_3",
+            "function_span": {
+              "start": 1271205,
+              "end": 1279434
+            },
+            "declaration_line": 33664
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_5_104551_3",
+            "function_span": {
+              "start": 1248072,
+              "end": 1268778
+            },
+            "declaration_line": 32982
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_3_19982_3",
+            "function_span": {
+              "start": 1200660,
+              "end": 1248066
+            },
+            "declaration_line": 31824
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_62619_3",
+            "function_span": {
+              "start": 1163628,
+              "end": 1200330
+            },
+            "declaration_line": 30829
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_6609_3",
+            "function_span": {
+              "start": 1156705,
+              "end": 1163596
+            },
+            "declaration_line": 30636
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_148934_3",
+            "function_span": {
+              "start": 1134508,
+              "end": 1156520
+            },
+            "declaration_line": 30086
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_79094_3",
+            "function_span": {
+              "start": 1124649,
+              "end": 1134404
+            },
+            "declaration_line": 29824
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_37567_3",
+            "function_span": {
+              "start": 1069064,
+              "end": 1097860
+            },
+            "declaration_line": 28290
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_0_50296_3",
+            "function_span": {
+              "start": 1099036,
+              "end": 1123696
+            },
+            "declaration_line": 29192
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_3_43811_3",
+            "function_span": {
+              "start": 1053535,
+              "end": 1068783
+            },
+            "declaration_line": 27877
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_3_56870_3",
+            "function_span": {
+              "start": 1040300,
+              "end": 1052519
+            },
+            "declaration_line": 27546
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_92433_3",
+            "function_span": {
+              "start": 1029715,
+              "end": 1037169
+            },
+            "declaration_line": 27245
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_88766_3",
+            "function_span": {
+              "start": 1014899,
+              "end": 1028241
+            },
+            "declaration_line": 26870
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 1601835,
+          "end": 1602154
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 1601824,
+          "end": 1602154,
+          "line": 42888,
+          "text": "$KEY_397 = [\n\t\t\t\t\t$THREAD_5_84400_4,\n\t\t\t\t\t$THREAD_5_104551_4,\n\t\t\t\t\t$THREAD_3_19982_4,\n\t\t\t\t\t$THREAD_3_62619_4,\n\t\t\t\t\t$THREAD_4_6609_4,\n\t\t\t\t\t$THREAD_3_148934_4,\n\t\t\t\t\t$THREAD_5_79094_4,\n\t\t\t\t\t$THREAD_5_37567_4,\n\t\t\t\t\t$THREAD_0"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_5_84400_4",
+            "function_span": {
+              "start": 1591116,
+              "end": 1599134
+            },
+            "declaration_line": 42605
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_5_104551_4",
+            "function_span": {
+              "start": 1568665,
+              "end": 1588781
+            },
+            "declaration_line": 41923
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_3_19982_4",
+            "function_span": {
+              "start": 1522411,
+              "end": 1568660
+            },
+            "declaration_line": 40765
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_3_62619_4",
+            "function_span": {
+              "start": 1486374,
+              "end": 1522088
+            },
+            "declaration_line": 39770
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_4_6609_4",
+            "function_span": {
+              "start": 1479644,
+              "end": 1486344
+            },
+            "declaration_line": 39577
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_3_148934_4",
+            "function_span": {
+              "start": 1457997,
+              "end": 1479463
+            },
+            "declaration_line": 39027
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_5_79094_4",
+            "function_span": {
+              "start": 1448400,
+              "end": 1457896
+            },
+            "declaration_line": 38765
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_5_37567_4",
+            "function_span": {
+              "start": 1394349,
+              "end": 1422246
+            },
+            "declaration_line": 37231
+          },
+          {
+            "slot": 8,
+            "name": "$THREAD_0_50296_4",
+            "function_span": {
+              "start": 1423419,
+              "end": 1447479
+            },
+            "declaration_line": 38133
+          },
+          {
+            "slot": 9,
+            "name": "$THREAD_3_43811_4",
+            "function_span": {
+              "start": 1379233,
+              "end": 1394072
+            },
+            "declaration_line": 36818
+          },
+          {
+            "slot": 10,
+            "name": "$THREAD_3_56870_4",
+            "function_span": {
+              "start": 1366329,
+              "end": 1378254
+            },
+            "declaration_line": 36487
+          },
+          {
+            "slot": 11,
+            "name": "$THREAD_0_92433_4",
+            "function_span": {
+              "start": 1356045,
+              "end": 1363305
+            },
+            "declaration_line": 36186
+          },
+          {
+            "slot": 12,
+            "name": "$THREAD_3_88766_3",
+            "function_span": {
+              "start": 1014899,
+              "end": 1028241
+            },
+            "declaration_line": 26870
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reaching-registry-heldout",
+    "input_sha256": "f40a15d7e431400910395979eb7b5321765498b51dc6faedd909f842ad502e33",
+    "selected_origins": [
+      0,
+      1,
+      2
+    ],
+    "origins": [
+      {
+        "array": {
+          "start": 245141,
+          "end": 245275
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 245130,
+          "end": 245275,
+          "line": 6697,
+          "text": "$KEY_280 = [$THREAD_2_7790, $THREAD_8_83688, $THREAD_4_86565, $THREAD_6_7062, $THREAD_6_32010, $THREAD_9_63137, $THREAD_0_65999, $THREAD_6_31198]"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 2245,
+            "arm": "body"
+          },
+          {
+            "kind": "if",
+            "line": 2246,
+            "arm": "then",
+            "test": "typeof document.createEvent === \"function\""
+          },
+          {
+            "kind": "if",
+            "line": 2258,
+            "arm": "then",
+            "test": "$I === null"
+          },
+          {
+            "kind": "try",
+            "line": 2881,
+            "arm": "catch"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_2_7790",
+            "function_span": {
+              "start": 220589,
+              "end": 243851
+            },
+            "declaration_line": 6227
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_8_83688",
+            "function_span": {
+              "start": 202480,
+              "end": 219380
+            },
+            "declaration_line": 5871
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_4_86565",
+            "function_span": {
+              "start": 190606,
+              "end": 202188
+            },
+            "declaration_line": 5590
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_7062",
+            "function_span": {
+              "start": 165791,
+              "end": 190568
+            },
+            "declaration_line": 4917
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_6_32010",
+            "function_span": {
+              "start": 143135,
+              "end": 165782
+            },
+            "declaration_line": 4330
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_9_63137",
+            "function_span": {
+              "start": 96931,
+              "end": 141846
+            },
+            "declaration_line": 3210
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_0_65999",
+            "function_span": {
+              "start": 81456,
+              "end": 86820
+            },
+            "declaration_line": 2731
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_6_31198",
+            "function_span": {
+              "start": 74062,
+              "end": 81193
+            },
+            "declaration_line": 2543
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 457517,
+          "end": 457663
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 457506,
+          "end": 457663,
+          "line": 12229,
+          "text": "$KEY_280 = [$THREAD_2_7790_2, $THREAD_8_83688_2, $THREAD_4_86565_2, $THREAD_6_7062_2, $THREAD_6_32010_2, $THREAD_9_63137_2, $THREAD_0_65999, $THREAD_6_31198]"
+        },
+        "guards": [
+          {
+            "kind": "try",
+            "line": 2245,
+            "arm": "body"
+          },
+          {
+            "kind": "if",
+            "line": 2246,
+            "arm": "then",
+            "test": "typeof document.createEvent === \"function\""
+          },
+          {
+            "kind": "if",
+            "line": 2258,
+            "arm": "then",
+            "test": "$I === null"
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_2_7790_2",
+            "function_span": {
+              "start": 433431,
+              "end": 456228
+            },
+            "declaration_line": 11759
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_8_83688_2",
+            "function_span": {
+              "start": 415674,
+              "end": 432257
+            },
+            "declaration_line": 11403
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_4_86565_2",
+            "function_span": {
+              "start": 404079,
+              "end": 415386
+            },
+            "declaration_line": 11122
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_7062_2",
+            "function_span": {
+              "start": 379935,
+              "end": 404043
+            },
+            "declaration_line": 10449
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_6_32010_2",
+            "function_span": {
+              "start": 357864,
+              "end": 379927
+            },
+            "declaration_line": 9862
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_9_63137_2",
+            "function_span": {
+              "start": 312778,
+              "end": 356581
+            },
+            "declaration_line": 8742
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_0_65999",
+            "function_span": {
+              "start": 81456,
+              "end": 86820
+            },
+            "declaration_line": 2731
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_6_31198",
+            "function_span": {
+              "start": 74062,
+              "end": 81193
+            },
+            "declaration_line": 2543
+          }
+        ]
+      },
+      {
+        "array": {
+          "start": 714644,
+          "end": 714794
+        },
+        "assignment": {
+          "type": "AssignmentExpression",
+          "start": 714633,
+          "end": 714794,
+          "line": 19143,
+          "text": "$KEY_280 = [$THREAD_2_7790_3, $THREAD_8_83688_3, $THREAD_4_86565_3, $THREAD_6_7062_3, $THREAD_6_32010_3, $THREAD_9_63137_3, $THREAD_0_65999_2, $THREAD_6_31198_2]"
+        },
+        "guards": [],
+        "slots": [
+          {
+            "slot": 0,
+            "name": "$THREAD_2_7790_3",
+            "function_span": {
+              "start": 691995,
+              "end": 713391
+            },
+            "declaration_line": 18674
+          },
+          {
+            "slot": 1,
+            "name": "$THREAD_8_83688_3",
+            "function_span": {
+              "start": 675306,
+              "end": 690932
+            },
+            "declaration_line": 18318
+          },
+          {
+            "slot": 2,
+            "name": "$THREAD_4_86565_3",
+            "function_span": {
+              "start": 664554,
+              "end": 675030
+            },
+            "declaration_line": 18037
+          },
+          {
+            "slot": 3,
+            "name": "$THREAD_6_7062_3",
+            "function_span": {
+              "start": 642429,
+              "end": 664524
+            },
+            "declaration_line": 17364
+          },
+          {
+            "slot": 4,
+            "name": "$THREAD_6_32010_3",
+            "function_span": {
+              "start": 622119,
+              "end": 642424
+            },
+            "declaration_line": 16777
+          },
+          {
+            "slot": 5,
+            "name": "$THREAD_9_63137_3",
+            "function_span": {
+              "start": 580430,
+              "end": 620854
+            },
+            "declaration_line": 15661
+          },
+          {
+            "slot": 6,
+            "name": "$THREAD_0_65999_2",
+            "function_span": {
+              "start": 566809,
+              "end": 571749
+            },
+            "declaration_line": 15183
+          },
+          {
+            "slot": 7,
+            "name": "$THREAD_6_31198_2",
+            "function_span": {
+              "start": 559977,
+              "end": 566561
+            },
+            "declaration_line": 14995
+          }
+        ]
+      }
+    ]
+  }
+]

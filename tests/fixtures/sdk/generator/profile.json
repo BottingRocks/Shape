@@ -1,0 +1,11 @@
+{
+  "format": "shape-byte-codec/1",
+  "cipher": {
+    "ivs": [1634760805, 857760878, 2036477234, 1797285236],
+    "counter": 0,
+    "double_rounds": 10
+  },
+  "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",
+  "keys": [0, 1, 2, 3, 4, 5, 6, 7],
+  "header_name": "X-example-a"
+}

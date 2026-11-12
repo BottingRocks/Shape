@@ -1,0 +1,16 @@
+[
+  {
+    "seed": "constructor-transport-full",
+    "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "fixture": "tests/fixtures/program/lazy-registry/constructor-transport-full.js",
+    "sha256": "80ee36c16529c603ca409c8ebb6824b86a29538d5a738b0fd69efb2c72419134",
+    "extraction": "entire baseline cleaned source, unchanged; exact original lexical context"
+  },
+  {
+    "seed": "constructor-transport-full-alternate",
+    "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "fixture": "tests/fixtures/program/lazy-registry/constructor-transport-full-alternate.js",
+    "sha256": "0c297b142e72409831f2573155ea4ac66703ae63e5ede78bb98252544cf30af4",
+    "extraction": "entire baseline cleaned source, unchanged; exact original lexical context"
+  }
+]

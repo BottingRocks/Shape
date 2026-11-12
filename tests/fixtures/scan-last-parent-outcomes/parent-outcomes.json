@@ -1,0 +1,146 @@
+[
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 30347,
+        "start": 29291
+      },
+      "identifier": {
+        "end": 29315,
+        "start": 29300
+      },
+      "name": "$THREAD_6_29181",
+      "owned_by_main": true,
+      "symbol": 383
+    },
+    "confidence": "medium",
+    "evaluator": "shared_observable_last_operator",
+    "evidence": [
+      {
+        "end": 30341,
+        "start": 30318
+      }
+    ],
+    "explanation": [
+      "complete own ordered factory/operator/executor protocol; scoped formals, state producer-consumer SymbolIds, every writer, error/catch identity, return and cleanup; independently proved complete native constructor and executed initialization at every exposure; external callable purposes remain opaque"
+    ],
+    "function_id": "fn@29291..30347",
+    "pc": 29181,
+    "proposed_name": "createLastOperator",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "createLastOperator",
+    "shorthand_edits": 0,
+    "thread_id": 6
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 30312,
+        "start": 29379
+      },
+      "identifier": {
+        "end": 29403,
+        "start": 29388
+      },
+      "name": "$THREAD_6_45986",
+      "owned_by_main": false,
+      "symbol": 388
+    },
+    "confidence": "medium",
+    "evaluator": "shared_observable_last_operator",
+    "evidence": [
+      {
+        "end": 30305,
+        "start": 29441
+      }
+    ],
+    "explanation": [
+      "complete own ordered factory/operator/executor protocol; scoped formals, state producer-consumer SymbolIds, every writer, error/catch identity, return and cleanup; independently proved complete native constructor and executed initialization at every exposure; external callable purposes remain opaque"
+    ],
+    "function_id": "fn@29379..30312",
+    "pc": 45986,
+    "proposed_name": "lastOperatorFunction",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "lastOperatorFunction",
+    "shorthand_edits": 0,
+    "thread_id": 6
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 38943,
+        "start": 38102
+      },
+      "identifier": {
+        "end": 38126,
+        "start": 38111
+      },
+      "name": "$THREAD_2_82358",
+      "owned_by_main": true,
+      "symbol": 507
+    },
+    "confidence": "medium",
+    "evaluator": "shared_observable_scan_operator",
+    "evidence": [
+      {
+        "end": 38234,
+        "start": 38218
+      },
+      {
+        "end": 38937,
+        "start": 38913
+      }
+    ],
+    "explanation": [
+      "complete own ordered factory/operator/executor protocol; scoped formals, state producer-consumer SymbolIds, every writer, error/catch identity, return and cleanup; independently proved complete native constructor and executed initialization at every exposure; external callable purposes remain opaque"
+    ],
+    "function_id": "fn@38102..38943",
+    "pc": 82358,
+    "proposed_name": "createScanOperator",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "createScanOperator",
+    "shorthand_edits": 0,
+    "thread_id": 2
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 38907,
+        "start": 38248
+      },
+      "identifier": {
+        "end": 38273,
+        "start": 38257
+      },
+      "name": "$THREAD_6_121673",
+      "owned_by_main": false,
+      "symbol": 512
+    },
+    "confidence": "medium",
+    "evaluator": "shared_observable_scan_operator",
+    "evidence": [
+      {
+        "end": 38900,
+        "start": 38311
+      }
+    ],
+    "explanation": [
+      "complete own ordered factory/operator/executor protocol; scoped formals, state producer-consumer SymbolIds, every writer, error/catch identity, return and cleanup; independently proved complete native constructor and executed initialization at every exposure; external callable purposes remain opaque"
+    ],
+    "function_id": "fn@38248..38907",
+    "pc": 121673,
+    "proposed_name": "scanOperatorFunction",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "scanOperatorFunction",
+    "shorthand_edits": 0,
+    "thread_id": 6
+  }
+]

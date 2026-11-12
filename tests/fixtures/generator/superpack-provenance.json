@@ -1,0 +1,29 @@
+{
+  "source": "sha256:f95e7e6049cfa4f6cf07f59385eb0d02239b905f90d4b592afed58498078b6c6",
+  "sha256": "f95e7e6049cfa4f6cf07f59385eb0d02239b905f90d4b592afed58498078b6c6",
+  "spans": [
+    [
+      2567,
+      2574
+    ],
+    [
+      2611,
+      2639
+    ],
+    [
+      14363,
+      14584
+    ],
+    [
+      14868,
+      15290
+    ]
+  ],
+  "reference_file": "superpack-reference.cjs",
+  "reference_sha256": "70606fcbca6088354063dcbeb78d5a441e3ce4a17205f9e366e7d0d4ab048951",
+  "changes": [
+    "No body edits or identifier renames. Only lexical prelude, identity sentinel, module exports, and option-construction glue.",
+    "Typed-array float path on little-endian Node. Fallback float path retained but not claimed compatible.",
+    "Original source encoder only; no browser/signal collection, measurements, private headers or captured payloads."
+  ]
+}

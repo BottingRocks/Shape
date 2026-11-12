@@ -1,0 +1,53 @@
+// ESM entry: re-exports the CommonJS binding.
+import { createRequire } from 'node:module';
+
+const shape = createRequire(import.meta.url)('./index.js');
+
+export const {
+  ShapeError,
+  LoadedArtifact,
+  LoadedKernel,
+  operation,
+  operationSync,
+  CachePolicy,
+  artifact,
+  session,
+  seeds,
+  headers,
+  payload,
+  decode,
+  decodeAsync,
+  explain,
+  explainAsync,
+  encode,
+  encodeAsync,
+  encodeSignals,
+  encodeSignalsAsync,
+  schema,
+  schemaAsync,
+  pack,
+  unpack,
+  unpackCanonical,
+  Generator,
+  version,
+  commands,
+  commandsSync,
+  call,
+  callSync,
+  deob,
+  report,
+  kernel,
+  ops,
+  trace,
+  cleanup,
+  naming,
+  signals,
+  pin,
+  sessionFromInitializer,
+  compileArtifact,
+  compactSchema,
+  parseJSON,
+  stringifyJSON,
+} = shape;
+
+export default shape;

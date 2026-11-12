@@ -1,0 +1,99 @@
+{
+  "session": {
+    "token": "A4peOJGhAQAA_R6jhFOmE96X3pjkjUK24DtgrMqnzp4dlOASRMAInfR-00XoAUm92wCuclLXwH9eCOfvosJeCA==",
+    "alphabet": "768eqNwP4xRQJ0kacboBKn5j1ugh9SIiVvZsmrtMzF=_OlWD2UGp3AHE-dCLYTXyf",
+    "keys": [
+      1944786431,
+      1181771095,
+      2061591115,
+      263772366,
+      1195508087,
+      1094872937,
+      60797880,
+      642840060
+    ]
+  },
+  "payload_seeds": [16909060, 50595020],
+  "signals": [
+    {
+      "name": "xhr_sample",
+      "seed": 287454020,
+      "xor": 2363885845,
+      "layout": {
+        "fields": [
+          {
+            "kind": "array",
+            "name": "responses",
+            "reverse": true,
+            "element": { "kind": "number", "name": "item" }
+          },
+          { "kind": "number", "name": "cpHash" },
+          { "kind": "number", "name": "xhrStatus" },
+          { "kind": "number", "name": "xhrLoadEndTs" },
+          { "kind": "number", "name": "xhrSendTs" },
+          { "kind": "byte", "name": "hasNetworkError" },
+          { "kind": "string", "name": "xhrResponse" }
+        ]
+      },
+      "values": {
+        "responses": [418, 3.5, -7],
+        "cpHash": 123456789,
+        "xhrStatus": 200,
+        "xhrLoadEndTs": 1699999999999,
+        "xhrSendTs": 1699999999000,
+        "hasNetworkError": 0,
+        "xhrResponse": "{\"ok\":true,\"note\":\"héllo 😀\"}"
+      }
+    },
+    {
+      "name": "automation_flags_sample",
+      "seed": 1432778632,
+      "xor": 2616238838,
+      "layout": {
+        "fields": [
+          {
+            "kind": "packed",
+            "name": "globalFlags",
+            "bits": ["webdriver", "phantom", "selenium"]
+          },
+          {
+            "kind": "optional",
+            "name": "uaFullVersion",
+            "tag": 130,
+            "inner": { "kind": "string", "name": "uaFullVersionValue" }
+          },
+          { "kind": "string", "name": "userAgent" }
+        ]
+      },
+      "values": {
+        "globalFlags": [true, false, true],
+        "uaFullVersion": "120.0.6099.109",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+      }
+    },
+    {
+      "name": "locale_sample",
+      "seed": 2578103244,
+      "xor": 1858880873,
+      "layout": {
+        "fields": [
+          {
+            "kind": "optional",
+            "name": "timezone",
+            "tag": 131,
+            "inner": { "kind": "string", "name": "timezoneValue" }
+          },
+          {
+            "kind": "array",
+            "name": "languages",
+            "element": { "kind": "string", "name": "language" }
+          }
+        ]
+      },
+      "values": {
+        "timezone": null,
+        "languages": ["en-US", "en"]
+      }
+    }
+  ]
+}

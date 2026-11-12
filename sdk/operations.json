@@ -1,0 +1,1637 @@
+{
+  "contract_version": 2,
+  "dispatch": "shape_call_v2(operation,request_json)",
+  "legacy": "shape_call unchanged (21 commands, original defaults)",
+  "envelope": {
+    "success": {
+      "ok": true,
+      "value": "operation result"
+    },
+    "failure": {
+      "ok": false,
+      "error": {
+        "code": "invalid_request|unknown_command|failed|panic",
+        "message": "string"
+      }
+    }
+  },
+  "cache": {
+    "default": {
+      "mode": "disabled"
+    },
+    "forms": [
+      {
+        "mode": "disabled"
+      },
+      {
+        "mode": "directory",
+        "directory": "/absolute/or/relative/path"
+      },
+      {
+        "mode": "environment"
+      }
+    ],
+    "semantics": "Per-call, no environment mutation. Disabled performs no disk cache IO. Environment explicitly reads legacy SHAPE_KERNEL_CACHE/default. Directory validates exact source identity. Loaded handles reuse memory independently of disk policy."
+  },
+  "defaults": {
+    "trace_program": {
+      "name": "seed.js",
+      "steps": 1000000,
+      "thread_cleanup": true,
+      "no_cleanup": false,
+      "check_reuse": false,
+      "jobs": null,
+      "quiet": true
+    },
+    "thread": {
+      "steps": 1000000,
+      "self_check": false,
+      "outline": true,
+      "reverse_sides": false,
+      "partial": false
+    },
+    "corpus": {
+      "steps": 1000000,
+      "jobs": 1,
+      "cleanup": false,
+      "limit": null
+    },
+    "artifact_compile": {
+      "input_kind": "program",
+      "float_byte_order": "little",
+      "direct": false
+    },
+    "decode": {
+      "verify": false,
+      "metadata": false
+    },
+    "explain": {
+      "verify": false
+    },
+    "client": {
+      "timeout_ms": 30000,
+      "connect_timeout_ms": 10000,
+      "max_body_bytes": 33554432,
+      "max_redirects": 5
+    },
+    "naming": {
+      "rename": false
+    },
+    "signals_schema": {
+      "layouts_only": false,
+      "finder_roles": true,
+      "name": null
+    },
+    "serializer": {
+      "keysets_to_omit": [
+
+      ],
+      "depth_bound": null,
+      "missing_sentinel_extension": false,
+      "opaque_extensions": false,
+      "limits": {
+        "max_bytes": 16777216,
+        "max_entries": 65536,
+        "max_depth": 128
+      }
+    }
+  },
+  "wire": {
+    "bytes": "JSON arrays of u8 (0..255), never base64",
+    "integers": "Exact JSON integer tokens, signed/unsigned 64-bit; consumers must preserve tokens (no IEEE double conversion)",
+    "pack_number": "16 hexadecimal IEEE754 bit digits in PackValue {kind:\"number\",value:\"...\"}",
+    "documents": "Nested documents may be objects or JSON strings. source is always text; absent/null optional fields use defaults, direct must be boolean if present.",
+    "artifacts": "Versioned core artifact JSON, caller persists; compact schema is descriptive, not executable",
+    "schema_sources": [
+      "src/sdk/facade.rs",
+      "src/sdk/extensions.rs",
+      "src/signals/decode",
+      "src/signals/payload"
+    ]
+  },
+  "handles": {
+    "decode": {
+      "load": "shape_artifact_load(bytes,len,error_out)",
+      "call": "shape_artifact_call(handle,method,request)",
+      "free": "shape_artifact_free(handle)",
+      "aliases": "ABI aliases of shape_generator_*; immutable validated once; concurrent calls permitted; wait before free",
+      "methods": {
+        "decode": "{capture:CaptureHeaders,session?:Session,verify?:bool,metadata?:bool} -> DecodedPayload",
+        "encode": "{signals?:NamedSignals,decoded?:DecodedPayload,session?:Session} -> CaptureHeaders (exactly one input)",
+        "explain": "{decoded:DecodedPayload,signal:string,session?:Session,verify?:bool} -> NamedSignal",
+        "schema": "{} -> CompactSeedSchema",
+        "artifact": "{} -> DecodeArtifact"
+      },
+      "compile": "ShapeArtifact *shape_artifact_compile(const char *request_json, char **error_out)",
+      "compile_contract": "Same JSON object request and defaults as v2 artifact.compile. NULL request means {} (missing fields -> invalid_request), invalid UTF-8/JSON -> invalid_request. Success returns owned already compiled/validated handle and clears *error_out. Failure returns NULL and sets owned error envelope when error_out is non-NULL. Caller owns any previous *error_out. No compiled-document serialization, reparsing or revalidation; transfers shared immutable validated Arc to ABI-compatible Generator. Free with shape_artifact_free; direct/result calls retain panic containment. Export only deliberately through artifact method. Legacy document-returning artifact.compile remains."
+    },
+    "kernel": {
+      "load": "shape_kernel_load(bytes,len,error_out)",
+      "call": "shape_kernel_call(handle,operation,request)",
+      "free": "shape_kernel_free(handle)",
+      "operations": [
+        "trace.program",
+        "trace.thread",
+        "trace.corpus.reachable",
+        "kernel.to_json"
+      ],
+      "semantics": "immutable parsed once, concurrent reads; trace.program requires exact raw source identity; no per-call artifact reload"
+    }
+  },
+  "projections": {
+    "Classification": "{variant:\"javascript-vm\"|\"webassembly-vm\",ops:[{handler_index,kind,nature,pops,pushes,source}]}",
+    "Site": "{name,launcher_url,base_url,seed_param,protocol:\"async_launcher\"|\"single_file\"|\"direct_kernel\",status:\"validated\"|\"reference\",headers:[[name,value]]}",
+    "ClientConfig": "{timeout_ms,connect_timeout_ms,max_body_bytes,max_redirects}; requests construct bounded native reqwest client; callers needing injected client fetch bytes themselves then seeds.parse/import",
+    "domain_results": "Non-Serde results are projected centrally, never Debug strings. PipelineReport and HandlerTemplate use their native Serde schemas; portable source reconstruction is also supported. PrefixTraceReport is replaced by explicit replay for corpus.fingerprint.",
+    "naming_rename": "Explicit summary of semantic rewrite and plan; Rust-specific diagnostics/outcome/anonymous/local rewrite objects are not returned by this projection."
+  },
+  "operations": [
+    {
+      "id": "version",
+      "request": "{}",
+      "result": "{version,commands,contract_version}",
+      "defaults": {
+      },
+      "request_fields": [
+
+      ]
+    },
+    {
+      "id": "deob",
+      "request": "{source:string,artifact?:boolean}",
+      "result": "{code:string,artifact?:KernelArtifact}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "artifact",
+          "required": false,
+          "wire_type": "boolean"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "request": "{source:string,input_kind?:raw|deobfuscated}",
+      "result": "KernelArtifact",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "input_kind",
+          "required": false,
+          "wire_type": "raw|deobfuscated"
+        }
+      ]
+    },
+    {
+      "id": "kernel.show",
+      "request": "{source:string,input_kind?:raw|deobfuscated,operations?:string[]}",
+      "result": "KernelProperties",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "input_kind",
+          "required": false,
+          "wire_type": "raw|deobfuscated"
+        },
+        {
+          "name": "operations",
+          "required": false,
+          "wire_type": "string[]"
+        }
+      ]
+    },
+    {
+      "id": "ops.list",
+      "request": "{source:string}",
+      "result": "OpsList",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "ops.show",
+      "request": "{source:string,op:u32}",
+      "result": "OpsShow",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "op",
+          "required": true,
+          "wire_type": "u32"
+        }
+      ]
+    },
+    {
+      "id": "trace.program",
+      "request": "{source:string,artifact?:KernelArtifact,name?:string,cache?:Cache,steps?:usize,thread_cleanup?:bool,no_cleanup?:bool,check_reuse?:bool,overrides?:object,jobs?:usize,quiet?:bool}",
+      "result": "{code,complete,traced,stopped:[{function,reason}],kernel_globals}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "artifact",
+          "required": false,
+          "wire_type": "KernelArtifact"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "cache",
+          "required": false,
+          "wire_type": "Cache"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "thread_cleanup",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "no_cleanup",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "check_reuse",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "overrides",
+          "required": false,
+          "wire_type": "object"
+        },
+        {
+          "name": "jobs",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "quiet",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "trace.thread",
+      "request": "{source?:string,artifact?:KernelArtifact,pc:usize,state:usize,descriptor?:usize,initial_slots?:u32[],inputs?:Snapshot,steps?:usize,self_check?:bool,outline?:bool,reverse_sides?:bool,partial?:bool,overrides?:object}",
+      "result": "ThreadTrace",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "artifact",
+          "required": false,
+          "wire_type": "KernelArtifact"
+        },
+        {
+          "name": "pc",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "state",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "descriptor",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "initial_slots",
+          "required": false,
+          "wire_type": "u32[]"
+        },
+        {
+          "name": "inputs",
+          "required": false,
+          "wire_type": "Snapshot"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "self_check",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "outline",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "reverse_sides",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "partial",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "overrides",
+          "required": false,
+          "wire_type": "object"
+        }
+      ]
+    },
+    {
+      "id": "cleanup.thread",
+      "request": "{source:string}",
+      "result": "{code,cleanup}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "naming.threads",
+      "request": "{source:string,rename?:bool,labels?:LabelReference}",
+      "result": "{source,report}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "rename",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "wire_type": "LabelReference"
+        }
+      ]
+    },
+    {
+      "id": "naming.collectors",
+      "request": "{source:string,rename?:bool}",
+      "result": "{source,report}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "rename",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "naming.plan",
+      "request": "{source:string}",
+      "result": "SemanticNamingPlan",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "naming.inventory",
+      "request": "{source:string}",
+      "result": "{function_index,role_graph}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "signals.schema",
+      "request": "{source:string,name?:string,layouts_only?:bool,finder_roles?:bool}",
+      "result": "SignalSchemaReport",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "layouts_only",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "finder_roles",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "signals.show",
+      "request": "{source:string}",
+      "result": "ProgramProperties",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "signals.inputs",
+      "request": "{source:string}",
+      "result": "ProgramInputContextReport",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "signals.contracts",
+      "request": "{source:string}",
+      "result": "SignalContractReport",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "pin",
+      "request": "{source:string,session?:Session,init?:string}",
+      "result": "SeedLayout",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "session",
+          "required": false,
+          "wire_type": "Session"
+        },
+        {
+          "name": "init",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "session.from_initializer",
+      "request": "{init:string}",
+      "result": "Session",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "init",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "artifact.compile",
+      "request": "{source:string,input_kind?:program|raw,session:Session,site_id:string,name?:string,cache?:Cache,float_byte_order?:little|big,direct?:bool}",
+      "result": "DecodeArtifact",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "input_kind",
+          "required": false,
+          "wire_type": "program|raw"
+        },
+        {
+          "name": "session",
+          "required": true,
+          "wire_type": "Session"
+        },
+        {
+          "name": "site_id",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "cache",
+          "required": false,
+          "wire_type": "Cache"
+        },
+        {
+          "name": "float_byte_order",
+          "required": false,
+          "wire_type": "little|big"
+        },
+        {
+          "name": "direct",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "artifact.compact_schema",
+      "request": "{artifact:DecodeArtifact}",
+      "result": "CompactSeedSchema",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "artifact",
+          "required": true,
+          "wire_type": "DecodeArtifact"
+        }
+      ]
+    },
+    {
+      "id": "signals.catalog",
+      "request": "{}",
+      "result": "CatalogCard[]",
+      "defaults": {
+      },
+      "request_fields": [
+
+      ]
+    },
+    {
+      "id": "signals.describe",
+      "request": "{name:string}",
+      "result": "CatalogCard",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "name",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "signals.compact_schema",
+      "request": "{source:string,direct?:bool}",
+      "result": "CompactSeedSchema",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "direct",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "kernel.load",
+      "request": "{artifact:KernelArtifact|string}",
+      "result": "KernelArtifact (validated)",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "artifact",
+          "required": true,
+          "wire_type": "KernelArtifact|string"
+        }
+      ]
+    },
+    {
+      "id": "kernel.to_json",
+      "request": "{artifact:KernelArtifact|string}",
+      "result": "string (validated artifact JSON)",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "artifact",
+          "required": true,
+          "wire_type": "KernelArtifact|string"
+        }
+      ]
+    },
+    {
+      "id": "ops.classify.source",
+      "request": "{source:string}",
+      "result": "Classification",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "ops.classify.report",
+      "request": "{report?:PipelineReport,source?:string} (exactly one)",
+      "result": "Classification; supplied serialized report or reconstruction from raw source",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "report",
+          "required": false,
+          "wire_type": "PipelineReport"
+        },
+        {
+          "name": "source",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "ops.classify.template",
+      "request": "{source:string,template?:HandlerTemplate,handler_index?:u32} (exactly one of template or handler_index)",
+      "result": "ClassifiedOp; source is handler text for explicit template, raw source for handler_index reconstruction",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "template",
+          "required": false,
+          "wire_type": "HandlerTemplate"
+        },
+        {
+          "name": "handler_index",
+          "required": false,
+          "wire_type": "u32"
+        }
+      ]
+    },
+    {
+      "id": "ops.classify.seeds",
+      "request": "{seeds:Classification[]}",
+      "result": "[{kind,nature,scope,handlers:[[seed_index,handler_index]]}]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "seeds",
+          "required": true,
+          "wire_type": "Classification[]"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.load",
+      "request": "{source:string,name?:string,cache?:Cache}",
+      "result": "KernelArtifact",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "cache",
+          "required": false,
+          "wire_type": "Cache"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.source",
+      "request": "{source:string,name?:string,cache?:Cache,steps?:usize,jobs?:usize,limit?:usize,cleanup?:bool}",
+      "result": "[{function:{descriptor,pc,state},print,code,created:[{descriptor,pc,state}]}]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "source",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "name",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "cache",
+          "required": false,
+          "wire_type": "Cache"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "jobs",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "cleanup",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.reachable",
+      "request": "{artifact:KernelArtifact,steps?:usize,jobs?:usize,limit?:usize,cleanup?:bool}",
+      "result": "[{function:{descriptor,pc,state},print,code,created:[{descriptor,pc,state}]}]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "artifact",
+          "required": true,
+          "wire_type": "KernelArtifact"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "jobs",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "cleanup",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.walk_seed",
+      "request": "{seed:string,cache?:Cache,steps?:usize,jobs?:usize,limit?:usize,cleanup?:bool,self_check?:bool,audit?:bool,branches?:string}",
+      "result": "object function-key -> fingerprint; explicit file read/optional branches output",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "seed",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "cache",
+          "required": false,
+          "wire_type": "Cache"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "jobs",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "cleanup",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "self_check",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "audit",
+          "required": false,
+          "wire_type": "bool"
+        },
+        {
+          "name": "branches",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.fingerprint",
+      "request": "{artifact:KernelArtifact,pc:usize,state:usize,descriptor?:usize,steps?:usize,parameters?:string[],cleanup?:bool}",
+      "result": "{print,code}; replay thread instead of nonserializable PrefixTraceReport",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "artifact",
+          "required": true,
+          "wire_type": "KernelArtifact"
+        },
+        {
+          "name": "pc",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "state",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "descriptor",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "steps",
+          "required": false,
+          "wire_type": "usize"
+        },
+        {
+          "name": "parameters",
+          "required": false,
+          "wire_type": "string[]"
+        },
+        {
+          "name": "cleanup",
+          "required": false,
+          "wire_type": "bool"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.compare",
+      "request": "{baseline:object,current:object}",
+      "result": "{regressions:string[],changes:string[]}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "baseline",
+          "required": true,
+          "wire_type": "object"
+        },
+        {
+          "name": "current",
+          "required": true,
+          "wire_type": "object"
+        }
+      ]
+    },
+    {
+      "id": "trace.corpus.compare_inline",
+      "request": "{outlined:object,inline:object}",
+      "result": "string[]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "outlined",
+          "required": true,
+          "wire_type": "object"
+        },
+        {
+          "name": "inline",
+          "required": true,
+          "wire_type": "object"
+        }
+      ]
+    },
+    {
+      "id": "naming.corpus.analyze",
+      "request": "{sources:[{name:string,source:string}]}",
+      "result": "[{name,plan,rename:{source,source_sha256,transformed_sha256,applied,skipped,ambiguous,plan}}]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "sources",
+          "required": true,
+          "wire_type": "[{name:string,source:string}]"
+        }
+      ]
+    },
+    {
+      "id": "naming.corpus.compare",
+      "request": "{baseline:[{name:string,source:string}],current:[{name:string,source:string}]}",
+      "result": "[{name,baseline_present,current_present,missing_roles,added_roles,name_divergences}]; plans reconstructed from supplied sources",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "baseline",
+          "required": true,
+          "wire_type": "[{name:string,source:string}]"
+        },
+        {
+          "name": "current",
+          "required": true,
+          "wire_type": "[{name:string,source:string}]"
+        }
+      ]
+    },
+    {
+      "id": "seeds.parse",
+      "request": "{bytes:u8[]}",
+      "result": "{kind:launcher|kernel,launcher?:{kernel_ref},kernel?:{bytes,sha256,statements,functions}}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        }
+      ]
+    },
+    {
+      "id": "seeds.parse_launcher",
+      "request": "{bytes:u8[]}",
+      "result": "{kernel_ref}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        }
+      ]
+    },
+    {
+      "id": "seeds.parse_kernel",
+      "request": "{bytes:u8[]}",
+      "result": "{bytes,sha256,statements,functions}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        }
+      ]
+    },
+    {
+      "id": "seeds.parse_url",
+      "request": "{input:string}",
+      "result": "string URL",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "input",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.resolve_url",
+      "request": "{reference:string,base?:string}",
+      "result": "string URL",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "reference",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "base",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.token",
+      "request": "{reference:string,param?:string}",
+      "result": "string validated token",
+      "defaults": {
+        "param": "seed"
+      },
+      "request_fields": [
+        {
+          "name": "reference",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "param",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.sites",
+      "request": "{}",
+      "result": "Site[]",
+      "defaults": {
+      },
+      "request_fields": [
+
+      ]
+    },
+    {
+      "id": "seeds.site",
+      "request": "{name:string}",
+      "result": "Site",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "name",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.fetch",
+      "request": "{url:string,client?:ClientConfig,headers?:[[string,string]],base_url?:string,seed_param?:string}",
+      "result": "{seed,launcher_url,kernel_url,launcher:u8[]|null,kernel:u8[],kernel_summary}; explicit network only",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "url",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "client",
+          "required": false,
+          "wire_type": "ClientConfig"
+        },
+        {
+          "name": "headers",
+          "required": false,
+          "wire_type": "[[string,string]]"
+        },
+        {
+          "name": "base_url",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "seed_param",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.fetch_direct",
+      "request": "{url:string,client?:ClientConfig,headers?:[[string,string]],base_url?:string,seed_param?:string}",
+      "result": "{seed,launcher_url,kernel_url,launcher:u8[]|null,kernel:u8[],kernel_summary}; explicit network only",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "url",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "client",
+          "required": false,
+          "wire_type": "ClientConfig"
+        },
+        {
+          "name": "headers",
+          "required": false,
+          "wire_type": "[[string,string]]"
+        },
+        {
+          "name": "base_url",
+          "required": false,
+          "wire_type": "string"
+        },
+        {
+          "name": "seed_param",
+          "required": false,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "seeds.client",
+      "request": "{timeout_ms?:u64,connect_timeout_ms?:u64,max_body_bytes?:u64,max_redirects?:usize}",
+      "result": "ClientConfig normalized; portable requests pass config, Rust HttpClient injection remains Rust-only",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "timeout_ms",
+          "required": false,
+          "wire_type": "u64"
+        },
+        {
+          "name": "connect_timeout_ms",
+          "required": false,
+          "wire_type": "u64"
+        },
+        {
+          "name": "max_body_bytes",
+          "required": false,
+          "wire_type": "u64"
+        },
+        {
+          "name": "max_redirects",
+          "required": false,
+          "wire_type": "usize"
+        }
+      ]
+    },
+    {
+      "id": "seeds.import",
+      "request": "{directory:string,seed:string,launcher?:u8[],kernel:u8[]}",
+      "result": "{status,kernel_path,launcher_path,launcher_differs}; explicit persistence",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "directory",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "seed",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "launcher",
+          "required": false,
+          "wire_type": "u8[]"
+        },
+        {
+          "name": "kernel",
+          "required": true,
+          "wire_type": "u8[]"
+        }
+      ]
+    },
+    {
+      "id": "headers.codec",
+      "request": "{profile:Profile}",
+      "result": "Profile validated; portable calls supply immutable profile",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        }
+      ]
+    },
+    {
+      "id": "headers.parse",
+      "request": "{text:string}",
+      "result": "map header name -> string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "text",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "headers.encode",
+      "request": "{profile:Profile,report:HeaderReport}",
+      "result": "map header name -> string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "report",
+          "required": true,
+          "wire_type": "HeaderReport"
+        }
+      ]
+    },
+    {
+      "id": "headers.decode",
+      "request": "{profile:Profile,headers:map,positional_count:usize,keysets?:string[][]}",
+      "result": "HeaderReport",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "headers",
+          "required": true,
+          "wire_type": "map"
+        },
+        {
+          "name": "positional_count",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "keysets",
+          "required": false,
+          "wire_type": "string[][]"
+        }
+      ]
+    },
+    {
+      "id": "headers.encode_bytes",
+      "request": "{profile:Profile,payload:Payload}",
+      "result": "map header name -> string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "payload",
+          "required": true,
+          "wire_type": "Payload"
+        }
+      ]
+    },
+    {
+      "id": "headers.decode_bytes",
+      "request": "{profile:Profile,headers:map}",
+      "result": "Payload",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "headers",
+          "required": true,
+          "wire_type": "map"
+        }
+      ]
+    },
+    {
+      "id": "headers.encode_finalized",
+      "request": "{profile:Profile,text:string,context?:HeaderContext}",
+      "result": "map header name -> string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "context",
+          "required": false,
+          "wire_type": "HeaderContext"
+        }
+      ]
+    },
+    {
+      "id": "headers.decode_finalized",
+      "request": "{profile:Profile,headers:map}",
+      "result": "{text,context}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "Profile"
+        },
+        {
+          "name": "headers",
+          "required": true,
+          "wire_type": "map"
+        }
+      ]
+    },
+    {
+      "id": "payload.codec",
+      "request": "{profile:PayloadProfile}",
+      "result": "PayloadProfile validated",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "PayloadProfile"
+        }
+      ]
+    },
+    {
+      "id": "payload.encode",
+      "request": "{profile:PayloadProfile,report:Report}",
+      "result": "string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "PayloadProfile"
+        },
+        {
+          "name": "report",
+          "required": true,
+          "wire_type": "Report"
+        }
+      ]
+    },
+    {
+      "id": "payload.decode",
+      "request": "{profile:PayloadProfile,text:string,positional_count:usize,keysets?:string[][]}",
+      "result": "Report",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "PayloadProfile"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "wire_type": "string"
+        },
+        {
+          "name": "positional_count",
+          "required": true,
+          "wire_type": "usize"
+        },
+        {
+          "name": "keysets",
+          "required": false,
+          "wire_type": "string[][]"
+        }
+      ]
+    },
+    {
+      "id": "payload.encode_bytes",
+      "request": "{profile:PayloadProfile,bytes:u8[],seeds:[u32,u32]}",
+      "result": "string",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "PayloadProfile"
+        },
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        },
+        {
+          "name": "seeds",
+          "required": true,
+          "wire_type": "[u32,u32]"
+        }
+      ]
+    },
+    {
+      "id": "payload.decode_bytes",
+      "request": "{profile:PayloadProfile,text:string}",
+      "result": "Payload",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "profile",
+          "required": true,
+          "wire_type": "PayloadProfile"
+        },
+        {
+          "name": "text",
+          "required": true,
+          "wire_type": "string"
+        }
+      ]
+    },
+    {
+      "id": "pack",
+      "request": "{value:PackValue,options?:SerializerOptions}",
+      "result": "u8[]",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "value",
+          "required": true,
+          "wire_type": "PackValue"
+        },
+        {
+          "name": "options",
+          "required": false,
+          "wire_type": "SerializerOptions"
+        }
+      ]
+    },
+    {
+      "id": "unpack",
+      "request": "{bytes:u8[],options?:SerializerOptions}",
+      "result": "{value:PackValue,original_bytes:u8[],canonical:bool}",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        },
+        {
+          "name": "options",
+          "required": false,
+          "wire_type": "SerializerOptions"
+        }
+      ]
+    },
+    {
+      "id": "unpack_canonical",
+      "request": "{bytes:u8[],options?:SerializerOptions}",
+      "result": "PackValue",
+      "defaults": {
+      },
+      "request_fields": [
+        {
+          "name": "bytes",
+          "required": true,
+          "wire_type": "u8[]"
+        },
+        {
+          "name": "options",
+          "required": false,
+          "wire_type": "SerializerOptions"
+        }
+      ]
+    }
+  ],
+  "constraints": {
+    "pin": "Exactly one of session or init",
+    "trace.thread": "Exactly one of source or artifact; steps positive",
+    "trace.program": "steps and jobs positive if supplied; artifact requires exact source identity; report_dir rejected in v2",
+    "cache": "Strict cache policy forms; empty directory rejected",
+    "encode": "Exactly one of signals or decoded",
+    "artifact.compile": "direct must be boolean if present (including null rejection); stopped raw trace fails instead of silently compiling partial program",
+    "naming.corpus": "Source names nonempty and unique",
+    "headers/payload": "Profile schema/version/cipher/alphabet/key validation by native codecs; unknown operation always unknown_command"
+  }
+}

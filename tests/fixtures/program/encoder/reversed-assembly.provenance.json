@@ -1,0 +1,10 @@
+{
+  "positive": "guarded.js",
+  "positive_sha256": "ae2a65b0481532d1b853bce3da3a68befaf6ce5b3a7b5be8a202641062ffa2b6",
+  "review": "revision001",
+  "review_manifest_sha256": "2771cd89077c162ddca2d02abbefca33953a3114f2d5a13a8ac16f2678d5d371",
+  "review_scratch": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "sha256": "5397c4fb33dfbf9158ffe466703fce2b1c7968812e7472dab5d2fe9ed180724a",
+  "mutation": "$BR = $BS.concat($BR); -> $BR = $BR.concat($BS);",
+  "status": "UNEXECUTED: integrator must first reproduce revision001 with valid-Model receipt; source review hypothesis only"
+}

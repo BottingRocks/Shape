@@ -1,0 +1,20 @@
+{
+  "schema": "shape-tracked-kernel-references/v1",
+  "purpose": "immutable source bytes for static JavaScript VM and WebAssembly VM regression evidence",
+  "execution": "never execute captured JavaScript or WebAssembly",
+  "provenance": "copied byte-for-byte from the supplied historical kernel captures; acquisition-store paths are not required",
+  "references": {
+    "javascript_vm": {
+      "path": "javascript/kernel.raw.js",
+      "variant": "javascript-vm",
+      "length": 351159,
+      "sha256": "503fe94faf4b551102be0e74c2cafe9ac8432296268c4d4a83c36451710fc084"
+    },
+    "webassembly_vm": {
+      "path": "webassembly/kernel.raw.js",
+      "variant": "webassembly-vm",
+      "length": 350892,
+      "sha256": "2e9b94dcf73fa5fe55961a9c5bb22e6cadaa78f322f9c8a934187cb5517e0581"
+    }
+  }
+}

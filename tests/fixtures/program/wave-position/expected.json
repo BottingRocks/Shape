@@ -1,0 +1,349 @@
+[
+  {
+    "key": "wave-position-alternate",
+    "input_sha256": "79cfa667f80916362d9b86bef45ecd7f74c9f66e8c357dcb3f2bf5ec6aff2b84",
+    "roles": [
+      {
+        "function_id": "fn@475108..486184",
+        "slot": 0,
+        "role": "waveCollector1",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@428989..455298",
+        "slot": 1,
+        "role": "waveCollector2",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@455303..474918",
+        "slot": 2,
+        "role": "waveCollector3",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@419218..427819",
+        "slot": 3,
+        "role": "waveCollector4",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@396826..418643",
+        "slot": 4,
+        "role": "waveCollector5",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@388071..396234",
+        "slot": 5,
+        "role": "waveCollector6",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@379885..387798",
+        "slot": 6,
+        "role": "waveCollector7",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@338729..377109",
+        "slot": 7,
+        "role": "waveCollector8",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@323472..338506",
+        "slot": 8,
+        "role": "waveCollector9",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@301746..312270",
+        "slot": 9,
+        "role": "waveCollector10",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@312275..323467",
+        "slot": 10,
+        "role": "waveCollector11",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@285473..301710",
+        "slot": 11,
+        "role": "waveCollector12",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@255438..279597",
+        "slot": 12,
+        "role": "waveCollector13",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@241944..254568",
+        "slot": 13,
+        "role": "waveCollector14",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@200069..239813",
+        "slot": 14,
+        "role": "waveCollector15",
+        "prior_semantic_label": null,
+        "anonymous": false
+      }
+    ]
+  },
+  {
+    "key": "wave-position-heldout",
+    "input_sha256": "efd1f3221fb3166a1a1bd72872533a49169c6c65287b31b001697d143c76e31b",
+    "roles": [
+      {
+        "function_id": "fn@452745..456105",
+        "slot": 0,
+        "role": "waveCollector1",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@460096..472116",
+        "slot": 1,
+        "role": "waveCollector2",
+        "prior_semantic_label": null,
+        "anonymous": true
+      },
+      {
+        "function_id": "fn@472120..496684",
+        "slot": 2,
+        "role": "waveCollector3",
+        "prior_semantic_label": null,
+        "anonymous": true
+      },
+      {
+        "function_id": "fn@421816..450597",
+        "slot": 3,
+        "role": "waveCollector4",
+        "prior_semantic_label": "registerBrowserFingerprintProbes",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@413326..421402",
+        "slot": 4,
+        "role": "waveCollector5",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@401769..413291",
+        "slot": 5,
+        "role": "waveCollector6",
+        "prior_semantic_label": "collectBrowserEnvironmentSignals",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@385381..401571",
+        "slot": 6,
+        "role": "waveCollector7",
+        "prior_semantic_label": "collectLocationWebGLTamperSignals",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@371344..385258",
+        "slot": 7,
+        "role": "waveCollector8",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@355839..367510",
+        "slot": 8,
+        "role": "waveCollector9",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@248357..312536",
+        "slot": 9,
+        "role": "waveCollector10",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@312616..355756",
+        "slot": 10,
+        "role": "waveCollector11",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@237752..247185",
+        "slot": 11,
+        "role": "waveCollector12",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@231357..237439",
+        "slot": 12,
+        "role": "waveCollector13",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@216182..225599",
+        "slot": 13,
+        "role": "waveCollector14",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@211094..215910",
+        "slot": 14,
+        "role": "waveCollector15",
+        "prior_semantic_label": "timingAndEnvironmentCollector",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@192222..210446",
+        "slot": 15,
+        "role": "waveCollector16",
+        "prior_semantic_label": null,
+        "anonymous": false
+      }
+    ]
+  },
+  {
+    "key": "captured-query-baseline",
+    "input_sha256": "c5ac5478012b052c34dcc039b9ce0d3a31c7d8252e39abc1859efcc439fd0d98",
+    "roles": [
+      {
+        "function_id": "fn@414462..418840",
+        "slot": 0,
+        "role": "waveCollector1",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@423496..444226",
+        "slot": 1,
+        "role": "waveCollector2",
+        "prior_semantic_label": null,
+        "anonymous": true
+      },
+      {
+        "function_id": "fn@444230..457792",
+        "slot": 2,
+        "role": "waveCollector3",
+        "prior_semantic_label": null,
+        "anonymous": true
+      },
+      {
+        "function_id": "fn@398670..411274",
+        "slot": 3,
+        "role": "waveCollector4",
+        "prior_semantic_label": "emitEncodedEnvironmentSignal",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@349518..398549",
+        "slot": 4,
+        "role": "waveCollector5",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@336925..348925",
+        "slot": 5,
+        "role": "waveCollector6",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@312922..330533",
+        "slot": 6,
+        "role": "waveCollector7",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@272712..279590",
+        "slot": 7,
+        "role": "waveCollector8",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@279595..312889",
+        "slot": 8,
+        "role": "waveCollector9",
+        "prior_semantic_label": "registerBrowserFingerprintProbes",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@250966..261428",
+        "slot": 9,
+        "role": "waveCollector10",
+        "prior_semantic_label": "collectBrowserEnvironmentSignals",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@261433..271650",
+        "slot": 10,
+        "role": "waveCollector11",
+        "prior_semantic_label": "timingAndEnvironmentCollector",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@235665..250753",
+        "slot": 11,
+        "role": "waveCollector12",
+        "prior_semantic_label": "collectInputAndAutomationProbeSignals",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@226067..235599",
+        "slot": 12,
+        "role": "waveCollector13",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@165525..192934",
+        "slot": 13,
+        "role": "waveCollector14",
+        "prior_semantic_label": "collectLocationWebGLTamperSignals",
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@192956..205998",
+        "slot": 14,
+        "role": "waveCollector15",
+        "prior_semantic_label": null,
+        "anonymous": false
+      },
+      {
+        "function_id": "fn@206540..222534",
+        "slot": 15,
+        "role": "waveCollector16",
+        "prior_semantic_label": null,
+        "anonymous": false
+      }
+    ]
+  }
+]

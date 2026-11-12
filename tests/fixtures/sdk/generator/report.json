@@ -1,0 +1,320 @@
+{
+  "errors": [
+    {
+      "kind": "undefined"
+    },
+    {
+      "kind": "null"
+    },
+    {
+      "kind": "number",
+      "value": "0000000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "8000000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "7ff8000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "7ff0000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "fff0000000000000"
+    },
+    {
+      "kind": "bool",
+      "value": true
+    },
+    {
+      "kind": "string",
+      "value": "quoted [{\"\\😀\u0000"
+    },
+    {
+      "kind": "binary",
+      "value": [
+        0,
+        128,
+        255
+      ]
+    },
+    {
+      "kind": "date",
+      "value": 123456789
+    },
+    {
+      "kind": "object",
+      "value": [
+        [
+          "b",
+          {
+            "kind": "number",
+            "value": "4000000000000000"
+          }
+        ],
+        [
+          "a",
+          {
+            "kind": "string",
+            "value": "hello"
+          }
+        ]
+      ]
+    }
+  ],
+  "positionalSignals": [
+    null,
+    [
+      [
+        {
+          "kind": "undefined"
+        },
+        {
+          "kind": "null"
+        },
+        {
+          "kind": "number",
+          "value": "0000000000000000"
+        },
+        {
+          "kind": "number",
+          "value": "8000000000000000"
+        },
+        {
+          "kind": "number",
+          "value": "7ff8000000000000"
+        },
+        {
+          "kind": "number",
+          "value": "7ff0000000000000"
+        },
+        {
+          "kind": "number",
+          "value": "fff0000000000000"
+        },
+        {
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "kind": "string",
+          "value": "quoted [{\"\\😀\u0000"
+        },
+        {
+          "kind": "binary",
+          "value": [
+            0,
+            128,
+            255
+          ]
+        },
+        {
+          "kind": "date",
+          "value": 123456789
+        },
+        {
+          "kind": "object",
+          "value": [
+            [
+              "b",
+              {
+                "kind": "number",
+                "value": "4000000000000000"
+              }
+            ],
+            [
+              "a",
+              {
+                "kind": "string",
+                "value": "hello"
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        0,
+        128,
+        255,
+        17
+      ]
+    ],
+    [
+      [],
+      [
+        3
+      ]
+    ]
+  ],
+  "signals": [
+    {
+      "kind": "undefined"
+    },
+    {
+      "kind": "null"
+    },
+    {
+      "kind": "number",
+      "value": "0000000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "8000000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "7ff8000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "7ff0000000000000"
+    },
+    {
+      "kind": "number",
+      "value": "fff0000000000000"
+    },
+    {
+      "kind": "bool",
+      "value": true
+    },
+    {
+      "kind": "string",
+      "value": "quoted [{\"\\😀\u0000"
+    },
+    {
+      "kind": "binary",
+      "value": [
+        0,
+        128,
+        255
+      ]
+    },
+    {
+      "kind": "date",
+      "value": 123456789
+    },
+    {
+      "kind": "object",
+      "value": [
+        [
+          "b",
+          {
+            "kind": "number",
+            "value": "4000000000000000"
+          }
+        ],
+        [
+          "a",
+          {
+            "kind": "string",
+            "value": "hello"
+          }
+        ]
+      ]
+    }
+  ],
+  "keyedSignals": [
+    [
+      128,
+      null
+    ],
+    [
+      7,
+      [
+        [
+          {
+            "kind": "undefined"
+          },
+          {
+            "kind": "null"
+          },
+          {
+            "kind": "number",
+            "value": "0000000000000000"
+          },
+          {
+            "kind": "number",
+            "value": "8000000000000000"
+          },
+          {
+            "kind": "number",
+            "value": "7ff8000000000000"
+          },
+          {
+            "kind": "number",
+            "value": "7ff0000000000000"
+          },
+          {
+            "kind": "number",
+            "value": "fff0000000000000"
+          },
+          {
+            "kind": "bool",
+            "value": true
+          },
+          {
+            "kind": "string",
+            "value": "quoted [{\"\\😀\u0000"
+          },
+          {
+            "kind": "binary",
+            "value": [
+              0,
+              128,
+              255
+            ]
+          },
+          {
+            "kind": "date",
+            "value": 123456789
+          },
+          {
+            "kind": "object",
+            "value": [
+              [
+                "b",
+                {
+                  "kind": "number",
+                  "value": "4000000000000000"
+                }
+              ],
+              [
+                "a",
+                {
+                  "kind": "string",
+                  "value": "hello"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          255,
+          0
+        ]
+      ]
+    ],
+    [
+      7,
+      [
+        [],
+        [
+          128
+        ]
+      ]
+    ],
+    [
+      0,
+      null
+    ]
+  ],
+  "seeds": [
+    1200151530,
+    1200151531
+  ],
+  "keysets": []
+}

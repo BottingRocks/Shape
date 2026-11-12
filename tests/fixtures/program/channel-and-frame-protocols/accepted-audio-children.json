@@ -1,0 +1,350 @@
+[
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 248815,
+        "start": 248085
+      },
+      "identifier": {
+        "end": 248110,
+        "start": 248094
+      },
+      "name": "$THREAD_3_160307",
+      "owned_by_main": false,
+      "symbol": 2233
+    },
+    "confidence": "medium",
+    "evaluator": "encoding_audio_result_emitter",
+    "evidence": [
+      {
+        "end": 248164,
+        "start": 248143
+      },
+      {
+        "end": 248204,
+        "start": 248191
+      },
+      {
+        "end": 248363,
+        "start": 248327
+      },
+      {
+        "end": 248363,
+        "start": 248336
+      },
+      {
+        "end": 248404,
+        "start": 248377
+      },
+      {
+        "end": 248404,
+        "start": 248386
+      },
+      {
+        "end": 248494,
+        "start": 248465
+      },
+      {
+        "end": 248634,
+        "start": 248589
+      },
+      {
+        "end": 248634,
+        "start": 248595
+      },
+      {
+        "end": 248666,
+        "start": 248649
+      },
+      {
+        "end": 248666,
+        "start": 248655
+      },
+      {
+        "end": 248732,
+        "start": 248694
+      },
+      {
+        "end": 248769,
+        "start": 248746
+      },
+      {
+        "end": 248801,
+        "start": 248783
+      }
+    ],
+    "explanation": [
+      "whole channel-zero/Array.from result emission in exact order length, reverse channel samples, scalar[0]; fresh big-endian random header and source-proven numeric writer/live seed factory; descending for-loop decrements before the guard and retains its explicit Number(index) store; exact cursor chaining, then next([[],bytes]) and complete on the same initialized capture; native AudioBuffer identity and external purpose explicitly unproved"
+    ],
+    "function_id": "fn@248085..248815",
+    "pc": 160307,
+    "proposed_name": "emitSeededChannelResult",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "emitSeededChannelResult",
+    "shorthand_edits": 0,
+    "thread_id": 3
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 257833,
+        "start": 257120
+      },
+      "identifier": {
+        "end": 257145,
+        "start": 257129
+      },
+      "name": "$THREAD_3_160307",
+      "owned_by_main": false,
+      "symbol": 2287
+    },
+    "confidence": "medium",
+    "evaluator": "encoding_audio_result_emitter",
+    "evidence": [
+      {
+        "end": 257198,
+        "start": 257177
+      },
+      {
+        "end": 257237,
+        "start": 257224
+      },
+      {
+        "end": 257394,
+        "start": 257358
+      },
+      {
+        "end": 257394,
+        "start": 257367
+      },
+      {
+        "end": 257434,
+        "start": 257407
+      },
+      {
+        "end": 257434,
+        "start": 257416
+      },
+      {
+        "end": 257522,
+        "start": 257493
+      },
+      {
+        "end": 257658,
+        "start": 257613
+      },
+      {
+        "end": 257658,
+        "start": 257619
+      },
+      {
+        "end": 257689,
+        "start": 257672
+      },
+      {
+        "end": 257689,
+        "start": 257678
+      },
+      {
+        "end": 257753,
+        "start": 257715
+      },
+      {
+        "end": 257789,
+        "start": 257766
+      },
+      {
+        "end": 257820,
+        "start": 257802
+      }
+    ],
+    "explanation": [
+      "whole channel-zero/Array.from result emission in exact order length, reverse channel samples, scalar[0]; fresh big-endian random header and source-proven numeric writer/live seed factory; descending for-loop decrements before the guard and retains its explicit Number(index) store; exact cursor chaining, then next([[],bytes]) and complete on the same initialized capture; native AudioBuffer identity and external purpose explicitly unproved"
+    ],
+    "function_id": "fn@257120..257833",
+    "pc": 160307,
+    "proposed_name": "emitSeededChannelResult",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "emitSeededChannelResult",
+    "shorthand_edits": 0,
+    "thread_id": 3
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 266830,
+        "start": 266134
+      },
+      "identifier": {
+        "end": 266159,
+        "start": 266143
+      },
+      "name": "$THREAD_3_160307",
+      "owned_by_main": false,
+      "symbol": 2341
+    },
+    "confidence": "medium",
+    "evaluator": "encoding_audio_result_emitter",
+    "evidence": [
+      {
+        "end": 266211,
+        "start": 266190
+      },
+      {
+        "end": 266249,
+        "start": 266236
+      },
+      {
+        "end": 266404,
+        "start": 266368
+      },
+      {
+        "end": 266404,
+        "start": 266377
+      },
+      {
+        "end": 266443,
+        "start": 266416
+      },
+      {
+        "end": 266443,
+        "start": 266425
+      },
+      {
+        "end": 266529,
+        "start": 266500
+      },
+      {
+        "end": 266661,
+        "start": 266616
+      },
+      {
+        "end": 266661,
+        "start": 266622
+      },
+      {
+        "end": 266691,
+        "start": 266674
+      },
+      {
+        "end": 266691,
+        "start": 266680
+      },
+      {
+        "end": 266753,
+        "start": 266715
+      },
+      {
+        "end": 266788,
+        "start": 266765
+      },
+      {
+        "end": 266818,
+        "start": 266800
+      }
+    ],
+    "explanation": [
+      "whole channel-zero/Array.from result emission in exact order length, reverse channel samples, scalar[0]; fresh big-endian random header and source-proven numeric writer/live seed factory; descending for-loop decrements before the guard and retains its explicit Number(index) store; exact cursor chaining, then next([[],bytes]) and complete on the same initialized capture; native AudioBuffer identity and external purpose explicitly unproved"
+    ],
+    "function_id": "fn@266134..266830",
+    "pc": 160307,
+    "proposed_name": "emitSeededChannelResult",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "emitSeededChannelResult",
+    "shorthand_edits": 0,
+    "thread_id": 3
+  },
+  {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 275430,
+        "start": 274734
+      },
+      "identifier": {
+        "end": 274759,
+        "start": 274743
+      },
+      "name": "$THREAD_3_160307",
+      "owned_by_main": false,
+      "symbol": 2394
+    },
+    "confidence": "medium",
+    "evaluator": "encoding_audio_result_emitter",
+    "evidence": [
+      {
+        "end": 274811,
+        "start": 274790
+      },
+      {
+        "end": 274849,
+        "start": 274836
+      },
+      {
+        "end": 275004,
+        "start": 274968
+      },
+      {
+        "end": 275004,
+        "start": 274977
+      },
+      {
+        "end": 275043,
+        "start": 275016
+      },
+      {
+        "end": 275043,
+        "start": 275025
+      },
+      {
+        "end": 275129,
+        "start": 275100
+      },
+      {
+        "end": 275261,
+        "start": 275216
+      },
+      {
+        "end": 275261,
+        "start": 275222
+      },
+      {
+        "end": 275291,
+        "start": 275274
+      },
+      {
+        "end": 275291,
+        "start": 275280
+      },
+      {
+        "end": 275353,
+        "start": 275315
+      },
+      {
+        "end": 275388,
+        "start": 275365
+      },
+      {
+        "end": 275418,
+        "start": 275400
+      }
+    ],
+    "explanation": [
+      "whole channel-zero/Array.from result emission in exact order length, reverse channel samples, scalar[0]; fresh big-endian random header and source-proven numeric writer/live seed factory; descending for-loop decrements before the guard and retains its explicit Number(index) store; exact cursor chaining, then next([[],bytes]) and complete on the same initialized capture; native AudioBuffer identity and external purpose explicitly unproved"
+    ],
+    "function_id": "fn@274734..275430",
+    "pc": 160307,
+    "proposed_name": "emitSeededChannelResult",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "emitSeededChannelResult",
+    "shorthand_edits": 0,
+    "thread_id": 3
+  }
+]

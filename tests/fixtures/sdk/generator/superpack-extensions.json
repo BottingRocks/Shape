@@ -1,0 +1,10 @@
+{
+  "value": {
+    "kind": "array",
+    "value": [
+      {"kind": "missing_sentinel"},
+      {"kind": "extension", "value": {"id": 3735928559, "payload": {"kind": "null"}}}
+    ]
+  },
+  "options": {"depth_bound": 100, "missing_sentinel_extension": true}
+}

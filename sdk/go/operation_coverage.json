@@ -1,0 +1,337 @@
+{
+  "version": {
+    "public_path": "NativeVersion",
+    "flat_function": "NativeVersion",
+    "signature": "NativeVersion() (VersionInfo, error)"
+  },
+  "deob": {
+    "public_path": "Deob",
+    "flat_function": "Deob",
+    "signature": "Deob(source string, opts DeobOptions) (*DeobResult, error)"
+  },
+  "report": {
+    "public_path": "Report",
+    "flat_function": "Report",
+    "signature": "Report(source string, opts ReportOptions) (json.RawMessage, error)"
+  },
+  "kernel.show": {
+    "flat_function": "KernelShow",
+    "public_path": "Kernel.Show",
+    "signature": "Show(source string, opts KernelShowOptions) (json.RawMessage, error)"
+  },
+  "ops.list": {
+    "flat_function": "OpsList",
+    "public_path": "Ops.List",
+    "signature": "List(source string) (json.RawMessage, error)"
+  },
+  "ops.show": {
+    "flat_function": "OpsShow",
+    "public_path": "Ops.Show",
+    "signature": "Show(source string, op uint32) (json.RawMessage, error)"
+  },
+  "trace.program": {
+    "flat_function": "TraceProgramWithOptions",
+    "public_path": "Trace.Program",
+    "signature": "Program(source string, options ProgramOptions) (*Program, error)"
+  },
+  "trace.thread": {
+    "flat_function": "TraceThread",
+    "public_path": "Trace.Thread",
+    "signature": "Thread(req TraceThreadRequest) (*Thread, error)"
+  },
+  "cleanup.thread": {
+    "flat_function": "CleanupThread",
+    "public_path": "CleanupOperations.Thread",
+    "signature": "Thread(source string) (*Cleanup, error)"
+  },
+  "naming.threads": {
+    "flat_function": "NamingThreads",
+    "public_path": "Naming.Threads",
+    "signature": "Threads(source string, opts NamingThreadsOptions) (*Named, error)"
+  },
+  "naming.collectors": {
+    "flat_function": "NamingCollectors",
+    "public_path": "Naming.Collectors",
+    "signature": "Collectors(source string, opts NamingCollectorsOptions) (*Named, error)"
+  },
+  "naming.plan": {
+    "flat_function": "NamingPlan",
+    "public_path": "Naming.Plan",
+    "signature": "Plan(source string) (json.RawMessage, error)"
+  },
+  "naming.inventory": {
+    "flat_function": "NamingInventory",
+    "public_path": "Naming.Inventory",
+    "signature": "Inventory(source string) (*Inventory, error)"
+  },
+  "signals.schema": {
+    "flat_function": "SignalsSchema",
+    "public_path": "Signals.Schema",
+    "signature": "Schema(source string, opts SignalsSchemaOptions) (json.RawMessage, error)"
+  },
+  "signals.show": {
+    "flat_function": "SignalsShow",
+    "public_path": "Signals.Show",
+    "signature": "Show(source string) (json.RawMessage, error)"
+  },
+  "signals.inputs": {
+    "flat_function": "SignalsInputs",
+    "public_path": "Signals.Inputs",
+    "signature": "Inputs(source string) (json.RawMessage, error)"
+  },
+  "signals.contracts": {
+    "flat_function": "SignalsContracts",
+    "public_path": "Signals.Contracts",
+    "signature": "Contracts(source string) (json.RawMessage, error)"
+  },
+  "pin": {
+    "public_path": "Pin",
+    "flat_function": "Pin",
+    "signature": "Pin(source string, opts PinOptions) (json.RawMessage, error)"
+  },
+  "session.from_initializer": {
+    "flat_function": "SessionFromInitializer",
+    "public_path": "Session.FromInitializer",
+    "signature": "FromInitializer(init string) (json.RawMessage, error)"
+  },
+  "artifact.compile": {
+    "flat_function": "CompileLoadedArtifact",
+    "public_path": "Artifact.Compile",
+    "signature": "Compile(source string, options ArtifactOptions) (*LoadedArtifact, error)"
+  },
+  "artifact.compact_schema": {
+    "flat_function": "CompactSchema",
+    "public_path": "Artifact.CompactSchema",
+    "signature": "CompactSchema(artifact json.RawMessage) (json.RawMessage, error)"
+  },
+  "signals.catalog": {
+    "flat_function": "SignalsCatalog",
+    "public_path": "Signals.Catalog",
+    "signature": "Catalog() (json.RawMessage, error)"
+  },
+  "signals.describe": {
+    "flat_function": "SignalsDescribe",
+    "public_path": "Signals.Describe",
+    "signature": "Describe(name string) (json.RawMessage, error)"
+  },
+  "signals.compact_schema": {
+    "flat_function": "SignalsCompactSchema",
+    "public_path": "Signals.CompactSchema",
+    "signature": "CompactSchema(source string, options SourceSchemaOptions) (json.RawMessage, error)"
+  },
+  "kernel.load": {
+    "flat_function": "LoadKernel",
+    "public_path": "Kernel.Load",
+    "signature": "Load(document []byte) (*LoadedKernel, error)"
+  },
+  "kernel.to_json": {
+    "flat_function": "KernelJSON",
+    "public_path": "Kernel.ToJSON",
+    "signature": "ToJSON(artifact json.RawMessage) (string, error)"
+  },
+  "ops.classify.source": {
+    "flat_function": "OpsClassifySource",
+    "public_path": "Ops.Classify.Source",
+    "signature": "Source(source string) (*Classification, error)"
+  },
+  "ops.classify.report": {
+    "flat_function": "OpsClassifyReport",
+    "public_path": "Ops.Classify.Report",
+    "signature": "Report(source string) (*Classification, error)"
+  },
+  "ops.classify.template": {
+    "flat_function": "OpsClassifyTemplate",
+    "public_path": "Ops.Classify.Template",
+    "signature": "Template(source string, handlerIndex uint32) (*ClassifiedOp, error)"
+  },
+  "ops.classify.seeds": {
+    "flat_function": "OpsClassifySeeds",
+    "public_path": "Ops.Classify.Seeds",
+    "signature": "Seeds(seeds []Classification) ([]KindSummary, error)"
+  },
+  "trace.corpus.load": {
+    "flat_function": "TraceCorpusLoad",
+    "public_path": "Trace.Corpus.Load",
+    "signature": "Load(source string, options CorpusSourceOptions) (json.RawMessage, error)"
+  },
+  "trace.corpus.source": {
+    "flat_function": "TraceCorpusSource",
+    "public_path": "Trace.Corpus.Source",
+    "signature": "Source(source string, options CorpusSourceOptions) ([]Fingerprint, error)"
+  },
+  "trace.corpus.reachable": {
+    "flat_function": "TraceCorpusReachable",
+    "public_path": "Trace.Corpus.Reachable",
+    "signature": "Reachable(artifact json.RawMessage, options ReachableOptions) ([]Fingerprint, error)"
+  },
+  "trace.corpus.walk_seed": {
+    "flat_function": "TraceCorpusWalkSeed",
+    "public_path": "Trace.Corpus.WalkSeed",
+    "signature": "WalkSeed(seed string, options CorpusWalkOptions) (json.RawMessage, error)"
+  },
+  "trace.corpus.fingerprint": {
+    "flat_function": "TraceCorpusFingerprint",
+    "public_path": "Trace.Corpus.Fingerprint",
+    "signature": "Fingerprint(artifact json.RawMessage, options FingerprintOptions) (*ThreadFingerprint, error)"
+  },
+  "trace.corpus.compare": {
+    "flat_function": "TraceCorpusCompare",
+    "public_path": "Trace.Corpus.Compare",
+    "signature": "Compare(baseline, current json.RawMessage) (*CorpusComparison, error)"
+  },
+  "trace.corpus.compare_inline": {
+    "flat_function": "TraceCorpusCompareInline",
+    "public_path": "Trace.Corpus.CompareInline",
+    "signature": "CompareInline(outlined, inline json.RawMessage) ([]string, error)"
+  },
+  "naming.corpus.analyze": {
+    "flat_function": "NamingCorpusAnalyze",
+    "public_path": "Naming.Corpus.Analyze",
+    "signature": "Analyze(sources []NamedSource) ([]NamingAnalysis, error)"
+  },
+  "naming.corpus.compare": {
+    "flat_function": "NamingCorpusCompare",
+    "public_path": "Naming.Corpus.Compare",
+    "signature": "Compare(baseline, current []NamedSource) ([]NamingDifference, error)"
+  },
+  "seeds.parse": {
+    "flat_function": "SeedsParse",
+    "public_path": "Seeds.Parse",
+    "signature": "Parse(bytes []byte) (*SeedScript, error)"
+  },
+  "seeds.parse_launcher": {
+    "flat_function": "SeedsParseLauncher",
+    "public_path": "Seeds.ParseLauncher",
+    "signature": "ParseLauncher(bytes []byte) (*Launcher, error)"
+  },
+  "seeds.parse_kernel": {
+    "flat_function": "SeedsParseKernel",
+    "public_path": "Seeds.ParseKernel",
+    "signature": "ParseKernel(bytes []byte) (*KernelSummary, error)"
+  },
+  "seeds.parse_url": {
+    "flat_function": "SeedsParseURL",
+    "public_path": "Seeds.ParseURL",
+    "signature": "ParseURL(input string) (string, error)"
+  },
+  "seeds.resolve_url": {
+    "flat_function": "SeedsResolveURL",
+    "public_path": "Seeds.ResolveURL",
+    "signature": "ResolveURL(reference, base string) (string, error)"
+  },
+  "seeds.token": {
+    "flat_function": "SeedsToken",
+    "public_path": "Seeds.Token",
+    "signature": "Token(reference, param string) (string, error)"
+  },
+  "seeds.sites": {
+    "flat_function": "SeedsSites",
+    "public_path": "Seeds.Sites",
+    "signature": "Sites() ([]Site, error)"
+  },
+  "seeds.site": {
+    "flat_function": "SeedsSite",
+    "public_path": "Seeds.Site",
+    "signature": "Site(name string) (*Site, error)"
+  },
+  "seeds.fetch": {
+    "flat_function": "SeedsFetch",
+    "public_path": "Seeds.Fetch",
+    "signature": "Fetch(url string, options FetchOptions) (*FetchedSeed, error)"
+  },
+  "seeds.fetch_direct": {
+    "flat_function": "SeedsFetchDirect",
+    "public_path": "Seeds.FetchDirect",
+    "signature": "FetchDirect(url string, options FetchOptions) (*FetchedSeed, error)"
+  },
+  "seeds.client": {
+    "flat_function": "SeedsClient",
+    "public_path": "Seeds.Client",
+    "signature": "Client(config ClientConfig) (*ClientConfig, error)"
+  },
+  "seeds.import": {
+    "flat_function": "SeedsImport",
+    "public_path": "Seeds.Import",
+    "signature": "Import(directory, seed string, launcher, kernel []byte) (*StoreOutcome, error)"
+  },
+  "headers.codec": {
+    "flat_function": "HeadersCodec",
+    "public_path": "HeaderOperations.Codec",
+    "signature": "Codec(profile HeaderProfile) (*HeaderProfile, error)"
+  },
+  "headers.parse": {
+    "flat_function": "HeadersParse",
+    "public_path": "HeaderOperations.Parse",
+    "signature": "Parse(text string) (Headers, error)"
+  },
+  "headers.encode": {
+    "flat_function": "HeadersEncode",
+    "public_path": "HeaderOperations.Encode",
+    "signature": "Encode(profile HeaderProfile, report FramedReport) (Headers, error)"
+  },
+  "headers.decode": {
+    "flat_function": "HeadersDecode",
+    "public_path": "HeaderOperations.Decode",
+    "signature": "Decode(profile HeaderProfile, headers Headers, geometry ReportGeometry) (*FramedReport, error)"
+  },
+  "headers.encode_bytes": {
+    "flat_function": "HeadersEncodeBytes",
+    "public_path": "HeaderOperations.EncodeBytes",
+    "signature": "EncodeBytes(profile HeaderProfile, payload Payload) (Headers, error)"
+  },
+  "headers.decode_bytes": {
+    "flat_function": "HeadersDecodeBytes",
+    "public_path": "HeaderOperations.DecodeBytes",
+    "signature": "DecodeBytes(profile HeaderProfile, headers Headers) (*Payload, error)"
+  },
+  "headers.encode_finalized": {
+    "flat_function": "HeadersEncodeFinalized",
+    "public_path": "HeaderOperations.EncodeFinalized",
+    "signature": "EncodeFinalized(profile HeaderProfile, text string, context *HeaderContext) (Headers, error)"
+  },
+  "headers.decode_finalized": {
+    "flat_function": "HeadersDecodeFinalized",
+    "public_path": "HeaderOperations.DecodeFinalized",
+    "signature": "DecodeFinalized(profile HeaderProfile, headers Headers) (*FinalizedHeaders, error)"
+  },
+  "payload.codec": {
+    "flat_function": "PayloadCodec",
+    "public_path": "PayloadOperations.Codec",
+    "signature": "Codec(profile PayloadProfile) (*PayloadProfile, error)"
+  },
+  "payload.encode": {
+    "flat_function": "PayloadEncode",
+    "public_path": "PayloadOperations.Encode",
+    "signature": "Encode(profile PayloadProfile, report FramedReport) (string, error)"
+  },
+  "payload.decode": {
+    "flat_function": "PayloadDecode",
+    "public_path": "PayloadOperations.Decode",
+    "signature": "Decode(profile PayloadProfile, text string, geometry ReportGeometry) (*FramedReport, error)"
+  },
+  "payload.encode_bytes": {
+    "flat_function": "PayloadEncodeBytes",
+    "public_path": "PayloadOperations.EncodeBytes",
+    "signature": "EncodeBytes(profile PayloadProfile, bytes []byte, seeds [2]uint32) (string, error)"
+  },
+  "payload.decode_bytes": {
+    "flat_function": "PayloadDecodeBytes",
+    "public_path": "PayloadOperations.DecodeBytes",
+    "signature": "DecodeBytes(profile PayloadProfile, text string) (*Payload, error)"
+  },
+  "pack": {
+    "public_path": "Pack",
+    "flat_function": "Pack",
+    "signature": "Pack(value PackValue, options SerializerOptions) ([]byte, error)"
+  },
+  "unpack": {
+    "public_path": "Unpack",
+    "flat_function": "Unpack",
+    "signature": "Unpack(data []byte, options SerializerOptions) (*PackDecoded, error)"
+  },
+  "unpack_canonical": {
+    "public_path": "UnpackCanonical",
+    "flat_function": "UnpackCanonical",
+    "signature": "UnpackCanonical(data []byte, options SerializerOptions) (*PackValue, error)"
+  }
+}

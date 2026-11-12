@@ -1,0 +1,8 @@
+{
+  "positive": "tests/fixtures/program/encoder/guarded.js",
+  "positive_sha256": "ae2a65b0481532d1b853bce3da3a68befaf6ce5b3a7b5be8a202641062ffa2b6",
+  "negative_sha256": "1629456126d67a2e2fa756c44c4866fbba530136b0405cbbbaa473398e021379",
+  "mutation": "Replace only the owned consumer STR_ length-writer callee; encodeValue unsigned writer remains unchanged.",
+  "status": "UNEXECUTED for revision004; requires parse + valid Model before refusal assertion",
+  "new_unique_seed": false
+}

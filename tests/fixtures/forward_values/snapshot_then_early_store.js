@@ -1,0 +1,134 @@
+let $KEY_1 = $SHAPE_OUTSIDE();
+let $KEY_4 = $SHAPE_OUTSIDE();
+let $KEY_5 = $SHAPE_OUTSIDE();
+let $KEY_7 = $SHAPE_OUTSIDE();
+let $KEY_16 = $SHAPE_OUTSIDE();
+let $KEY_17 = $SHAPE_OUTSIDE();
+let $KEY_19 = $SHAPE_OUTSIDE();
+let $KEY_20 = $SHAPE_OUTSIDE();
+let $KEY_21 = $SHAPE_OUTSIDE();
+let $KEY_109 = $SHAPE_OUTSIDE();
+let $KEY_399 = $SHAPE_OUTSIDE();
+function $THREAD_SELF() {
+	let $KEY_10;
+	$KEY_10 = 0;
+	function $THREAD_9_21092() {}
+	let $SSA_8_80068_d438_35 = Object;
+	let $SSA_8_80068_d438_36 = Object["defineProperty"];
+	var $KEY_18 = $THREAD_9_21092;
+	let $OBJECT_8_80068_d438_44 = { ["get"]: void 0 };
+	function $THREAD_0_35789() {
+		$KEY_10 = $SHAPE_OUTSIDE($KEY_10);
+	}
+	$OBJECT_8_80068_d438_44["get"] = $THREAD_0_35789;
+	$SSA_8_80068_d438_36.call($SSA_8_80068_d438_35, $THREAD_9_21092, "toString", $OBJECT_8_80068_d438_44);
+	$KEY_20 = Number(new $KEY_1()) - $KEY_7;
+	$KEY_6 = Math["random"]() * 4294967296 | 0;
+	$KEY_0 = Math["random"]() * 4294967296 | 0;
+	let $CARRY_8_80068_d438_145 = false;
+	let $CARRY_8_80068_d438_229;
+	try {
+		let $SSA_x10 = Function["prototype"]["toString"];
+		let $SSA_x9 = $SSA_x10;
+		let $SSA_x8 = $SSA_x10["call"];
+		$CARRY_8_80068_d438_145 = "" + $THREAD_9_21092 === $SSA_x8.call($SSA_x9, $THREAD_9_21092);
+		$CARRY_8_80068_d438_229 = false;
+	} catch (e) {
+		$CARRY_8_80068_d438_229 = true;
+	}
+	let $SSA_x1 = Math["random"]() * 4294967296;
+	let $SSA_8_80068_d438_243 = [];
+	let $SSA_8_80068_d438_244 = $SSA_x1 | 0;
+	var $KEY_6;
+	let $SSA_8_80068_d438_256 = [
+		$KEY_6 >>> 24,
+		255 & $KEY_6 >> 16,
+		$KEY_6 >> 8 & 255,
+		255 & $KEY_6
+	];
+	var $KEY_0;
+	let $SSA_8_80068_d438_255 = [
+		$KEY_0 >>> 24,
+		$KEY_0 >> 16 & 255,
+		255 & $KEY_0 >> 8,
+		$KEY_0 & 255
+	];
+	$KEY_8 = $KEY_399($KEY_6 ^ 1851333560);
+	let $SSA_8_80068_d438_427 = [];
+	var $KEY_14 = $SSA_8_80068_d438_244;
+	let $SSA_8_80068_d438_428 = [$SSA_8_80068_d438_244 >>> 24];
+	$SSA_8_80068_d438_244;
+	$SSA_8_80068_d438_428[1] = $SSA_8_80068_d438_244 >> 16 & 255;
+	$SSA_8_80068_d438_244;
+	$SSA_8_80068_d438_428[2] = $SSA_8_80068_d438_244 >> 8 & 255;
+	$SSA_8_80068_d438_244;
+	$SSA_8_80068_d438_428[3] = $SSA_8_80068_d438_244 & 255;
+	let $SSA_8_80068_d438_461 = $KEY_109;
+	var $KEY_8;
+	let $SSA_x3 = Object;
+	let $SSA_x2 = Object["getOwnPropertyNames"];
+	var $KEY_13 = $SSA_8_80068_d438_256;
+	var $KEY_15 = 3;
+	$SSA_8_80068_d438_461($KEY_8, $SSA_x2.call($SSA_x3, $KEY_5)["length"], $SSA_8_80068_d438_256, 3);
+	let $SSA_x4 = $KEY_17;
+	let $SSA_8_80068_d438_541 = $SSA_x4;
+	let $SSA_8_80068_d438_542 = $SSA_x4["next"];
+	var $KEY_11 = $SSA_8_80068_d438_243;
+	let $SSA_8_80068_d438_543 = [$SSA_8_80068_d438_243];
+	$SSA_8_80068_d438_256;
+	$SSA_8_80068_d438_543[1] = $SSA_8_80068_d438_256;
+	$SSA_8_80068_d438_542.call($SSA_8_80068_d438_541, $SSA_8_80068_d438_543);
+	$SSA_8_80068_d438_244;
+	let $SSA_8_80068_d438_581 = $KEY_399($SSA_8_80068_d438_244 ^ 220244791);
+	var $KEY_12 = $CARRY_8_80068_d438_145;
+	let $SSA_x5 = $KEY_12;
+	let $SSA_8_80068_d438_589 = [];
+	let $SSA_8_80068_d438_590 = $SSA_x5 | 0;
+	let $SSA_8_80068_d438_612 = $KEY_399(942696328 ^ $KEY_0);
+	var $KEY_2 = $SSA_8_80068_d438_428;
+	let $SSA_8_80068_d438_638 = $KEY_109($SSA_8_80068_d438_581, $KEY_10, $SSA_8_80068_d438_428, 3);
+	$SSA_8_80068_d438_590;
+	let $SSA_8_80068_d438_662 = $SSA_8_80068_d438_590 | $CARRY_8_80068_d438_229 << 1;
+	$SSA_8_80068_d438_428;
+	var $KEY_22 = $SSA_8_80068_d438_428;
+	$SSA_8_80068_d438_428[$SSA_8_80068_d438_638 + 1] = $SSA_8_80068_d438_662 ^ $SSA_8_80068_d438_581();
+	var $KEY_3 = $SSA_8_80068_d438_255;
+	var $KEY_9 = 3;
+	let $SSA_8_80068_d438_730 = $KEY_109($SSA_8_80068_d438_612, $KEY_4, $SSA_8_80068_d438_255, 3);
+	let $SSA_8_80068_d438_761 = $KEY_109($SSA_8_80068_d438_612, $KEY_20, $SSA_8_80068_d438_255, $SSA_8_80068_d438_730);
+	let $SSA_x6 = $KEY_21;
+	let $SSA_8_80068_d438_773 = $SSA_x6;
+	let $SSA_8_80068_d438_774 = $SSA_x6["next"];
+	$SSA_8_80068_d438_427;
+	let $SSA_8_80068_d438_775 = [$SSA_8_80068_d438_427];
+	$SSA_8_80068_d438_428;
+	$SSA_8_80068_d438_775[1] = $SSA_8_80068_d438_428;
+	$SSA_8_80068_d438_774.call($SSA_8_80068_d438_773, $SSA_8_80068_d438_775);
+	$KEY_17["complete"]();
+	$SSA_8_80068_d438_255;
+	let $SSA_8_80068_d438_829 = $KEY_109($SSA_8_80068_d438_612, $KEY_16, $SSA_8_80068_d438_255, $SSA_8_80068_d438_761);
+	$KEY_109($SSA_8_80068_d438_612, $KEY_7, $SSA_8_80068_d438_255, $SSA_8_80068_d438_829);
+	let $SSA_x7 = $KEY_19;
+	let $SSA_8_80068_d438_858 = $SSA_x7;
+	let $SSA_8_80068_d438_859 = $SSA_x7["next"];
+	$KEY_12 = $SSA_8_80068_d438_589;
+	let $SSA_8_80068_d438_860 = [$SSA_8_80068_d438_589];
+	$SSA_8_80068_d438_255;
+	$SSA_8_80068_d438_860[1] = $SSA_8_80068_d438_255;
+	$SSA_8_80068_d438_859.call($SSA_8_80068_d438_858, $SSA_8_80068_d438_860);
+	return void 0;
+}
+function $SHAPE_OUTSIDE() {
+	$KEY_1 = $SHAPE_OUTSIDE($KEY_1);
+	$KEY_4 = $SHAPE_OUTSIDE($KEY_4);
+	$KEY_5 = $SHAPE_OUTSIDE($KEY_5);
+	$KEY_7 = $SHAPE_OUTSIDE($KEY_7);
+	$KEY_16 = $SHAPE_OUTSIDE($KEY_16);
+	$KEY_17 = $SHAPE_OUTSIDE($KEY_17);
+	$KEY_19 = $SHAPE_OUTSIDE($KEY_19);
+	$KEY_20 = $SHAPE_OUTSIDE($KEY_20);
+	$KEY_21 = $SHAPE_OUTSIDE($KEY_21);
+	$KEY_109 = $SHAPE_OUTSIDE($KEY_109);
+	$KEY_399 = $SHAPE_OUTSIDE($KEY_399);
+}
+$SHAPE_OUTSIDE($THREAD_SELF);

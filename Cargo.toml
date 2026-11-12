@@ -1,0 +1,76 @@
+[workspace]
+# The engine (this package, also the Rust SDK) and the SDK bindings share one
+# lock file and one target directory.
+members = [".", "sdk/c"]
+
+[package]
+name = "shape"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.92"
+description = "CLI and Rust SDK for deobfuscating and tracing Shape VM code and decoding, inspecting, and encoding captured request headers"
+readme = "README.md"
+repository = "https://github.com/pinyugi/shapesecurity-ai"
+license = "GPL-3.0-only"
+publish = false
+autobins = false
+autoexamples = false
+
+[lib]
+name = "shape"
+path = "src/lib.rs"
+
+[[bin]]
+name = "shape"
+path = "shape.rs"
+
+[dependencies]
+clap = { version = "4.6", features = ["derive"] }
+oxc_allocator = "=0.120.0"
+oxc_ast = "=0.120.0"
+oxc_ast_visit = "=0.120.0"
+oxc_codegen = { version = "=0.120.0", default-features = false }
+oxc_ecmascript = "=0.120.0"
+oxc_parser = "=0.120.0"
+oxc_semantic = "=0.120.0"
+oxc_span = "=0.120.0"
+oxc_syntax = { version = "=0.120.0", features = ["to_js_string"] }
+wasmparser = { version = "=0.261.0", default-features = false, features = ["std", "validate", "features"] }
+# Capture identity requires SHA-256 of exact input bytes. The seed acquisition
+# store uses the same implementation and pin.
+sha2 = "=0.11.1"
+# The versioned operation catalogue is a byte-stable JSON contract. Its types
+# derive `Serialize`, and the shared formatter reproduces the historical
+# hand-written layout and escaping exactly (see `operations::catalogue`).
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = { version = "1", features = ["arbitrary_precision", "unbounded_depth"] }
+# Seed acquisition needs an HTTP client, URL resolution, and structured errors.
+# These dependencies support `shape seeds` in the standard build.
+reqwest = { version = "0.13.5", default-features = false, features = [
+    "blocking",
+    "rustls",
+    "http2",
+    "gzip",
+    "brotli",
+    "deflate",
+    "zstd",
+] }
+thiserror = "2"
+url = "2.5"
+zstd = "0.14.2"
+mimalloc = "0.1"
+# Already built for oxc: a fast hasher for the emitter's and tracer's
+# string-keyed maps, which never depend on iteration order.
+rustc-hash = "2.1"
+
+[profile.release]
+lto = "thin"
+
+# Day-to-day iteration: optimized, but incremental and without LTO so
+# rebuilds link fast. Numbers differ slightly from `release`.
+[profile.iter]
+inherits = "release"
+lto = false
+incremental = true
+codegen-units = 256
+debug = "line-tables-only"

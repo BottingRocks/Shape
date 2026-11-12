@@ -1,0 +1,1062 @@
+{
+ "seed": "AAATNm6hAQAAVKBKNyFxkTzo2sfGSR3C_e1TVHPTqHH-SVQoRHtqUU5AuLdF",
+ "signals": {
+  "wave:10:0": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CM >>> 24",
+         "$CM >> 16 & 255",
+         "$CM >> 8 & 255",
+         "$CM & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         320009,
+         320115
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3261186026,
+        "mask_source": "$CM ^ 3261186026",
+        "op": "string",
+        "position": "3",
+        "resolved": "global.location.protocol",
+        "span": [
+         322268,
+         322310
+        ],
+        "value": "$KEY_73.location.protocol",
+        "value_span": [
+         322272,
+         322297
+        ],
+        "via_helper": null,
+        "write_source": "$DG($KEY_73.location.protocol, $KEY_77, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3261186026,
+        "mask_source": "$CM ^ 3261186026",
+        "op": "string",
+        "position": "$DJ",
+        "resolved": "global.location.href.substring(0, 100)",
+        "span": [
+         323615,
+         323673
+        ],
+        "value": "$KEY_73.location.href.substring(0, 100)",
+        "value_span": [
+         323619,
+         323658
+        ],
+        "via_helper": null,
+        "write_source": "$DG($KEY_73.location.href.substring(0, 100), $KEY_77, $DJ)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3261186026,
+           "mask_source": "$CM ^ 3261186026",
+           "op": "byte",
+           "position": "$DI",
+           "resolved": "$CM() ^ 130",
+           "span": [
+            324031,
+            324057
+           ],
+           "value": "130",
+           "value_span": [
+            324054,
+            324057
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_77[$DI] = $CM() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3261186026,
+           "mask_source": "$CM ^ 3261186026",
+           "op": "string",
+           "position": "$DH",
+           "resolved": "$DH + 1",
+           "span": [
+            324092,
+            324114
+           ],
+           "value": "$DI",
+           "value_span": [
+            324096,
+            324099
+           ],
+           "via_helper": null,
+           "write_source": "$DG($DI, $KEY_77, $DH)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$DI == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         323977,
+         324125
+        ]
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3261186026,
+           "mask_source": "$CM ^ 3261186026",
+           "op": "byte",
+           "position": "$DI + 1",
+           "resolved": "$CM() ^ 131",
+           "span": [
+            325226,
+            325256
+           ],
+           "value": "131",
+           "value_span": [
+            325253,
+            325256
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_77[$DI + 1] = $CM() ^ 131",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3261186026,
+           "mask_source": "$CM ^ 3261186026",
+           "op": "string",
+           "position": "$DI",
+           "resolved": "global.location.hostname",
+           "span": [
+            325285,
+            325307
+           ],
+           "value": "$DH",
+           "value_span": [
+            325289,
+            325292
+           ],
+           "via_helper": null,
+           "write_source": "$DG($DH, $KEY_77, $DI)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$DH == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         325197,
+         325318
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:10:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CT >>> 24",
+         "$CT >> 16 & 255",
+         "$CT >> 8 & 255",
+         "$CT & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         320995,
+         321101
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1220799023,
+        "mask_source": "$CT ^ 1220799023",
+        "op": "byte",
+        "position": "4",
+        "resolved": "($KEY_61.document.referrer === \"\" ? 20 : 123) ^ $CT()",
+        "span": [
+         322898,
+         322960
+        ],
+        "value": "$KEY_61.document.referrer === \"\" ? 20 : 123",
+        "value_span": [
+         322908,
+         322951
+        ],
+        "via_helper": null,
+        "write_source": "$DE[4] = ($KEY_61.document.referrer === \"\" ? 20 : 123) ^ $CT()",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1220799023,
+        "mask_source": "$CT ^ 1220799023",
+        "op": "string",
+        "position": "4",
+        "resolved": "global.document.referrer.substring(0, 100)",
+        "span": [
+         323319,
+         323375
+        ],
+        "value": "$KEY_61.document.referrer.substring(0, 100)",
+        "value_span": [
+         323323,
+         323366
+        ],
+        "via_helper": null,
+        "write_source": "$DK($KEY_61.document.referrer.substring(0, 100), $DE, 4)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1220799023,
+        "mask_source": "$CT ^ 1220799023",
+        "op": "number",
+        "position": "$CU",
+        "resolved": "global.history.length",
+        "span": [
+         324134,
+         324181
+        ],
+        "value": "$KEY_61.history.length",
+        "value_span": [
+         324148,
+         324170
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CT, $KEY_61.history.length, $DE, $CU)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:11:1": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CO >>> 24",
+         "$CO >> 16 & 255",
+         "$CO >> 8 & 255",
+         "$CO & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         289929,
+         290045
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2995094797,
+        "mask_source": "$CO ^ 2995094797",
+        "op": "number",
+        "position": "3",
+        "resolved": "$KEY_14[0] < 1 ? $KEY_14[0] : $KEY_14[0] - $KEY_14[0] >>> 0",
+        "span": [
+         290145,
+         290227
+        ],
+        "value": "$KEY_14[0] < 1 ? $KEY_14[0] : $KEY_14[0] - $KEY_14[0] >>> 0",
+        "value_span": [
+         290159,
+         290218
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, $KEY_14[0] < 1 ? $KEY_14[0] : $KEY_14[0] - $KEY_14[0] >>> 0, $CP, 3)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2995094797,
+           "mask_source": "$CO ^ 2995094797",
+           "op": "byte",
+           "position": "k",
+           "resolved": "$CO() ^ 130",
+           "span": [
+            290293,
+            290313
+           ],
+           "value": "130",
+           "value_span": [
+            290310,
+            290313
+           ],
+           "via_helper": null,
+           "write_source": "$CP[k] = $CO() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2995094797,
+           "mask_source": "$CO ^ 2995094797",
+           "op": "string",
+           "position": "$CR",
+           "resolved": "$CR + 1",
+           "span": [
+            290350,
+            290366
+           ],
+           "value": "k",
+           "value_span": [
+            290354,
+            290355
+           ],
+           "via_helper": null,
+           "write_source": "$CQ(k, $CP, $CR)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "k == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         290239,
+         290379
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2995094797,
+        "mask_source": "$CO ^ 2995094797",
+        "op": "number",
+        "position": "k",
+        "resolved": "hash($CK.join(\"|\") + \"||\" + $CL.join(\"|\"))",
+        "span": [
+         290394,
+         290463
+        ],
+        "value": "$KEY_411($CK.join(\"|\") + \"||\" + $CL.join(\"|\"))",
+        "value_span": [
+         290408,
+         290454
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, $KEY_411($CK.join(\"|\") + \"||\" + $CL.join(\"|\")), $CP, k)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2995094797,
+        "mask_source": "$CO ^ 2995094797",
+        "op": "number",
+        "position": "k",
+        "resolved": "typeof k.allowedFeatures === \"function\" ? k.allowedFeatures() : [].length",
+        "span": [
+         290481,
+         290514
+        ],
+        "value": "$CL.length",
+        "value_span": [
+         290495,
+         290505
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, $CL.length, $CP, k)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2995094797,
+        "mask_source": "$CO ^ 2995094797",
+        "op": "number",
+        "position": "$CL",
+        "resolved": "typeof k.features === \"function\" ? k.features() : [].length",
+        "span": [
+         290526,
+         290561
+        ],
+        "value": "$CK.length",
+        "value_span": [
+         290540,
+         290550
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, $CK.length, $CP, $CL)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:1:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CI >>> 24",
+         "$CI >> 16 & 255",
+         "$CI >> 8 & 255",
+         "$CI & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         505728,
+         505834
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2232387578,
+        "mask_source": "$CI ^ 2232387578",
+        "op": "byte",
+        "position": "4",
+        "resolved": "(typeof (0, $KEY_13) !== \"undefined\" && !!$KEY_11.createEvent(\"UIEvent\").isTrusted ? 62 : 8) ^ $CI()",
+        "span": [
+         508068,
+         508177
+        ],
+        "value": "typeof (0, $KEY_13) !== \"undefined\" && !!$KEY_11.createEvent(\"UIEvent\").isTrusted ? 62 : 8",
+        "value_span": [
+         508078,
+         508168
+        ],
+        "via_helper": null,
+        "write_source": "i_2[4] = (typeof (0, $KEY_13) !== \"undefined\" && !!$KEY_11.createEvent(\"UIEvent\").isTrusted ? 62 : 8) ^ $CI()",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:5:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CM >>> 24",
+         "$CM >> 16 & 255",
+         "$CM >> 8 & 255",
+         "$CM & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         451284,
+         451390
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2715648264,
+           "mask_source": "$CM ^ 2715648264",
+           "op": "byte",
+           "position": "4",
+           "resolved": "$CM() ^ 130",
+           "span": [
+            453330,
+            453350
+           ],
+           "value": "130",
+           "value_span": [
+            453347,
+            453350
+           ],
+           "via_helper": null,
+           "write_source": "$CO[4] = $CM() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2715648264,
+           "mask_source": "$CM ^ 2715648264",
+           "op": "number",
+           "position": "3",
+           "resolved": "global.navigator.deviceMemory",
+           "span": [
+            453379,
+            453405
+           ],
+           "value": "$CJ",
+           "value_span": [
+            453393,
+            453396
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_246($CM, $CJ, $CO, 3)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$CJ == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         453301,
+         453416
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:6:0": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$E >>> 24",
+         "$E >> 16 & 255",
+         "$E >> 8 & 255",
+         "$E & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         622927,
+         623009
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3991243660,
+        "mask_source": "$E ^ 3991243660",
+        "op": "string",
+        "position": "3",
+        "resolved": "navigator.platform",
+        "span": [
+         623085,
+         623114
+        ],
+        "value": "navigator.platform",
+        "value_span": [
+         623088,
+         623106
+        ],
+        "via_helper": null,
+        "write_source": "$G(navigator.platform, $F, 3)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3991243660,
+           "mask_source": "$E ^ 3991243660",
+           "op": "byte",
+           "position": "++$H",
+           "resolved": "$E() ^ 130",
+           "span": [
+            623188,
+            623209
+           ],
+           "value": "130",
+           "value_span": [
+            623206,
+            623209
+           ],
+           "via_helper": null,
+           "write_source": "$F[++$H] = $E() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 3991243660,
+           "mask_source": "$E ^ 3991243660",
+           "op": "number",
+           "position": "$H",
+           "resolved": "navigator.hardwareConcurrency",
+           "span": [
+            623235,
+            623258
+           ],
+           "value": "$I",
+           "value_span": [
+            623247,
+            623249
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_13($E, $I, $F, $H)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$I == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         623164,
+         623265
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3991243660,
+        "mask_source": "$E ^ 3991243660",
+        "op": "string",
+        "position": "$H",
+        "resolved": "location.origin",
+        "span": [
+         623275,
+         623302
+        ],
+        "value": "location.origin",
+        "value_span": [
+         623278,
+         623293
+        ],
+        "via_helper": null,
+        "write_source": "$G(location.origin, $F, $H)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3991243660,
+        "mask_source": "$E ^ 3991243660",
+        "op": "number",
+        "position": "$H",
+        "resolved": "$KEY_4(self)",
+        "span": [
+         623313,
+         623346
+        ],
+        "value": "$KEY_4(self)",
+        "value_span": [
+         623325,
+         623337
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_13($E, $KEY_4(self), $F, $H)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3991243660,
+        "mask_source": "$E ^ 3991243660",
+        "op": "string",
+        "position": "$E",
+        "resolved": "navigator.userAgent",
+        "span": [
+         623352,
+         623383
+        ],
+        "value": "navigator.userAgent",
+        "value_span": [
+         623355,
+         623374
+        ],
+        "via_helper": null,
+        "write_source": "$G(navigator.userAgent, $F, $E)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:6:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CO >>> 24",
+         "$CO >> 16 & 255",
+         "$CO >> 8 & 255",
+         "$CO & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         397029,
+         397135
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 4014217389,
+        "mask_source": "$CO ^ 4014217389",
+        "op": "number",
+        "position": "3",
+        "resolved": "0",
+        "span": [
+         397896,
+         397920
+        ],
+        "value": "0",
+        "value_span": [
+         397910,
+         397911
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, 0, $CV, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 4014217389,
+        "mask_source": "$CO ^ 4014217389",
+        "op": "string",
+        "position": "$DA",
+        "resolved": "Array.from(new Date($KEY_360).toString()).join(\"\")",
+        "span": [
+         398647,
+         398674
+        ],
+        "value": "$CK.join(\"\")",
+        "value_span": [
+         398651,
+         398663
+        ],
+        "via_helper": null,
+        "write_source": "$CZ($CK.join(\"\"), $CV, $DA)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 4014217389,
+        "mask_source": "$CO ^ 4014217389",
+        "op": "number",
+        "position": "$CK",
+        "resolved": "$KEY_44.shift()[0]",
+        "span": [
+         398684,
+         398715
+        ],
+        "value": "$CN[0]",
+        "value_span": [
+         398698,
+         398704
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CO, $CN[0], $CV, $CK)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:8:0": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CL >>> 24",
+         "$CL >> 16 & 255",
+         "$CL >> 8 & 255",
+         "$CL & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         366290,
+         366396
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2295076076,
+        "mask_source": "$CL ^ 2295076076",
+        "op": "number",
+        "position": "3",
+        "resolved": "global.navigator.plugins.length",
+        "span": [
+         366486,
+         366512
+        ],
+        "value": "$CI",
+        "value_span": [
+         366500,
+         366503
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CL, $CI, $CJ, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2295076076,
+        "mask_source": "$CL ^ 2295076076",
+        "op": "number",
+        "position": "$CI",
+        "resolved": "[].length",
+        "span": [
+         366554,
+         366582
+        ],
+        "value": "$CK",
+        "value_span": [
+         366568,
+         366571
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_246($CL, $CK, $CJ, $CI)",
+        "xor_literal": null
+       },
+       {
+        "body": {
+         "items": [
+          {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2295076076,
+           "mask_source": "$CL ^ 2295076076",
+           "op": "number",
+           "position": "$CI",
+           "resolved": "[][[].length].a",
+           "span": [
+            366670,
+            366705
+           ],
+           "value": "$CM[$CK].a",
+           "value_span": [
+            366684,
+            366694
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_246($CL, $CM[$CK].a, $CJ, $CI)",
+           "xor_literal": null
+          },
+          {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 2295076076,
+           "mask_source": "$CL ^ 2295076076",
+           "op": "string",
+           "position": "$CI",
+           "resolved": "[][[].length].b",
+           "span": [
+            366723,
+            366748
+           ],
+           "value": "$CM[$CK].b",
+           "value_span": [
+            366727,
+            366737
+           ],
+           "via_helper": null,
+           "write_source": "$CR($CM[$CK].b, $CJ, $CI)",
+           "xor_literal": null
+          }
+         ],
+         "op": "sequence"
+        },
+        "count": null,
+        "direction": "descending",
+        "header": "for (;;)",
+        "loop_kind": "for",
+        "op": "repeat",
+        "span": [
+         366592,
+         366759
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:9:2": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$CP >>> 24",
+         "$CP >> 16 & 255",
+         "$CP >> 8 & 255",
+         "$CP & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         339478,
+         339584
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 26226507,
+           "mask_source": "$CP ^ 26226507",
+           "op": "byte",
+           "position": "4",
+           "resolved": "$CP() ^ 130",
+           "span": [
+            342300,
+            342320
+           ],
+           "value": "130",
+           "value_span": [
+            342317,
+            342320
+           ],
+           "via_helper": null,
+           "write_source": "$CR[4] = $CP() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 26226507,
+           "mask_source": "$CP ^ 26226507",
+           "op": "string",
+           "position": "3",
+           "resolved": "JSON.stringify($KEY_9.outerArgs).slice(0, 256)",
+           "span": [
+            342327,
+            342343
+           ],
+           "value": "$CN",
+           "value_span": [
+            342331,
+            342334
+           ],
+           "via_helper": null,
+           "write_source": "$DA($CN, $CR, 3)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$CN == null",
+        "kind": "conditional",
+        "op": "choice",
+        "span": [
+         342285,
+         342343
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 26226507,
+        "mask_source": "$CP ^ 26226507",
+        "op": "byte",
+        "position": "$DA + 1",
+        "resolved": "$DC ^ $CP()",
+        "span": [
+         342591,
+         342617
+        ],
+        "value": "$DC",
+        "value_span": [
+         342606,
+         342609
+        ],
+        "via_helper": null,
+        "write_source": "$CR[$DA + 1] = $DC ^ $CP()",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

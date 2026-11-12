@@ -1,0 +1,39 @@
+{
+  "input": {
+    "identity": "captured-slot-paste-marker:84eb3be24944c801d9adcdc8304c487ae5a844dcacb85c18c8a335a978f7448d:fn@324467..324775",
+    "seed": "captured-slot-paste-marker",
+    "vendor": "web-gl-render-hash-vm-source-integrity-layouts",
+    "function_id": "fn@324467..324775",
+    "binding_name": "$THREAD_5_85895",
+    "source_sha256": "84eb3be24944c801d9adcdc8304c487ae5a844dcacb85c18c8a335a978f7448d",
+    "span": {
+      "end": 324775,
+      "start": 324467
+    },
+    "links": {
+      "cleaned": "corpus/captured-slot-paste-marker/cleaned.js",
+      "identified": "corpus/captured-slot-paste-marker/renamed.js",
+      "raw": "corpus/captured-slot-paste-marker/raw.js",
+      "map": "corpus/captured-slot-paste-marker/naming.json"
+    },
+    "line": 9051,
+    "seed_link": "corpus/captured-slot-paste-marker",
+    "variant_id": "paste-input-marker--4e4ab99c92e7",
+    "match_rationale": "Within try require target.tagName INPUT; insertFromPaste increments captured counter, otherwise differing activeElement sets captured flag; catch forwards error. Member-specific distinctions recorded in semantic_features, literal_tokens, and original capture references. Membership asserts shared bounded own protocol, not captured-value equality or wire equivalence.",
+    "semantic_features": {
+      "protocol": "paste-input-marker"
+    },
+    "body_sha256": "ab698bcdce33318aed1462a95635649de862b6977d966b97bbe6b0de1b2fa743",
+    "source_review_index": 41,
+    "scope_binding": {
+      "binding_symbol": 2611,
+      "binding_name": "$THREAD_5_85895",
+      "owned_by_main": false
+    }
+  },
+  "full_parent_span": [
+    323785,
+    330692
+  ],
+  "fixture_sha256": "9c87e672c720b18c1c64cefaa4c3f2136ddb0d120a56b0a457a2194f26841106"
+}

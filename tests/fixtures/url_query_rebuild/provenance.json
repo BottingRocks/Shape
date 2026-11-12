@@ -1,0 +1,8 @@
+{
+  "baseline": "baseline1300-003",
+  "seed": "url-query-rebuild-parent",
+  "source_sha256": "6510d73a454030624659009e38b455e535575478beb5ec659d2bea13bc8c2ab0",
+  "function_id": "fn@79821..86447",
+  "fixture": "primary.js",
+  "note": "Exact builder and accessor/default/cache setup only, in minimal carrier; scope spelling retained for mutation tests."
+}

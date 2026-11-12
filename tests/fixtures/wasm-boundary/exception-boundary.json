@@ -1,0 +1,196 @@
+{
+  "schema": "shape.wasm-exception-boundary/v1",
+  "status": "static-evidence",
+  "semantic_parity": {
+    "basis": "user-confirmed project semantic contract",
+    "scope": "shared VM structure and operation semantics across legacy and seed variants",
+    "seed_specific_extraction": "bindings, handler composition, shuffled indices, operand layouts, WASM wiring and offsets"
+  },
+  "deliberate_exception_signal": {
+    "expression": "null[0]()",
+    "purpose": "invoked inside try/catch to deliberately generate a specific signal",
+    "creation": "push callable without throwing",
+    "invocation": "preserve the original TypeError and surrounding catch path",
+    "basis": "user-confirmed semantics; static push/invoke timing recorded below"
+  },
+  "method": {
+    "current_equivalent": "./target/release/shape deob tests/fixtures/kernels/<variant>/kernel.raw.js (migration equivalent; recorded method below is historical)",
+    "stdout_command": "./target/release/shape-deob tests/fixtures/kernels/<variant>/kernel.raw.js",
+    "stdout_span_unit": "byte offset into the shape-deob stdout",
+    "module_offset_unit": "byte offset relative to the decoded interpreter module start",
+    "decoder": "shape_oxc_deob::decode_base64",
+    "validator": "wasmparser 0.261.0"
+  },
+  "seeds": {
+    "javascript_vm": {
+      "site": "javascript interpreter",
+      "seed_id": "javascript_vm",
+      "raw_seed": "tests/fixtures/kernels/javascript/kernel.raw.js",
+      "raw_sha256": "503fe94faf4b551102be0e74c2cafe9ac8432296268c4d4a83c36451710fc084",
+      "stdout_sha256": "e7c5f0a08df50fe6d05eb2f279894d17aeafe3f0fa26e3a50c6d9522bd9af517",
+      "stdout_bytes": 529802,
+      "wasm": false,
+      "note": "no WebAssembly module literal; JavaScript VM vmRun/q dispatch; outside the WebAssembly host boundary"
+    },
+    "webassembly_vm_dual_module": {
+      "site": "dual-module interpreter",
+      "seed_id": "webassembly_vm_dual_module",
+      "raw_seed": "historical capture; no tracked raw source",
+      "source_artifact_id": "sha256:8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "raw_sha256": "8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "stdout_sha256": "1943fc288500094afe0573646b19d8db290e663b268bb7182059fe895b69ab98",
+      "stdout_bytes": 494053,
+      "wasm": true,
+      "handler_count": 207,
+      "null_signal_handler_key": 146,
+      "handler_table": {
+        "module_sha256": "66a3120b879b897cad51012c68b7b4994660950c333a7eff9a159866771962a7",
+        "module_bytes": 1923,
+        "import_namespace": "u",
+        "table_export": "d",
+        "entries": 207
+      },
+      "image": {
+        "sha256": "9ab11ee2dd3d223d1fef8bde16a93e9b5c4b5a26d1385a0805d7bb08145b9979",
+        "bytes": 169666,
+        "dispatch_table_base": 164866,
+        "dispatch_stride": 480,
+        "states": 10,
+        "opcodes": 240
+      },
+      "interpreter": {
+        "module_sha256": "ef437a5b1d5aa752bf8f05b358ea755e29094e1a83d4a995e286f19781f8054c",
+        "module_bytes": 3090,
+        "import_namespace": "v",
+        "global": { "index": 0, "type": "i32", "mutable": true, "init": 0 },
+        "exports": {
+          "reset_set_flag": { "raw": "Zc", "function_index": 13, "body_range": "0xd6..0xdc" },
+          "run_status": { "raw": "x", "function_index": 14, "body_range": "0xde..0xc12" }
+        },
+        "flag_ops": {
+          "setter": { "const_offset": "0xd7", "set_offset": "0xd9" },
+          "in_interpreter_set": [
+            { "const_offset": "0x3dc", "set_offset": "0x3de" },
+            { "const_offset": "0x3fd", "set_offset": "0x3ff" }
+          ],
+          "read_clear": { "get_offset": "0xb2c", "const_offset": "0xb30", "set_offset": "0xb32" }
+        },
+        "host_calls": {
+          "rethrow_raw_value": { "function_index": 9, "raw": "ZZ", "call_offsets": ["0x3e5", "0x406"] },
+          "error_stack_truncate": { "function_index": 10, "raw": "ZE", "call_offsets": ["0x668", "0x676", "0xbe0"] },
+          "error_stack_write_slot": { "function_index": 8, "raw": "V", "call_offsets": ["0x631"] }
+        },
+        "guarded_call": {
+          "guarded_wrapper_indices": [2, 3, 4, 5, 6, 7],
+          "guarded_wrapper_raw": ["w", "k", "y", "T", "U", "L"],
+          "site_count": 23,
+          "representative": {
+            "guard_if_offset": "0x79f",
+            "wrapper_call_offset": "0x7a1",
+            "direct_call_indirect_offset": "0x7a4",
+            "direct_type_index": 3
+          }
+        },
+        "returns": [
+          { "value": 0, "const_offset": "0x2f3", "return_offset": "0x2f5" },
+          { "value": 0, "const_offset": "0x2f7", "return_offset": "0x2f9" },
+          { "value": 1, "const_offset": "0x703", "return_offset": "0x705" }
+        ],
+        "traps_unreachable": [
+          "0x3ba", "0x416", "0x4a8", "0x4e3", "0x581", "0x605", "0x67c",
+          "0x6ee", "0x77d", "0xb9b", "0xbd2", "0xc08", "0xc0e", "0xc10"
+        ]
+      },
+      "js_spans": {
+        "vm_run": 257056,
+        "run_export_call": 257142,
+        "vm_invoke_operation": 257452,
+        "catch_set_flag_call": 257750,
+        "catch_push_error": 257773,
+        "host_imports_object": 484202,
+        "rethrow_import_body": 484322,
+        "null_signal_push": 230512,
+        "null_signal_call": 230552
+      }
+    },
+    "webassembly_vm_tracked": {
+      "site": "tracked webassembly interpreter",
+      "seed_id": "webassembly_vm_tracked",
+      "raw_seed": "tests/fixtures/kernels/webassembly/kernel.raw.js",
+      "raw_sha256": "2e9b94dcf73fa5fe55961a9c5bb22e6cadaa78f322f9c8a934187cb5517e0581",
+      "stdout_sha256": "48f111e31c70d17118b46dc7abea5d73cda42e1a80bbc51093f2506f15e5c49e",
+      "stdout_bytes": 509321,
+      "wasm": true,
+      "handler_count": 201,
+      "null_signal_handler_key": 83,
+      "handler_table": {
+        "module_sha256": "8a3ce5970dd1596e32ee4cb6a97eecefa7e7a33692d61272c4f86d7b74b93d7b",
+        "module_bytes": 1853,
+        "import_namespace": "s",
+        "table_export": "Z",
+        "entries": 201
+      },
+      "image": {
+        "sha256": "03a3112cdbad29d4c8105581efe716232b16a891d1e6523d632112cef984ab76",
+        "bytes": 175525,
+        "dispatch_table_base": 170845,
+        "dispatch_stride": 468,
+        "states": 10,
+        "opcodes": 234
+      },
+      "interpreter": {
+        "module_sha256": "850a986f7107b081d83adde9e7a5382101170a67eb41efe6921a692a69d2a407",
+        "module_bytes": 2997,
+        "import_namespace": "f",
+        "global": { "index": 0, "type": "i32", "mutable": true, "init": 0 },
+        "exports": {
+          "reset_set_flag": { "raw": "Te", "function_index": 12, "body_range": "0xc6..0xcc" },
+          "run_status": { "raw": "W", "function_index": 13, "body_range": "0xce..0xbb5" }
+        },
+        "flag_ops": {
+          "setter": { "const_offset": "0xc7", "set_offset": "0xc9" },
+          "in_interpreter_set": [
+            { "const_offset": "0x4a2", "set_offset": "0x4a4" },
+            { "const_offset": "0x4c3", "set_offset": "0x4c5" }
+          ],
+          "read_clear": { "get_offset": "0xacf", "const_offset": "0xad3", "set_offset": "0xad5" }
+        },
+        "host_calls": {
+          "rethrow_raw_value": { "function_index": 8, "raw": "TT", "call_offsets": ["0x4ab", "0x4cc"] },
+          "error_stack_truncate": { "function_index": 9, "raw": "TJ", "call_offsets": ["0x62a", "0x638", "0xb83"] },
+          "error_stack_write_slot": { "function_index": 7, "raw": "l", "call_offsets": ["0x3a0"] }
+        },
+        "guarded_call": {
+          "guarded_wrapper_indices": [2, 3, 4, 5, 6],
+          "guarded_wrapper_raw": ["b", "D", "h", "m", "d"],
+          "site_count": 23,
+          "representative": {
+            "guard_if_offset": "0x736",
+            "wrapper_call_offset": "0x738",
+            "direct_call_indirect_offset": "0x73b",
+            "direct_type_index": 3
+          }
+        },
+        "returns": [
+          { "value": 1, "const_offset": "0x355", "return_offset": "0x357" },
+          { "value": 0, "const_offset": "0x537", "return_offset": "0x539" },
+          { "value": 0, "const_offset": "0x6f0", "return_offset": "0x6f2" }
+        ],
+        "traps_unreachable": [
+          "0x4dc", "0x597", "0x63e", "0xb3e", "0xb75", "0xbab", "0xbb1", "0xbb3"
+        ]
+      },
+      "js_spans": {
+        "vm_run": 264753,
+        "run_export_call": 264839,
+        "vm_invoke_operation": 265149,
+        "catch_set_flag_call": 265427,
+        "catch_push_error": 265450,
+        "host_imports_object": 499691,
+        "rethrow_import_body": 500571,
+        "null_signal_push": 217897,
+        "null_signal_call": 217937
+      }
+    }
+  }
+}

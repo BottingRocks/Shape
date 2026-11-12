@@ -1,0 +1,23 @@
+/target/
+/.worktrees/
+/.ecc/
+/shape/
+/seeds/
+# Retired documentation history folders; their contents live in Git history.
+# See docs/README.md; do not recreate them in the active tree.
+/docs/investigations/
+/docs/plans/
+artifacts/
+**/*.rs.bk
+.DS_Store
+.env
+.env.*
+!.env.example
+# Local trace, corpus, and benchmark outputs. Published measurement summaries
+# and reproduction commands live in docs; raw reports stay on the machine.
+/reports/
+.agent-scratch/
+# Local diagram drafts and receipts.
+/.archify/
+# generated reports anywhere in the tree
+reports/

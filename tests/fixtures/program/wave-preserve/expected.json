@@ -1,0 +1,234 @@
+[
+  {
+    "key": "wave-preservation-heldout",
+    "input_sha256": "667ecf78acc873796c2bea205f249449ff3256981a854083c95f7637512b2cee",
+    "expected_preserved_wave_names": [
+      {
+        "function_id": "fn@183487..199142",
+        "name": "waveCollector15"
+      },
+      {
+        "function_id": "fn@201745..226620",
+        "name": "waveCollector14"
+      },
+      {
+        "function_id": "fn@226739..233041",
+        "name": "waveCollector13"
+      },
+      {
+        "function_id": "fn@233275..268510",
+        "name": "waveCollector12"
+      },
+      {
+        "function_id": "fn@271292..276989",
+        "name": "waveCollector11"
+      },
+      {
+        "function_id": "fn@277460..284149",
+        "name": "waveCollector10"
+      },
+      {
+        "function_id": "fn@285807..304446",
+        "name": "waveCollector9"
+      },
+      {
+        "function_id": "fn@305146..314390",
+        "name": "waveCollector8"
+      },
+      {
+        "function_id": "fn@314780..325073",
+        "name": "waveCollector7"
+      },
+      {
+        "function_id": "fn@325345..366085",
+        "name": "waveCollector5"
+      },
+      {
+        "function_id": "fn@366667..375018",
+        "name": "waveCollector6"
+      },
+      {
+        "function_id": "fn@375351..398208",
+        "name": "waveCollector4"
+      },
+      {
+        "function_id": "fn@398260..403908",
+        "name": "waveCollector3"
+      },
+      {
+        "function_id": "fn@404638..411074",
+        "name": "waveCollector2"
+      },
+      {
+        "function_id": "fn@411252..461844",
+        "name": "waveCollector1"
+      }
+    ]
+  },
+  {
+    "key": "wave-preservation-alternate",
+    "input_sha256": "4de0900c8501d76999066fdc87b3266ac59c54e54278a29a2d81afb13a5b3f8c",
+    "expected_preserved_wave_names": [
+      {
+        "function_id": "fn@121183..145744",
+        "name": "waveCollector8"
+      },
+      {
+        "function_id": "fn@146015..159092",
+        "name": "waveCollector7"
+      },
+      {
+        "function_id": "fn@166926..212912",
+        "name": "waveCollector6"
+      },
+      {
+        "function_id": "fn@212917..223923",
+        "name": "waveCollector5"
+      },
+      {
+        "function_id": "fn@223945..262705",
+        "name": "waveCollector4"
+      },
+      {
+        "function_id": "fn@262857..269630",
+        "name": "waveCollector3"
+      },
+      {
+        "function_id": "fn@270926..290592",
+        "name": "waveCollector2"
+      },
+      {
+        "function_id": "fn@290598..295737",
+        "name": "waveCollector1"
+      }
+    ]
+  },
+  {
+    "key": "residual-origin-baseline",
+    "input_sha256": "6bc9a97f040d6acd2b129e140cc70d6807fa12f42991ff43866fef260d4d240d",
+    "expected_preserved_wave_names": [
+      {
+        "function_id": "fn@187107..205041",
+        "name": "waveCollector16"
+      },
+      {
+        "function_id": "fn@205824..214106",
+        "name": "waveCollector15"
+      },
+      {
+        "function_id": "fn@219523..231487",
+        "name": "waveCollector14"
+      },
+      {
+        "function_id": "fn@231567..251106",
+        "name": "waveCollector13"
+      },
+      {
+        "function_id": "fn@253310..263377",
+        "name": "waveCollector12"
+      },
+      {
+        "function_id": "fn@263631..270291",
+        "name": "waveCollector11"
+      },
+      {
+        "function_id": "fn@270372..277066",
+        "name": "waveCollector10"
+      },
+      {
+        "function_id": "fn@281566..289959",
+        "name": "waveCollector9"
+      },
+      {
+        "function_id": "fn@290947..298183",
+        "name": "waveCollector8"
+      },
+      {
+        "function_id": "fn@298189..331198",
+        "name": "waveCollector7"
+      },
+      {
+        "function_id": "fn@331285..337183",
+        "name": "waveCollector6"
+      },
+      {
+        "function_id": "fn@337361..382328",
+        "name": "waveCollector5"
+      },
+      {
+        "function_id": "fn@383902..393817",
+        "name": "waveCollector4"
+      },
+      {
+        "function_id": "fn@393847..416945",
+        "name": "waveCollector3"
+      },
+      {
+        "function_id": "fn@417030..431365",
+        "name": "waveCollector2"
+      },
+      {
+        "function_id": "fn@433208..440950",
+        "name": "waveCollector1"
+      }
+    ]
+  },
+  {
+    "key": "native-forward",
+    "input_sha256": "d27e39cc89f6829f12e5920022cbb646972746c16e3df543f883e4b035119938",
+    "expected_preserved_wave_names": [
+      {
+        "function_id": "fn@144362..159704",
+        "name": "waveCollector13"
+      },
+      {
+        "function_id": "fn@159785..164836",
+        "name": "waveCollector12"
+      },
+      {
+        "function_id": "fn@164842..183184",
+        "name": "waveCollector11"
+      },
+      {
+        "function_id": "fn@184685..201259",
+        "name": "waveCollector10"
+      },
+      {
+        "function_id": "fn@201265..238123",
+        "name": "waveCollector9"
+      },
+      {
+        "function_id": "fn@239134..258084",
+        "name": "waveCollector8"
+      },
+      {
+        "function_id": "fn@258349..276071",
+        "name": "waveCollector7"
+      },
+      {
+        "function_id": "fn@277247..288485",
+        "name": "waveCollector6"
+      },
+      {
+        "function_id": "fn@289760..297300",
+        "name": "waveCollector5"
+      },
+      {
+        "function_id": "fn@297479..327671",
+        "name": "waveCollector4"
+      },
+      {
+        "function_id": "fn@327750..342292",
+        "name": "waveCollector3"
+      },
+      {
+        "function_id": "fn@344329..354177",
+        "name": "waveCollector2"
+      },
+      {
+        "function_id": "fn@355005..377563",
+        "name": "waveCollector1"
+      }
+    ]
+  }
+]

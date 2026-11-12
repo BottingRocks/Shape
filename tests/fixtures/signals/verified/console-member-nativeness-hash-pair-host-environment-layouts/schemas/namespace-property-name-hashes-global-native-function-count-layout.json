@@ -1,0 +1,1062 @@
+{
+ "seed": "0faa99d6c382866e0a6dc0491c39068ce2f8ef8bb5b09ab0dd92af6f0183e7ab",
+ "signals": {
+  "wave:10:2": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BH >>> 24",
+         "$BH >> 16 & 255",
+         "$BH >> 8 & 255",
+         "$BH & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         336425,
+         336551
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2231271238,
+        "mask_source": "$BH ^ 2231271238",
+        "op": "string",
+        "position": "3",
+        "resolved": "global.document.referrer.substring(0, 100)",
+        "span": [
+         337053,
+         337109
+        ],
+        "value": "$KEY_12.document.referrer.substring(0, 100)",
+        "value_span": [
+         337057,
+         337100
+        ],
+        "via_helper": null,
+        "write_source": "$BS($KEY_12.document.referrer.substring(0, 100), $BP, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2231271238,
+        "mask_source": "$BH ^ 2231271238",
+        "op": "byte",
+        "position": "$BS",
+        "resolved": "($KEY_12.document.referrer === \"\" ? 87 : 109) ^ $BH()",
+        "span": [
+         337127,
+         337191
+        ],
+        "value": "$KEY_12.document.referrer === \"\" ? 87 : 109",
+        "value_span": [
+         337139,
+         337182
+        ],
+        "via_helper": null,
+        "write_source": "$BP[$BS] = ($KEY_12.document.referrer === \"\" ? 87 : 109) ^ $BH()",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 2231271238,
+        "mask_source": "$BH ^ 2231271238",
+        "op": "number",
+        "position": "$BS",
+        "resolved": "global.history.length",
+        "span": [
+         337205,
+         337252
+        ],
+        "value": "$KEY_12.history.length",
+        "value_span": [
+         337219,
+         337241
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BH, $KEY_12.history.length, $BP, $BS)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:11:3": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BT >>> 24",
+         "$BT >> 16 & 255",
+         "$BT >> 8 & 255",
+         "$BT & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         393807,
+         393933
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1878168780,
+        "mask_source": "$BT ^ 1878168780",
+        "op": "number",
+        "position": "3",
+        "resolved": "$KEY_301.shift()[0]",
+        "span": [
+         395279,
+         395308
+        ],
+        "value": "$BP[0]",
+        "value_span": [
+         395293,
+         395299
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BT, $BP[0], $CB, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1878168780,
+        "mask_source": "$BT ^ 1878168780",
+        "op": "number",
+        "position": "$CL",
+        "resolved": "0",
+        "span": [
+         395328,
+         395354
+        ],
+        "value": "0",
+        "value_span": [
+         395342,
+         395343
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BT, 0, $CB, $CL)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1878168780,
+        "mask_source": "$BT ^ 1878168780",
+        "op": "string",
+        "position": "$BP",
+        "resolved": "Array.from(new Date($KEY_314).toString()).join(\"\")",
+        "span": [
+         395571,
+         395598
+        ],
+        "value": "$BK.join(\"\")",
+        "value_span": [
+         395575,
+         395587
+        ],
+        "via_helper": null,
+        "write_source": "$CD($BK.join(\"\"), $CB, $BP)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:4:3": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$E >>> 24",
+         "$E >> 16 & 255",
+         "$E >> 8 & 255",
+         "$E & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         683863,
+         683945
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1382574781,
+        "mask_source": "$E ^ 1382574781",
+        "op": "number",
+        "position": "3",
+        "resolved": "$KEY_7(self)",
+        "span": [
+         684020,
+         684052
+        ],
+        "value": "$KEY_7(self)",
+        "value_span": [
+         684032,
+         684044
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_15($E, $KEY_7(self), $F, 3)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 1382574781,
+           "mask_source": "$E ^ 1382574781",
+           "op": "byte",
+           "position": "++$H",
+           "resolved": "$E() ^ 130",
+           "span": [
+            684126,
+            684147
+           ],
+           "value": "130",
+           "value_span": [
+            684144,
+            684147
+           ],
+           "via_helper": null,
+           "write_source": "$F[++$H] = $E() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 1382574781,
+           "mask_source": "$E ^ 1382574781",
+           "op": "number",
+           "position": "$H",
+           "resolved": "navigator.hardwareConcurrency",
+           "span": [
+            684173,
+            684196
+           ],
+           "value": "$I",
+           "value_span": [
+            684185,
+            684187
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_15($E, $I, $F, $H)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$I == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         684102,
+         684203
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1382574781,
+        "mask_source": "$E ^ 1382574781",
+        "op": "string",
+        "position": "$H",
+        "resolved": "navigator.userAgent",
+        "span": [
+         684213,
+         684244
+        ],
+        "value": "navigator.userAgent",
+        "value_span": [
+         684216,
+         684235
+        ],
+        "via_helper": null,
+        "write_source": "$G(navigator.userAgent, $F, $H)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1382574781,
+        "mask_source": "$E ^ 1382574781",
+        "op": "string",
+        "position": "$H",
+        "resolved": "location.origin",
+        "span": [
+         684255,
+         684282
+        ],
+        "value": "location.origin",
+        "value_span": [
+         684258,
+         684273
+        ],
+        "via_helper": null,
+        "write_source": "$G(location.origin, $F, $H)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1382574781,
+        "mask_source": "$E ^ 1382574781",
+        "op": "string",
+        "position": "$H",
+        "resolved": "navigator.platform",
+        "span": [
+         684288,
+         684318
+        ],
+        "value": "navigator.platform",
+        "value_span": [
+         684291,
+         684309
+        ],
+        "via_helper": null,
+        "write_source": "$G(navigator.platform, $F, $H)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:5:0": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BQ >>> 24",
+         "$BQ >> 16 & 255",
+         "$BQ >> 8 & 255",
+         "$BQ & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         470354,
+         470480
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 274921687,
+        "mask_source": "$BQ ^ 274921687",
+        "op": "number",
+        "position": "3",
+        "resolved": "[].length",
+        "span": [
+         471709,
+         471735
+        ],
+        "value": "$BE",
+        "value_span": [
+         471723,
+         471726
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BQ, $BE, $BX, 3)",
+        "xor_literal": null
+       },
+       {
+        "body": {
+         "items": [
+          {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 274921687,
+           "mask_source": "$BQ ^ 274921687",
+           "op": "string",
+           "position": "$CA",
+           "resolved": "[][[].length].b",
+           "span": [
+            473447,
+            473472
+           ],
+           "value": "$BS[$BE].b",
+           "value_span": [
+            473451,
+            473461
+           ],
+           "via_helper": null,
+           "write_source": "$BR($BS[$BE].b, $BX, $CA)",
+           "xor_literal": null
+          },
+          {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 274921687,
+           "mask_source": "$BQ ^ 274921687",
+           "op": "number",
+           "position": "$CA",
+           "resolved": "[][[].length].a",
+           "span": [
+            473494,
+            473529
+           ],
+           "value": "$BS[$BE].a",
+           "value_span": [
+            473508,
+            473518
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_236($BQ, $BS[$BE].a, $BX, $CA)",
+           "xor_literal": null
+          }
+         ],
+         "op": "sequence"
+        },
+        "count": null,
+        "direction": "descending",
+        "header": "while ($BE >= 0)",
+        "loop_kind": "while",
+        "op": "repeat",
+        "span": [
+         473408,
+         473565
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 274921687,
+        "mask_source": "$BQ ^ 274921687",
+        "op": "number",
+        "position": "$CA",
+        "resolved": "global.navigator.plugins.length",
+        "span": [
+         474099,
+         474127
+        ],
+        "value": "$BF",
+        "value_span": [
+         474113,
+         474116
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BQ, $BF, $BX, $CA)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:5:1": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BK >>> 24",
+         "$BK >> 16 & 255",
+         "$BK >> 8 & 255",
+         "$BK & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         467202,
+         467338
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1264147187,
+        "mask_source": "$BK ^ 1264147187",
+        "op": "number",
+        "position": "3",
+        "resolved": "typeof $BE.features === \"function\" ? $BE.features() : [].length",
+        "span": [
+         467451,
+         467484
+        ],
+        "value": "$BG.length",
+        "value_span": [
+         467465,
+         467475
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BK, $BG.length, $BL, 3)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1264147187,
+        "mask_source": "$BK ^ 1264147187",
+        "op": "number",
+        "position": "$BN",
+        "resolved": "hash($BG.join(\"|\") + \"||\" + $BH.join(\"|\"))",
+        "span": [
+         467506,
+         467577
+        ],
+        "value": "$KEY_272($BG.join(\"|\") + \"||\" + $BH.join(\"|\"))",
+        "value_span": [
+         467520,
+         467566
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BK, $KEY_272($BG.join(\"|\") + \"||\" + $BH.join(\"|\")), $BL, $BN)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 1264147187,
+           "mask_source": "$BK ^ 1264147187",
+           "op": "byte",
+           "position": "$BE",
+           "resolved": "$BK() ^ 130",
+           "span": [
+            467659,
+            467681
+           ],
+           "value": "130",
+           "value_span": [
+            467678,
+            467681
+           ],
+           "via_helper": null,
+           "write_source": "$BL[$BE] = $BK() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 1264147187,
+           "mask_source": "$BK ^ 1264147187",
+           "op": "string",
+           "position": "$BG",
+           "resolved": "$BG + 1",
+           "span": [
+            467728,
+            467746
+           ],
+           "value": "$BE",
+           "value_span": [
+            467732,
+            467735
+           ],
+           "via_helper": null,
+           "write_source": "$BM($BE, $BL, $BG)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$BE == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         467593,
+         467763
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1264147187,
+        "mask_source": "$BK ^ 1264147187",
+        "op": "number",
+        "position": "$BE",
+        "resolved": "writeNumber.length",
+        "span": [
+         467784,
+         467819
+        ],
+        "value": "$BH.length",
+        "value_span": [
+         467798,
+         467808
+        ],
+        "via_helper": null,
+        "write_source": "$KEY_236($BK, $BH.length, $BL, $BE)",
+        "xor_literal": null
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 1264147187,
+        "mask_source": "$BK ^ 1264147187",
+        "op": "number",
+        "position": "$BE",
+        "resolved": "$BG < 1 ? $BG : $BG - $BG >>> 0",
+        "span": [
+         467897,
+         467948
+        ],
+        "value": "$BG < 1 ? $BG : $BG - $BG >>> 0",
+        "value_span": [
+         467906,
+         467937
+        ],
+        "via_helper": null,
+        "write_source": "$BH($BK, $BG < 1 ? $BG : $BG - $BG >>> 0, $BL, $BE)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:6:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BB >>> 24",
+         "$BB >> 16 & 255",
+         "$BB >> 8 & 255",
+         "$BB & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         456257,
+         456383
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 31245117,
+           "mask_source": "$BB ^ 31245117",
+           "op": "byte",
+           "position": "4",
+           "resolved": "$BB() ^ 130",
+           "span": [
+            457366,
+            457386
+           ],
+           "value": "130",
+           "value_span": [
+            457383,
+            457386
+           ],
+           "via_helper": null,
+           "write_source": "$BC[4] = $BB() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 31245117,
+           "mask_source": "$BB ^ 31245117",
+           "op": "string",
+           "position": "3",
+           "resolved": "global.location.port",
+           "span": [
+            457393,
+            457409
+           ],
+           "value": "$BE",
+           "value_span": [
+            457397,
+            457400
+           ],
+           "via_helper": null,
+           "write_source": "$BD($BE, $BC, 3)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$BE == null",
+        "kind": "conditional",
+        "op": "choice",
+        "span": [
+         457351,
+         457409
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 31245117,
+        "mask_source": "$BB ^ 31245117",
+        "op": "string",
+        "position": "$BE",
+        "resolved": "global.location.href.substring(0, 100)",
+        "span": [
+         457429,
+         457483
+        ],
+        "value": "$KEY_14.location.href.substring(0, 100)",
+        "value_span": [
+         457433,
+         457472
+        ],
+        "via_helper": null,
+        "write_source": "$BD($KEY_14.location.href.substring(0, 100), $BC, $BE)",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 31245117,
+           "mask_source": "$BB ^ 31245117",
+           "op": "byte",
+           "position": "$BF",
+           "resolved": "$BB() ^ 131",
+           "span": [
+            457608,
+            457630
+           ],
+           "value": "131",
+           "value_span": [
+            457627,
+            457630
+           ],
+           "via_helper": null,
+           "write_source": "$BC[$BF] = $BB() ^ 131",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 31245117,
+           "mask_source": "$BB ^ 31245117",
+           "op": "string",
+           "position": "$BE",
+           "resolved": "$BE + 1",
+           "span": [
+            457673,
+            457691
+           ],
+           "value": "$BF",
+           "value_span": [
+            457677,
+            457680
+           ],
+           "via_helper": null,
+           "write_source": "$BD($BF, $BC, $BE)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$BF == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         457546,
+         457706
+        ]
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 31245117,
+        "mask_source": "$BB ^ 31245117",
+        "op": "string",
+        "position": "$BF",
+        "resolved": "global.location.protocol",
+        "span": [
+         457719,
+         457759
+        ],
+        "value": "$KEY_14.location.protocol",
+        "value_span": [
+         457723,
+         457748
+        ],
+        "via_helper": null,
+        "write_source": "$BD($KEY_14.location.protocol, $BC, $BF)",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:7:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BG >>> 24",
+         "$BG >> 16 & 255",
+         "$BG >> 8 & 255",
+         "$BG & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         429771,
+         429897
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 4078507852,
+           "mask_source": "$BG ^ 4078507852",
+           "op": "byte",
+           "position": "4",
+           "resolved": "$BG() ^ 130",
+           "span": [
+            429990,
+            430010
+           ],
+           "value": "130",
+           "value_span": [
+            430007,
+            430010
+           ],
+           "via_helper": null,
+           "write_source": "$BH[4] = $BG() ^ 130",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 4078507852,
+           "mask_source": "$BG ^ 4078507852",
+           "op": "number",
+           "position": "3",
+           "resolved": "global.navigator.deviceMemory",
+           "span": [
+            430047,
+            430073
+           ],
+           "value": "$BF",
+           "value_span": [
+            430061,
+            430064
+           ],
+           "via_helper": null,
+           "write_source": "$KEY_236($BG, $BF, $BH, 3)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$BF == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         429957,
+         430088
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:8:4": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BI >>> 24",
+         "$BI >> 16 & 255",
+         "$BI >> 8 & 255",
+         "$BI & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         417399,
+         417525
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 3701782714,
+        "mask_source": "$BI ^ 3701782714",
+        "op": "byte",
+        "position": "4",
+        "resolved": "(typeof (0, $KEY_29) !== \"undefined\" && !!$KEY_8.createEvent(\"UIEvent\").isTrusted ? 65 : 33) ^ $BI()",
+        "span": [
+         418515,
+         418624
+        ],
+        "value": "typeof (0, $KEY_29) !== \"undefined\" && !!$KEY_8.createEvent(\"UIEvent\").isTrusted ? 65 : 33",
+        "value_span": [
+         418525,
+         418615
+        ],
+        "via_helper": null,
+        "write_source": "$BO[4] = (typeof (0, $KEY_29) !== \"undefined\" && !!$KEY_8.createEvent(\"UIEvent\").isTrusted ? 65 : 33) ^ $BI()",
+        "xor_literal": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "wave:9:1": {
+   "emissions": [
+    {
+     "grammar": {
+      "items": [
+       {
+        "elements": [
+         "$BF >>> 24",
+         "$BF >> 16 & 255",
+         "$BF >> 8 & 255",
+         "$BF & 255"
+        ],
+        "op": "raw_prefix",
+        "seed_word": "Math.random() * 4294967296 | 0",
+        "span": [
+         403027,
+         403153
+        ],
+        "spelling": "array_literal"
+       },
+       {
+        "helper_arguments": [],
+        "mask": "stream",
+        "mask_constant": 122381069,
+        "mask_source": "$BF ^ 122381069",
+        "op": "byte",
+        "position": "4",
+        "resolved": "($BL | ($KEY_0.global === $KEY_0) << 3) ^ $BF()",
+        "span": [
+         405277,
+         405333
+        ],
+        "value": "$BL | ($KEY_0.global === $KEY_0) << 3",
+        "value_span": [
+         405287,
+         405324
+        ],
+        "via_helper": null,
+        "write_source": "$BG[4] = ($BL | ($KEY_0.global === $KEY_0) << 3) ^ $BF()",
+        "xor_literal": null
+       },
+       {
+        "arms": [
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 122381069,
+           "mask_source": "$BF ^ 122381069",
+           "op": "byte",
+           "position": "5",
+           "resolved": "$BF() ^ 131",
+           "span": [
+            405380,
+            405400
+           ],
+           "value": "131",
+           "value_span": [
+            405397,
+            405400
+           ],
+           "via_helper": null,
+           "write_source": "$BG[5] = $BF() ^ 131",
+           "xor_literal": null
+          },
+          "label": "then"
+         },
+         {
+          "body": {
+           "helper_arguments": [],
+           "mask": "stream",
+           "mask_constant": 122381069,
+           "mask_source": "$BF ^ 122381069",
+           "op": "string",
+           "position": "4",
+           "resolved": "JSON.stringify($AY.outerArgs).slice(0, 256)",
+           "span": [
+            405437,
+            405453
+           ],
+           "value": "$BD",
+           "value_span": [
+            405441,
+            405444
+           ],
+           "via_helper": null,
+           "write_source": "$BN($BD, $BG, 4)",
+           "xor_literal": null
+          },
+          "label": "else"
+         }
+        ],
+        "condition": "$BD == null",
+        "kind": "if",
+        "op": "choice",
+        "span": [
+         405347,
+         405468
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

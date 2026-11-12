@@ -1,0 +1,8 @@
+{
+  "capture": {"input_kind":"raw","identity":{"algorithm":"sha256","digest":"75c3ea2409c357ca488026af87f973d3934e19cc7f97e543c15ecbbaa1cd2a69"},"byte_length":1276,"raw_identity":"verified"},
+  "derived_from": {"report":"shape-kernel-operation-catalogue/v1","catalogue_version":"shape-oxc-deob/operation-catalogue-v1","source_hash":{"algorithm":"fnv1a64","digest":"bb62ff5c6b26dbea"}},
+  "table": {"declaration_ordinal":2,"original_name":"operations","canonical_name":"vmOperations","shape":"array","element_count":4,"function_count":4},
+  "inventory": {"exact":4,"partial":0,"unknown":0,"missing_sparse_entries":0},
+  "handlers": [{"key":0,"index":0,"family":"return","classification":"atomic","micro_ops":["return"],"confidence":"high","unknown_fragments":0,"fingerprint":"1345f07a2214d6bd"},{"key":1,"index":1,"family":"return","classification":"atomic","micro_ops":["return"],"confidence":"high","unknown_fragments":0,"fingerprint":"1345f07a2214d6bd"},{"key":2,"index":2,"family":"return","classification":"atomic","micro_ops":["return"],"confidence":"high","unknown_fragments":0,"fingerprint":"1345f07a2214d6bd"},{"key":3,"index":3,"family":"return","classification":"atomic","micro_ops":["return"],"confidence":"high","unknown_fragments":0,"fingerprint":"1345f07a2214d6bd"}]
+
+}

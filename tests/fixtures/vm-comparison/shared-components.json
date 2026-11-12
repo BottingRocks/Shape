@@ -1,0 +1,360 @@
+{
+  "schema": "shape-vm-shared-components/v1",
+  "status": "static-source-evidence",
+  "semantic_contract": {
+    "basis": "user-confirmed project contract",
+    "scope": "shared VM structure and operation semantics across the JavaScript VM and WebAssembly VM kernels",
+    "seed_specific": "shuffled names/indices/arities and different handler compositions are variants of shared semantics",
+    "null_signal": "null[0]() is a deliberate signal callable, invoked inside try/catch; creation does not throw"
+  },
+  "method": {
+    "current_equivalent": "target/release/shape deob, shape ops list/show, shape kernel show (migration equivalents; recorded method below is historical)",
+    "binaries": "target/release/shape-deob, shape-operation-catalogue, shape-kernel-layout (release, built once)",
+    "handler_body_normalization": "operation_catalogue canonical_normalized_body: Oxc semantic bindings renamed to b0..bN by definition span, whitespace collapsed, full body retained",
+    "helper_body_normalization": "same rule applied by an ignored scratch exporter over non-handler function-like nodes",
+    "inputs": "historical raw seeds unaltered; current source bytes are the tracked kernel fixtures",
+    "no_runtime": "no JS/Node/Babel/eval/WASM execution"
+  },
+  "seeds": {
+    "javascript_vm": {
+      "site": "javascript interpreter",
+      "seed_id": "javascript_vm",
+      "raw_seed": "tests/fixtures/kernels/javascript/kernel.raw.js",
+      "raw_sha256": "503fe94faf4b551102be0e74c2cafe9ac8432296268c4d4a83c36451710fc084",
+      "stdout_sha256": "e7c5f0a08df50fe6d05eb2f279894d17aeafe3f0fa26e3a50c6d9522bd9af517",
+      "stdout_bytes": 529802,
+      "handler_table_original": "BI",
+      "handler_table_canonical": "vmOperations",
+      "handler_entries": 241,
+      "handler_functions": 241,
+      "has_wasm": false,
+      "wasm_modules": []
+    },
+    "webassembly_vm_dual_module": {
+      "site": "dual-module interpreter",
+      "seed_id": "webassembly_vm_dual_module",
+      "raw_seed": "historical capture; no tracked raw source",
+      "source_artifact_id": "sha256:8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "raw_sha256": "8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "stdout_sha256": "1943fc288500094afe0573646b19d8db290e663b268bb7182059fe895b69ab98",
+      "stdout_bytes": 494053,
+      "handler_table_original": "Du",
+      "handler_table_canonical": "vmOperations",
+      "handler_entries": 207,
+      "handler_functions": 207,
+      "has_wasm": true,
+      "wasm_modules": [
+        {
+          "byte_len": 1923,
+          "imports_count": 207,
+          "exports": [
+            "d"
+          ],
+          "validated": true
+        },
+        {
+          "byte_len": 3090,
+          "imports_count": 15,
+          "exports": [
+            "Zc",
+            "x"
+          ],
+          "validated": true
+        }
+      ]
+    },
+    "webassembly_vm_tracked": {
+      "site": "tracked webassembly interpreter",
+      "seed_id": "webassembly_vm_tracked",
+      "raw_seed": "tests/fixtures/kernels/webassembly/kernel.raw.js",
+      "raw_sha256": "2e9b94dcf73fa5fe55961a9c5bb22e6cadaa78f322f9c8a934187cb5517e0581",
+      "stdout_sha256": "48f111e31c70d17118b46dc7abea5d73cda42e1a80bbc51093f2506f15e5c49e",
+      "stdout_bytes": 509321,
+      "handler_table_original": "Ou",
+      "handler_table_canonical": "vmOperations",
+      "handler_entries": 201,
+      "handler_functions": 201,
+      "has_wasm": true,
+      "wasm_modules": [
+        {
+          "byte_len": 1853,
+          "imports_count": 201,
+          "exports": [
+            "Z"
+          ],
+          "validated": true
+        },
+        {
+          "byte_len": 2997,
+          "imports_count": 14,
+          "exports": [
+            "Te",
+            "W"
+          ],
+          "validated": true
+        }
+      ]
+    }
+  },
+  "handler_body_overlap": {
+    "unit": "exact canonical_normalized_body string (Oxc semantic-binding symbol rename, full body, whitespace-collapsed)",
+    "per_seed": {
+      "javascript_vm": {
+        "entries": 241,
+        "distinct": 238,
+        "singleton_groups": 236,
+        "duplicate_groups": 2
+      },
+      "webassembly_vm_dual_module": {
+        "entries": 207,
+        "distinct": 196,
+        "singleton_groups": 186,
+        "duplicate_groups": 10
+      },
+      "webassembly_vm_tracked": {
+        "entries": 201,
+        "distinct": 195,
+        "singleton_groups": 190,
+        "duplicate_groups": 5
+      }
+    },
+    "pairwise_distinct": {
+      "javascript_vm_and_webassembly_vm_dual_module": 54,
+      "javascript_vm_and_webassembly_vm_tracked": 54,
+      "webassembly_vm_dual_module_and_webassembly_vm_tracked": 137
+    },
+    "triple_distinct": 54,
+    "triple_handler_occurrences": {
+      "javascript_vm": 57,
+      "webassembly_vm_dual_module": 57,
+      "webassembly_vm_tracked": 57
+    },
+    "unique_distinct": {
+      "javascript_vm_only": 184,
+      "webassembly_vm_dual_module_only": 59,
+      "webassembly_vm_tracked_only": 58,
+      "webassembly_vm_dual_module_and_webassembly_vm_tracked_only": 83
+    },
+    "union_distinct": 438
+  },
+  "helper_body_overlap": {
+    "unit": "non-handler function-like AST node canonical body (same normalization)",
+    "per_seed_distinct": {
+      "javascript_vm": 22,
+      "webassembly_vm_dual_module": 27,
+      "webassembly_vm_tracked": 27
+    },
+    "pairwise_distinct": {
+      "javascript_vm_and_webassembly_vm_dual_module": 14,
+      "javascript_vm_and_webassembly_vm_tracked": 14,
+      "webassembly_vm_dual_module_and_webassembly_vm_tracked": 23
+    },
+    "triple_distinct": 14,
+    "unique_distinct": {
+      "javascript_vm_only": 8,
+      "webassembly_vm_dual_module_only": 4,
+      "webassembly_vm_tracked_only": 4,
+      "webassembly_vm_dual_module_and_webassembly_vm_tracked_only": 9
+    },
+    "triple_helpers": [
+      {
+        "name": "function vmDecodeBase64(encodedString, l) {",
+        "lines": {
+          "javascript_vm": 13642,
+          "webassembly_vm_dual_module": 11340,
+          "webassembly_vm_tracked": 11688
+        }
+      },
+      {
+        "name": "function vmMemory() {",
+        "lines": {
+          "javascript_vm": 13677,
+          "webassembly_vm_dual_module": 11396,
+          "webassembly_vm_tracked": 11744
+        }
+      },
+      {
+        "name": "Object.defineProperty(K, \"initializeSlot\", { value: function(slotIndex",
+        "lines": {
+          "javascript_vm": 13682,
+          "webassembly_vm_dual_module": 11401,
+          "webassembly_vm_tracked": 11749
+        }
+      },
+      {
+        "name": "Object.defineProperty(K, \"readSlot\", { value: function(slotIndex) {",
+        "lines": {
+          "javascript_vm": 13685,
+          "webassembly_vm_dual_module": 11404,
+          "webassembly_vm_tracked": 11752
+        }
+      },
+      {
+        "name": "Object.defineProperty(K, \"writeSlot\", { value: function(slotIndex, val",
+        "lines": {
+          "javascript_vm": 13688,
+          "webassembly_vm_dual_module": 11407,
+          "webassembly_vm_tracked": 11755
+        }
+      },
+      {
+        "name": "Object.defineProperty(K, \"cloneMemory\", { value: function() {",
+        "lines": {
+          "javascript_vm": 13691,
+          "webassembly_vm_dual_module": 11410,
+          "webassembly_vm_tracked": 11758
+        }
+      },
+      {
+        "name": "function vmCreateStack() {",
+        "lines": {
+          "javascript_vm": 13696,
+          "webassembly_vm_dual_module": 11415,
+          "webassembly_vm_tracked": 11763
+        }
+      },
+      {
+        "name": "context.stack.push(function() {",
+        "lines": {
+          "javascript_vm": 14202,
+          "webassembly_vm_dual_module": 12702,
+          "webassembly_vm_tracked": 12494
+        }
+      },
+      {
+        "name": "context.stack.push(function(O) {",
+        "lines": {
+          "javascript_vm": 14207,
+          "webassembly_vm_dual_module": 12898,
+          "webassembly_vm_tracked": 12743
+        }
+      },
+      {
+        "name": "function vmCreateThread(descriptorIndex, byteOffset, dispatchState, ca",
+        "lines": {
+          "javascript_vm": 16082,
+          "webassembly_vm_dual_module": 13280,
+          "webassembly_vm_tracked": 13559
+        }
+      },
+      {
+        "name": "function vmCaptureThread(byteOffset, dispatchState, memory, initialSlo",
+        "lines": {
+          "javascript_vm": 16090,
+          "webassembly_vm_dual_module": 13286,
+          "webassembly_vm_tracked": 13565
+        }
+      },
+      {
+        "name": "function vmBuildThreadInvocation(byteOffset, dispatchState, memory, in",
+        "lines": {
+          "javascript_vm": 16105,
+          "webassembly_vm_dual_module": 13301,
+          "webassembly_vm_tracked": 13580
+        }
+      },
+      {
+        "name": "var vmInvokeThread = function() {",
+        "lines": {
+          "javascript_vm": 16107,
+          "webassembly_vm_dual_module": 13303,
+          "webassembly_vm_tracked": 13582
+        }
+      },
+      {
+        "name": "function vmDecodeString(encodedString, keyIndex, stringTable, cache, d",
+        "lines": {
+          "javascript_vm": 16167,
+          "webassembly_vm_dual_module": 13423,
+          "webassembly_vm_tracked": 13701
+        }
+      }
+    ],
+    "wasm_pair_only_helpers": [
+      {
+        "name": "vmWorker.onmessage = function(messageEvent) {",
+        "lines": {
+          "webassembly_vm_dual_module": 11382,
+          "webassembly_vm_tracked": 11730
+        }
+      },
+      {
+        "name": "function vmContext(byteOffset, dispatchState, O, l) {",
+        "lines": {
+          "webassembly_vm_dual_module": 11423,
+          "webassembly_vm_tracked": 11771
+        }
+      },
+      {
+        "name": "var vmPopStack = function(context) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13337,
+          "webassembly_vm_tracked": 13616
+        }
+      },
+      {
+        "name": "L: function(context) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13356,
+          "webassembly_vm_tracked": 13634
+        }
+      },
+      {
+        "name": "TM: function(context, operand1) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13366,
+          "webassembly_vm_tracked": 13637
+        }
+      },
+      {
+        "name": "TT: function(context) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13359,
+          "webassembly_vm_tracked": 13662
+        }
+      },
+      {
+        "name": "Tv: function(context, operand1) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13402,
+          "webassembly_vm_tracked": 13665
+        }
+      },
+      {
+        "name": "l: function(context, operand1) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13397,
+          "webassembly_vm_tracked": 13671
+        }
+      },
+      {
+        "name": "TJ: function(context, operand1) {",
+        "lines": {
+          "webassembly_vm_dual_module": 13392,
+          "webassembly_vm_tracked": 13677
+        }
+      }
+    ]
+  },
+  "combined_exact_body_inventory": {
+    "unit": "distinct exact canonical function bodies over vmOperations handlers plus non-handler functions",
+    "all_three_shared_distinct": 68,
+    "all_three_shared_handler_distinct": 54,
+    "all_three_shared_helper_distinct": 14,
+    "wasm_pair_only_distinct": 92,
+    "wasm_pair_only_handler_distinct": 83,
+    "wasm_pair_only_helper_distinct": 9,
+    "js_only_distinct": 192,
+    "js_only_handler_distinct": 184,
+    "js_only_helper_distinct": 8,
+    "webassembly_vm_dual_module_single_capture_distinct": 63,
+    "webassembly_vm_tracked_single_capture_distinct": 62,
+    "union_distinct": 477
+  },
+  "limits": [
+    "Exact canonical-body intersection measures normalized structure, including renamed captured bindings; semantic reuse also requires resolving their values and roles.",
+    "A zero exact overlap for a body does not imply different semantics; it can be an arity, literal, or placement variant.",
+    "Hashes/fingerprints are not proof; every count above compares the full canonical body string.",
+    "Missing WASM debug names are not a semantic blocker; roles are recovered from reads/writes/control flow."
+  ]
+}

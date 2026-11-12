@@ -1,0 +1,27 @@
+{
+  "source_fixture": "native-reverse.js",
+  "review_copies": [
+    {
+      "review_source": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "fixture": "review-unreachable-install.js",
+      "sha256": "432d19268f91db2d77917e6cb5a2ae23969539b1010159340abe469485fa88fb",
+      "exact_bytes": true
+    },
+    {
+      "review_source": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "fixture": "review-returned-constructor-mutation.js",
+      "sha256": "3e78c5f3a827d7408feb726b920dbfa737bea44a34a1e69ed45f1a66f14261c7",
+      "exact_bytes": true
+    }
+  ],
+  "derived": [
+    {
+      "fixture": "native-reverse-multi-hop.js",
+      "change": "Only add two const aliases after the original factory call and construct through the second alias; all installed source remains intact."
+    },
+    {
+      "fixture": "native-reverse-second-alias-mutation.js",
+      "change": "Full installed multi-hop witness plus second-alias prototype.register overwrite before construction."
+    }
+  ]
+}

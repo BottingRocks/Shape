@@ -1,0 +1,35 @@
+{
+  "source": "sha256:472fd0f679bd46ceae81714817cf8ea0e42bfecdd08d3a196e758f6c972b8683",
+  "sha256": "472fd0f679bd46ceae81714817cf8ea0e42bfecdd08d3a196e758f6c972b8683",
+  "spans": [
+    [
+      128,
+      133
+    ],
+    [
+      2491,
+      2519
+    ],
+    [
+      2723,
+      2731
+    ],
+    [
+      13718,
+      13720
+    ],
+    [
+      13723,
+      13947
+    ],
+    [
+      13948,
+      14367
+    ]
+  ],
+  "reference_file": "superpack-reference-alternate.cjs",
+  "reference_sha256": "2bfca41359c91bd920b2847b7d9681d5cbd550f6275f77e851264c4bd7162d9c",
+  "changes": [
+    "Unchanged original bodies; lexical prelude, identity sentinel at source line 4393, exports and option glue only."
+  ]
+}

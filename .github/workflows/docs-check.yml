@@ -1,0 +1,43 @@
+name: Docs checks
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/docs-links.mjs"
+      - "scripts/docs-links.test.mjs"
+      - "docs/signals/*.js"
+      - "scripts/signal-data.test.mjs"
+      - "src/signals/catalog/*.rs"
+      - "src/signals/wire/readable.rs"
+      - "src/signals/wire/counted.rs"
+      - "src/signals/wire/named.rs"
+      - ".github/workflows/docs-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - "scripts/docs-links.mjs"
+      - "scripts/docs-links.test.mjs"
+      - "docs/signals/*.js"
+      - "scripts/signal-data.test.mjs"
+      - "src/signals/catalog/*.rs"
+      - "src/signals/wire/readable.rs"
+      - "src/signals/wire/counted.rs"
+      - "src/signals/wire/named.rs"
+      - ".github/workflows/docs-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --test scripts/docs-links.test.mjs
+      - run: node scripts/docs-links.mjs
+      - run: node scripts/signal-data.test.mjs

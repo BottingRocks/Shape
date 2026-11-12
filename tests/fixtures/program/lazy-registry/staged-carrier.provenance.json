@@ -1,0 +1,77 @@
+{
+  "seed": "staged-carrier",
+  "source": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "source_sha256": "48639e6d4cafb36dd72508ee06c670a7dc276c47f3d9c524cfec1b23497051a8",
+  "class_id": "class@410669..410849",
+  "current_baseline": "baseline130-005",
+  "current_map_applied": false,
+  "fixture_sha256": "79e62397694c25886cb84918f58682018dad2ca7bd490df71f49bc4de7fea5c8",
+  "spans": [
+    {
+      "start": 55409,
+      "end": 55510,
+      "line": 2161,
+      "endLine": 2161
+    },
+    {
+      "start": 410277,
+      "end": 410297,
+      "line": 12316,
+      "endLine": 12316
+    },
+    {
+      "start": 9717,
+      "end": 9802,
+      "line": 375,
+      "endLine": 375
+    },
+    {
+      "start": 79451,
+      "end": 79485,
+      "line": 3023,
+      "endLine": 3023
+    },
+    {
+      "start": 14455,
+      "end": 17933,
+      "line": 562,
+      "endLine": 698
+    },
+    {
+      "start": 19885,
+      "end": 19920,
+      "line": 785,
+      "endLine": 785
+    },
+    {
+      "start": 55510,
+      "end": 60826,
+      "line": 2162,
+      "endLine": 2376
+    },
+    {
+      "start": 69475,
+      "end": 69509,
+      "line": 2653,
+      "endLine": 2653
+    },
+    {
+      "start": 409569,
+      "end": 410277,
+      "line": 12280,
+      "endLine": 12315
+    },
+    {
+      "start": 410297,
+      "end": 410363,
+      "line": 12317,
+      "endLine": 12317
+    },
+    {
+      "start": 410631,
+      "end": 410999,
+      "line": 12322,
+      "endLine": 12338
+    }
+  ]
+}

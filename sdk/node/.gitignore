@@ -1,0 +1,6 @@
+/build/
+*.node
+/lib/*.dylib
+/lib/*.so
+/lib/*.a
+node_modules/

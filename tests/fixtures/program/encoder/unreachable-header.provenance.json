@@ -1,0 +1,9 @@
+{
+  "positive": "tests/fixtures/program/encoder/guarded.js",
+  "positive_sha256": "ae2a65b0481532d1b853bce3da3a68befaf6ce5b3a7b5be8a202641062ffa2b6",
+  "negative_sha256": "4428fb44a817cd7f04bedabe4a82a12dcb22c6f4ca459e2bede90f9d419cac01",
+  "mutation": "Insert direct throw new Error(\"stop\") as the first instance encode statement, before options/header.",
+  "review": "review/MANAGER-ENCODER-REACHABILITY.json",
+  "status": "SOURCE_HYPOTHESIS_NOT_REPRODUCED; parser/Model/matcher checks UNEXECUTED until sole integrator receipt",
+  "new_unique_seed": false
+}

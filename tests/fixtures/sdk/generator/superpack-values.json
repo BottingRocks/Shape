@@ -1,0 +1,19 @@
+{
+  "value": {
+    "kind": "array",
+    "value": [
+      {"kind": "undefined"},
+      {"kind": "null"},
+      {"kind": "bool", "value": true},
+      {"kind": "number", "value": "0000000000000000"},
+      {"kind": "number", "value": "8000000000000000"},
+      {"kind": "number", "value": "7ff8000000000000"},
+      {"kind": "number", "value": "7ff0000000000000"},
+      {"kind": "number", "value": "fff0000000000000"},
+      {"kind": "string", "value": "synthetic text"},
+      {"kind": "binary", "value": [0, 128, 255]},
+      {"kind": "date", "value": 123456789},
+      {"kind": "object", "value": [["a", {"kind": "null"}], ["b", {"kind": "undefined"}]]}
+    ]
+  }
+}

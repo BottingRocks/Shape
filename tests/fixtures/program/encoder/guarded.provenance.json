@@ -1,0 +1,17 @@
+{
+  "seed": "wave-position-alternate",
+  "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "input_sha256": "79cfa667f80916362d9b86bef45ecd7f74c9f66e8c357dcb3f2bf5ec6aff2b84",
+  "factory_span": {
+    "start": 506656,
+    "end": 519207
+  },
+  "class_span": {
+    "start": 506711,
+    "end": 519149
+  },
+  "factory_sha256": "4cd4038fc709905cb0eee6150f4418bfa4a9790fab3c9404598142bb2d2ffadb",
+  "fixture_sha256": "ae2a65b0481532d1b853bce3da3a68befaf6ce5b3a7b5be8a202641062ffa2b6",
+  "harness": "Existing ORIGINAL bootstrap, registry/base carrier and consumers, with table/comparer bindings matching original factory. Factory bytes unchanged. Other referenced helper bodies are not used as class proof evidence.",
+  "execution": "UNEXECUTED"
+}

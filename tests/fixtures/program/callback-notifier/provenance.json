@@ -1,0 +1,32 @@
+[
+  {
+    "seed": "native-reverse",
+    "original_class_span": [
+      475499,
+      476203
+    ],
+    "original_sha256": "8c77d860ac9d9c78f7bc4c8a57de4113e0a054cb237bcf49e50fbf821e815bcb",
+    "fixture": "tests/fixtures/program/callback-notifier/native-reverse.js",
+    "fixture_sha256": "205d5b539eaeb3d0048c5a64db21f033b5fe5ee6e1e72d05aee2ce0ae3afa23c",
+    "installation_note": "Original native declaration and factory/alias/new caller; added exact readonly prototype installation and local state sink declaration."
+  },
+  {
+    "seed": "native-forward",
+    "original_class_span": [
+      411852,
+      412603
+    ],
+    "original_sha256": "d27e39cc89f6829f12e5920022cbb646972746c16e3df543f883e4b035119938",
+    "fixture": "tests/fixtures/program/callback-notifier/native-forward.js",
+    "fixture_sha256": "cdcc373a927715973c70e6db52d083bea90284a0e9a591abc7835641d355eb0a",
+    "installation_note": "Original native declaration and factory/alias/new caller; added exact readonly prototype installation and local state sink declaration."
+  },
+  {
+    "kind": "review_counterexample",
+    "fixture": "tests/fixtures/program/callback-notifier/counterexample-static-base-mutation.js",
+    "fixture_sha256": "27c383902095f0e4cd70974913abe221c5fd6d4464da6f88ac456ea99376fc1d",
+    "review_source": "CONTROL/review/notifier/counterexample-static-base-mutation.js",
+    "review_sha256": "27c383902095f0e4cd70974913abe221c5fd6d4464da6f88ac456ea99376fc1d",
+    "installation_note": "Exact unchanged read-review fixture; real reverse native class/factory/alias/new transport with static super.prototype.notify mutation. Read as parser input only; never executed."
+  }
+]

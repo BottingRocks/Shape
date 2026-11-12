@@ -1,0 +1,6 @@
+# Native library copied in by the repo build script; never committed.
+/shape/lib/
+__pycache__/
+*.egg-info/
+/build/
+/dist/

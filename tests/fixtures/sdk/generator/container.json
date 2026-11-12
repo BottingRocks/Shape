@@ -1,0 +1,12 @@
+{
+  "seeds": [287454020, 1432778632],
+  "data": {
+    "kind": "container",
+    "container": {
+      "errors": [0, 255],
+      "positional": [{"encoded": [42], "extra": [0, 128, 255]}, null],
+      "signals": [129, 0],
+      "keyed": [{"name": 7, "encoded": [], "extra": [255, 0]}]
+    }
+  }
+}

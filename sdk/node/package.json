@@ -1,0 +1,52 @@
+{
+  "name": "shape",
+  "version": "0.1.0",
+  "description": "Node.js binding of libshape: deobfuscation, tracing and signal decoding (JSON in, JSON out).",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "src/addon.c",
+    "build.sh",
+    "build/shape.node",
+    "build/libshape.dylib",
+    "build/libshape.so",
+    "build/shape.h",
+    "README.md",
+    "operations.js",
+    "domain.d.ts",
+    "index.d.mts",
+    "TYPESCRIPT.md",
+    "api-map.json"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "sh ./build.sh",
+    "test": "node --test test/index.js test/operations.test.mjs",
+    "test:types": "tsc --noEmit --strict --module nodenext --moduleResolution nodenext --target es2022 test/types.ts test/result-contracts.ts test/operations.mts",
+    "test:docs": "node test/docs.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "~5.7.3"
+  }
+}

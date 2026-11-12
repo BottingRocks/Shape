@@ -1,0 +1,26 @@
+{
+  "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "spans": [
+    {
+      "name": "$THREAD_2_110707",
+      "start": 10422,
+      "end": 14586
+    },
+    {
+      "name": "$THREAD_7_6923",
+      "start": 69206,
+      "end": 74474
+    },
+    {
+      "name": "$THREAD_1_54839",
+      "start": 392407,
+      "end": 393059
+    },
+    {
+      "name": "$THREAD_7_72452",
+      "start": 393418,
+      "end": 393663
+    }
+  ],
+  "note": "Four exact owned declarations; original installer/base/factory invocation and receiver setup retained. Outer captured slots declared for scoped Model; no whole corpus copy."
+}

@@ -1,0 +1,20 @@
+{
+  "factory": "Exact user-pasted createSignalPayloadEncoder, unchanged; SHA-256 independently recorded in original flow audit. No private capture data.",
+  "cipher": "Unmodified cleaned-source createChaChaLikeStreamCipher, lines 3289–3895; source SHA-256 f95e7e6049cfa4f6cf07f59385eb0d02239b905f90d4b592afed58498078b6c6. This is an explicit synthetic build dependency, not a claim about an unknown captured build.",
+  "entropy": {
+    "random": 0.25,
+    "performance": 12345,
+    "date_ms": 1700000000123,
+    "crypto_u32": 2309737967,
+    "counter_before": 41,
+    "seeds": [
+      1200151530,
+      1200151531
+    ]
+  },
+  "files": {
+    "payload-factory.js": "24e70043d6b8f5aeb4e15ca045e7336eba422ed3c98d2ac6081ecbac9cab2e8a",
+    "payload-cipher.js": "db12d79e99a6c79101b3db76d0ead976b86fe8f5dde2a2ae6c7780a35cadbb04",
+    "superpack-reference.cjs": "70606fcbca6088354063dcbeb78d5a441e3ce4a17205f9e366e7d0d4ab048951"
+  }
+}

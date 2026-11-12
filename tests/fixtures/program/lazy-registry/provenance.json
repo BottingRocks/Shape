@@ -1,0 +1,288 @@
+[
+  {
+    "seed": "native-reverse",
+    "spans": [
+      {
+        "label": "lazy factory",
+        "input_span": {
+          "start": 485076,
+          "end": 485321,
+          "line": 13979,
+          "endLine": 13991
+        }
+      },
+      {
+        "label": "function $THREAD_9_78581",
+        "input_span": {
+          "start": 79317,
+          "end": 87714
+        }
+      },
+      {
+        "label": "function $THREAD_1_75932",
+        "input_span": {
+          "start": 13229,
+          "end": 16716
+        }
+      },
+      {
+        "label": "base constructor",
+        "input_span": {
+          "end": 476203,
+          "start": 475499
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 6604,
+          "end": 6687
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 88931,
+          "end": 88965
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 79192,
+          "end": 79315
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 484651,
+          "end": 484671
+        }
+      }
+    ],
+    "source": "../../../../../../../reports/thread-shared-rules-post110/baseline130-004/seeds/native-reverse/cleaned.js",
+    "class_id": "class@485112..485290",
+    "base_kind": "native-class",
+    "bytes": 13418,
+    "correction": "Retain original outer supporting binding declarations and registry initialization: the typed descriptor proof requires a scoped registry SymbolId; omitted globals cannot substitute. These real declarations also give bootstrap a unique broadest reachable binding scope."
+  },
+  {
+    "seed": "native-forward",
+    "spans": [
+      {
+        "label": "lazy factory",
+        "input_span": {
+          "start": 413043,
+          "end": 413324,
+          "line": 11651,
+          "endLine": 11663
+        }
+      },
+      {
+        "label": "function $THREAD_9_125208",
+        "input_span": {
+          "start": 43150,
+          "end": 48772
+        }
+      },
+      {
+        "label": "function $THREAD_5_62505",
+        "input_span": {
+          "start": 14615,
+          "end": 19030
+        }
+      },
+      {
+        "label": "base constructor",
+        "input_span": {
+          "end": 412603,
+          "start": 411852
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 7517,
+          "end": 7583
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 95767,
+          "end": 95803
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 43023,
+          "end": 43146
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 412661,
+          "end": 412684
+        }
+      }
+    ],
+    "source": "../../../../../../../reports/thread-shared-rules-post110/baseline130-004/seeds/native-forward/cleaned.js",
+    "class_id": "class@413081..413287",
+    "base_kind": "native-class",
+    "bytes": 11615,
+    "correction": "Retain original outer supporting binding declarations and registry initialization: the typed descriptor proof requires a scoped registry SymbolId; omitted globals cannot substitute. These real declarations also give bootstrap a unique broadest reachable binding scope."
+  },
+  {
+    "seed": "single-assignment-helper-carrier",
+    "spans": [
+      {
+        "label": "lazy factory",
+        "input_span": {
+          "start": 487393,
+          "end": 487638,
+          "line": 14084,
+          "endLine": 14096
+        }
+      },
+      {
+        "label": "function $THREAD_2_39726",
+        "input_span": {
+          "start": 77221,
+          "end": 85625
+        }
+      },
+      {
+        "label": "function $THREAD_8_45175",
+        "input_span": {
+          "start": 4836,
+          "end": 8393
+        }
+      },
+      {
+        "label": "base constructor",
+        "input_span": {
+          "end": 465633,
+          "start": 465560
+        }
+      },
+      {
+        "label": "complete prototype method installations",
+        "input_span": {
+          "start": 486019,
+          "end": 486972
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 169,
+          "end": 254
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 87782,
+          "end": 87816
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 77096,
+          "end": 77219
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 486973,
+          "end": 486993
+        }
+      }
+    ],
+    "source": "../../../../../../../reports/thread-shared-rules-post110/baseline130-004/seeds/single-assignment-helper-carrier/cleaned.js",
+    "class_id": "class@487428..487607",
+    "base_kind": "ordinary-function",
+    "bytes": 13819,
+    "correction": "Retain original outer supporting binding declarations and registry initialization: the typed descriptor proof requires a scoped registry SymbolId; omitted globals cannot substitute. These real declarations also give bootstrap a unique broadest reachable binding scope."
+  },
+  {
+    "seed": "ordinary-forward",
+    "spans": [
+      {
+        "label": "lazy factory",
+        "input_span": {
+          "start": 435289,
+          "end": 435561,
+          "line": 12023,
+          "endLine": 12035
+        }
+      },
+      {
+        "label": "function $THREAD_9_23667",
+        "input_span": {
+          "start": 74436,
+          "end": 80069
+        }
+      },
+      {
+        "label": "function $THREAD_7_64770",
+        "input_span": {
+          "start": 7437,
+          "end": 11833
+        }
+      },
+      {
+        "label": "base constructor",
+        "input_span": {
+          "end": 412079,
+          "start": 412000
+        }
+      },
+      {
+        "label": "complete prototype method installations",
+        "input_span": {
+          "start": 433946,
+          "end": 434922
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 342,
+          "end": 407
+        }
+      },
+      {
+        "label": "outer interceptor support (original binding declaration / registry initialization)",
+        "input_span": {
+          "start": 96196,
+          "end": 96232
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 74325,
+          "end": 74432
+        }
+      },
+      {
+        "label": "original installation lifecycle flag context",
+        "input_span": {
+          "start": 434923,
+          "end": 434945
+        }
+      }
+    ],
+    "source": "../../../../../../../reports/thread-shared-rules-post110/baseline130-004/seeds/ordinary-forward/cleaned.js",
+    "class_id": "class@435327..435525",
+    "base_kind": "ordinary-function",
+    "bytes": 11879,
+    "correction": "Retain original outer supporting binding declarations and registry initialization: the typed descriptor proof requires a scoped registry SymbolId; omitted globals cannot substitute. These real declarations also give bootstrap a unique broadest reachable binding scope."
+  }
+]

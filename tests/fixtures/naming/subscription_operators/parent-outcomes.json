@@ -1,0 +1,80 @@
+{
+  "subscription-parent-alternate": {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 11610,
+        "start": 11540
+      },
+      "identifier": {
+        "end": 11564,
+        "start": 11549
+      },
+      "name": "$THREAD_7_25410",
+      "owned_by_main": false,
+      "symbol": 138
+    },
+    "confidence": "medium",
+    "evaluator": "captured_subscription_cleanup",
+    "evidence": [
+      {
+        "end": 11603,
+        "start": 11575
+      },
+      {
+        "end": 11602,
+        "start": 11582
+      }
+    ],
+    "explanation": [
+      "entire zero-formal body returns the nonoptional zero-argument unsubscribe method on one scoped captured subscribe result; direct sole executed store and immutable parameter/alias source; every callback exposure follows that store; dynamic source and method retain opaque consumer-defined identity"
+    ],
+    "function_id": "fn@11540..11610",
+    "pc": 25410,
+    "proposed_name": "unsubscribeCapturedSource",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "unsubscribeCapturedSource",
+    "shorthand_edits": 0,
+    "thread_id": 7
+  },
+  "subscription-parent-baseline": {
+    "applied": true,
+    "binding": {
+      "declaration": {
+        "end": 18478,
+        "start": 18407
+      },
+      "identifier": {
+        "end": 18432,
+        "start": 18416
+      },
+      "name": "$THREAD_6_139757",
+      "owned_by_main": false,
+      "symbol": 247
+    },
+    "confidence": "medium",
+    "evaluator": "captured_subscription_cleanup",
+    "evidence": [
+      {
+        "end": 18471,
+        "start": 18443
+      },
+      {
+        "end": 18470,
+        "start": 18450
+      }
+    ],
+    "explanation": [
+      "entire zero-formal body returns the nonoptional zero-argument unsubscribe method on one scoped captured subscribe result; direct sole executed store and immutable parameter/alias source; every callback exposure follows that store; dynamic source and method retain opaque consumer-defined identity"
+    ],
+    "function_id": "fn@18407..18478",
+    "pc": 139757,
+    "proposed_name": "unsubscribeCapturedSource",
+    "reason": null,
+    "reference_edits": 1,
+    "role_name": "unsubscribeCapturedSource",
+    "shorthand_edits": 0,
+    "thread_id": 6
+  }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "fixture": "tests/fixtures/program/ring-buffer/residual-origin-baseline.js",
+    "seed": "residual-origin-baseline",
+    "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "input_sha256": "6bc9a97f040d6acd2b129e140cc70d6807fa12f42991ff43866fef260d4d240d",
+    "class_id": "class@186177..186979",
+    "excerpts": [
+      {
+        "span": {
+          "start": 186177,
+          "end": 186979
+        },
+        "sha256": "c5b06025a6b66a0dbda3fa6285b6d97df10581f7fb65fff0e286427f1de27b8a"
+      },
+      {
+        "span": {
+          "start": 186984,
+          "end": 187016
+        },
+        "sha256": "627107c00637d5afc1aeec1e2e375b5f231ae2bc290dc4b3dec2f37d6174b58d"
+      },
+      {
+        "span": {
+          "start": 189512,
+          "end": 189543
+        },
+        "sha256": "f0180753cc92f31938c726d777d8983db34d9428dad63c246e78ad8670b29d46"
+      },
+      {
+        "span": {
+          "start": 192028,
+          "end": 192056
+        },
+        "sha256": "976e6f9e035b29bc3b5a985eeba50c9cee04901c28ee8dab584cadbdb2900299"
+      },
+      {
+        "span": {
+          "start": 314775,
+          "end": 314795
+        },
+        "sha256": "478f96fae766c6a13b850520d43eae5b07789444cd36da169f0f5602975e3deb"
+      }
+    ],
+    "fixture_sha256": "afa4eca252ad5d5e9393e18b1da87bac141304da58570623f925301b9842fd03",
+    "scaffold": "Two comments and newline joins only; prove() supplies enclosing bootstrap. Consumer excerpts are not executed.",
+    "map": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "map_sha256": "a137b57dd70426b818a440cc4a87743f8e2b81b91cf34d3f2e001011c4f44945"
+  },
+  {
+    "fixture": "tests/fixtures/program/ring-buffer/residual-origin-alternate.js",
+    "seed": "residual-origin-alternate",
+    "input": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "input_sha256": "11e39c67e62c138ebd25c025f4ec793b27a383a29a1eb38e990508b9e8183f9c",
+    "class_id": "class@130467..131199",
+    "excerpts": [
+      {
+        "span": {
+          "start": 130467,
+          "end": 131199
+        },
+        "sha256": "4ecc77aa10c487eed64ea9b98fb0bd77fc5e3b7d45941a68a3f4af0c277c8d72"
+      },
+      {
+        "span": {
+          "start": 143453,
+          "end": 143485
+        },
+        "sha256": "f66e407b7395da7028d64bf0ec9c7d330cc934797bfbddd98359d881d921166e"
+      },
+      {
+        "span": {
+          "start": 147063,
+          "end": 147094
+        },
+        "sha256": "20ff9106c399bcf408b28f2a4559b57d29e641c7309b34d7b0363e02495564c3"
+      },
+      {
+        "span": {
+          "start": 149712,
+          "end": 149740
+        },
+        "sha256": "2ff9d9f02fed956c4c65a4149b0ee80b64c2dbe4df073a9ae491ae7b62e17c3a"
+      },
+      {
+        "span": {
+          "start": 151116,
+          "end": 151280
+        },
+        "sha256": "872e6329c816a54b2b3bceacce949b96504997a6163bc5595cf359b61e6062b3"
+      }
+    ],
+    "fixture_sha256": "1ad25d4b7ccc561958f105e40bf5c2e3045163cea616e89b9dac1d5741bafd75",
+    "scaffold": "Two comments and newline joins only; prove() supplies enclosing bootstrap. Consumer excerpts are not executed.",
+    "map": "/corpus/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "map_sha256": "a9b2a5397fa357f399bcac007d88506bbef56c24eac4a096ca92ab51d8445b57"
+  }
+]

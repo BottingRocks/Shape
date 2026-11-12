@@ -1,0 +1,41 @@
+[
+  {
+    "source": "tools/shape_a_header.py KAT_CFG / KAT_B64, classic JavaScript encryptor",
+    "profile": {
+      "format": "shape-byte-codec/1",
+      "cipher": {"ivs": [653061021, 1868990556, 314007762, 3767242981], "counter": 8869519665802586, "double_rounds": 4},
+      "alphabet": "D1q=NnrUlydcQshSW6o7e-MxbwTuBaIi2mkY9ftXOH0GRAgVC53EKPp_jLZ4Jv8zF",
+      "keys": [270548331, 1733784460, 1100686077, 25935318, 65808426, 1936476155, 1757906958, 1721421690],
+      "header_name": "X-fixture-a"
+    },
+    "seeds": [287454020, 1432778632],
+    "plaintext_hex": "68656c6c6f2073686170652c2074686973206973206120636f646563206b6e6f776e2d616e7377657220746573742e",
+    "value": "NolE6n-tajYaVL-qhnlHGd5nRKyj4NzfElqMwBKu3a0UWRHEaGJvCtcwyjjhEDDvzo9MWbXsoC"
+  },
+  {
+    "source": "src/signal_codec/mod.rs payload_matches_the_js_oracle",
+    "profile": {
+      "format": "shape-byte-codec/1",
+      "cipher": {"ivs": [522575410, 361402133, 1980070771, 3031302865], "counter": 307069178630199, "double_rounds": 5},
+      "alphabet": "768eqNwP4xRQJ0kacboBKn5j1ugh9SIiVvZsmrtMzF=_OlWD2UGp3AHE-dCLYTXyf",
+      "keys": [1944786431, 1181771095, 2061591115, 263772366, 1195508087, 1094872937, 60797880, 642840060],
+      "header_name": "X-fixture-a"
+    },
+    "seeds": [168496141, 16909060],
+    "plaintext_hex": "00003711223344c70b696edd5caca9105ef1a9b5cdb26b65f5401bbaf771606ada7407a3fbcfbc9755b8e82344581eb676c5e28ceffc9f71825d00",
+    "value": "8VOJecq872ons2cBbwKY7agUiLp5l3u2x76D7dXH_gBDm_MJtYTvj4qBOZkAmi6FQtl69vscW6H5kwyxyCkpi9kJW7"
+  },
+  {
+    "source": "tools/shape_a_header.py KAT_TARGET_CFG / KAT_TARGET_B64, captured WebAssembly encryptor at six double rounds",
+    "profile": {
+      "format": "shape-byte-codec/1",
+      "cipher": {"ivs": [2738146281, 4051065481, 3627690418, 1659531234], "counter": 8109957027847065, "double_rounds": 6},
+      "alphabet": "Wwqo04Xxca-pOekNdS_QgPuhUYibmnjVlrM5G6DJAIsTtFCf=L8Rv2HEzK39B17Zy",
+      "keys": [735181864, 727229675, 1172637576, 1998869291, 298190045, 1084671352, 223225468, 2077129531],
+      "header_name": "X-fixture-a"
+    },
+    "seeds": [287454020, 1432778632],
+    "plaintext_hex": "68656c6c6f2073686170652c2074686973206973206120636f646563206b6e6f776e2d616e7377657220746573742e",
+    "value": "0_cRS4PDnzMQf0DsDgGUMeMQVllC13ZJT=OERS7TpnCm0xoPqznDQL9BR6VFHxItArQglv7oo="
+  }
+]

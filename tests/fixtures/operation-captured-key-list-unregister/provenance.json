@@ -1,0 +1,302 @@
+[
+  {
+    "fixture": "stateful-parent-expanded.js",
+    "seed": "single-guarded-registry",
+    "span": {
+      "end": 519596,
+      "start": 518627
+    },
+    "name": "$THREAD_3_86302",
+    "capture_navigation": [
+      "$KEY_21",
+      "$KEY_11",
+      "$KEY_48",
+      "$KEY_243",
+      "$KEY_22",
+      "$KEY_8",
+      "$KEY_17",
+      "$KEY_20"
+    ],
+    "sourcepath": "corpus/single-guarded-registry/cleaned.js"
+  },
+  {
+    "fixture": "stateful-parent-baseline.js",
+    "seed": "single-guarded-registry",
+    "span": {
+      "end": 933047,
+      "start": 932152
+    },
+    "name": "$THREAD_3_86302",
+    "capture_navigation": [
+      "$KEY_21",
+      "$KEY_11",
+      "$KEY_48",
+      "$KEY_243",
+      "$KEY_22",
+      "$KEY_8",
+      "$KEY_17",
+      "$KEY_20"
+    ],
+    "sourcepath": "corpus/single-guarded-registry/cleaned.js"
+  },
+  {
+    "fixture": "stateful-parent-alternate.js",
+    "seed": "single-guarded-registry",
+    "span": {
+      "end": 1343662,
+      "start": 1342767
+    },
+    "name": "$THREAD_3_86302",
+    "capture_navigation": [
+      "$KEY_21",
+      "$KEY_11",
+      "$KEY_48",
+      "$KEY_243",
+      "$KEY_22",
+      "$KEY_8",
+      "$KEY_17",
+      "$KEY_20"
+    ],
+    "sourcepath": "corpus/single-guarded-registry/cleaned.js"
+  },
+  {
+    "fixture": "stateful-parent-compact.js",
+    "seed": "single-guarded-registry",
+    "span": {
+      "end": 1661457,
+      "start": 1660599
+    },
+    "name": "$THREAD_3_86302",
+    "capture_navigation": [
+      "$KEY_21",
+      "$KEY_11",
+      "$KEY_48",
+      "$KEY_243",
+      "$KEY_22",
+      "$KEY_8",
+      "$KEY_17",
+      "$KEY_20"
+    ],
+    "sourcepath": "corpus/single-guarded-registry/cleaned.js"
+  },
+  {
+    "fixture": "work-batch-parent-expanded.js",
+    "seed": "reaching-registry-heldout",
+    "span": {
+      "end": 283551,
+      "start": 282549
+    },
+    "name": "$THREAD_6_43037",
+    "capture_navigation": [
+      "$KEY_20",
+      "$KEY_6",
+      "$KEY_12",
+      "$KEY_61",
+      "$KEY_14",
+      "$KEY_3",
+      "$KEY_4",
+      "$KEY_15"
+    ],
+    "sourcepath": "corpus/reaching-registry-heldout/cleaned.js"
+  },
+  {
+    "fixture": "work-batch-parent-baseline.js",
+    "seed": "reaching-registry-heldout",
+    "span": {
+      "end": 494870,
+      "start": 493905
+    },
+    "name": "$THREAD_6_43037",
+    "capture_navigation": [
+      "$KEY_20",
+      "$KEY_6",
+      "$KEY_12",
+      "$KEY_61",
+      "$KEY_14",
+      "$KEY_3",
+      "$KEY_4",
+      "$KEY_15"
+    ],
+    "sourcepath": "corpus/reaching-registry-heldout/cleaned.js"
+  },
+  {
+    "fixture": "work-batch-parent-compact.js",
+    "seed": "reaching-registry-heldout",
+    "span": {
+      "end": 748614,
+      "start": 747760
+    },
+    "name": "$THREAD_6_43037",
+    "capture_navigation": [
+      "$KEY_20",
+      "$KEY_6",
+      "$KEY_12",
+      "$KEY_61",
+      "$KEY_14",
+      "$KEY_3",
+      "$KEY_4",
+      "$KEY_15"
+    ],
+    "sourcepath": "corpus/reaching-registry-heldout/cleaned.js"
+  },
+  {
+    "fixture": "branched-parent-baseline.js",
+    "seed": "branched-registry",
+    "span": {
+      "end": 533513,
+      "start": 532624
+    },
+    "name": "$THREAD_6_110682",
+    "capture_navigation": [
+      "$KEY_8",
+      "$KEY_2",
+      "$KEY_331",
+      "$KEY_281",
+      "$KEY_9",
+      "$KEY_0",
+      "$KEY_7",
+      "$KEY_5"
+    ],
+    "sourcepath": "corpus/branched-registry/cleaned.js"
+  },
+  {
+    "fixture": "branched-parent-alternate.js",
+    "seed": "branched-registry",
+    "span": {
+      "end": 790096,
+      "start": 789207
+    },
+    "name": "$THREAD_6_110682",
+    "capture_navigation": [
+      "$KEY_8",
+      "$KEY_2",
+      "$KEY_331",
+      "$KEY_281",
+      "$KEY_9",
+      "$KEY_0",
+      "$KEY_7",
+      "$KEY_5"
+    ],
+    "sourcepath": "corpus/branched-registry/cleaned.js"
+  },
+  {
+    "fixture": "forwarding-parent-baseline.js",
+    "seed": "reaching-registry-alternate",
+    "span": {
+      "end": 545424,
+      "start": 544529
+    },
+    "name": "$THREAD_0_107547",
+    "capture_navigation": [
+      "$KEY_1",
+      "$KEY_15",
+      "$KEY_96",
+      "$KEY_330",
+      "$KEY_8",
+      "$KEY_18",
+      "$KEY_12",
+      "$KEY_16"
+    ],
+    "sourcepath": "corpus/reaching-registry-alternate/cleaned.js"
+  },
+  {
+    "fixture": "forwarding-parent-compact.js",
+    "seed": "reaching-registry-alternate",
+    "span": {
+      "end": 759404,
+      "start": 758546
+    },
+    "name": "$THREAD_0_107547",
+    "capture_navigation": [
+      "$KEY_1",
+      "$KEY_15",
+      "$KEY_96",
+      "$KEY_330",
+      "$KEY_8",
+      "$KEY_18",
+      "$KEY_12",
+      "$KEY_16"
+    ],
+    "sourcepath": "corpus/reaching-registry-alternate/cleaned.js"
+  },
+  {
+    "fixture": "numeric-parent-baseline.js",
+    "seed": "registry-callable-aliases",
+    "span": {
+      "end": 508822,
+      "start": 507925
+    },
+    "name": "$THREAD_8_105747",
+    "capture_navigation": [
+      "$KEY_13",
+      "$KEY_2",
+      "$KEY_281",
+      "$KEY_264",
+      "$KEY_14",
+      "$KEY_16",
+      "$KEY_17",
+      "$KEY_4"
+    ],
+    "sourcepath": "corpus/registry-callable-aliases/cleaned.js"
+  },
+  {
+    "fixture": "numeric-parent-compact.js",
+    "seed": "registry-callable-aliases",
+    "span": {
+      "end": 692628,
+      "start": 691768
+    },
+    "name": "$THREAD_8_105747",
+    "capture_navigation": [
+      "$KEY_13",
+      "$KEY_2",
+      "$KEY_281",
+      "$KEY_264",
+      "$KEY_14",
+      "$KEY_16",
+      "$KEY_17",
+      "$KEY_4"
+    ],
+    "sourcepath": "corpus/registry-callable-aliases/cleaned.js"
+  },
+  {
+    "fixture": "checkbox-parent-baseline.js",
+    "seed": "registry-consumer-heldout",
+    "span": {
+      "end": 497510,
+      "start": 496620
+    },
+    "name": "$THREAD_9_102987",
+    "capture_navigation": [
+      "$KEY_6",
+      "$KEY_3",
+      "$KEY_390",
+      "$KEY_78",
+      "$KEY_5",
+      "$KEY_7",
+      "$KEY_10",
+      "$KEY_15"
+    ],
+    "sourcepath": "corpus/registry-consumer-heldout/cleaned.js"
+  },
+  {
+    "fixture": "checkbox-parent-compact.js",
+    "seed": "registry-consumer-heldout",
+    "span": {
+      "end": 660785,
+      "start": 659932
+    },
+    "name": "$THREAD_9_102987",
+    "capture_navigation": [
+      "$KEY_6",
+      "$KEY_3",
+      "$KEY_390",
+      "$KEY_78",
+      "$KEY_5",
+      "$KEY_7",
+      "$KEY_10",
+      "$KEY_15"
+    ],
+    "sourcepath": "corpus/registry-consumer-heldout/cleaned.js"
+  }
+]

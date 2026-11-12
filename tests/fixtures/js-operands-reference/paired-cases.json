@@ -1,0 +1,777 @@
+{
+  "schema": "shape-js-wasm-operand-paired-cases/v1",
+  "status": "static-source-evidence",
+  "baseline_commit": "47e7190",
+  "semantic_contract": {
+    "basis": "user-confirmed project contract",
+    "parity": "shared VM structure and operation semantics across the JavaScript VM and WebAssembly VM variants",
+    "unsupported": "an unsupported extractor result is an extractor gap, not an unknown VM purpose"
+  },
+  "method": {
+    "current_equivalent": "target/release/shape deob, shape ops list/show, shape kernel show (migration equivalents; recorded method below is historical)",
+    "binaries": "target/release/shape-deob, shape-operation-catalogue, shape-kernel-layout (release, built once); wasm2wat static disassembly only",
+    "no_runtime": "no JS/Node/Babel/eval/WASM execution",
+    "inputs": "raw seeds unaltered under tracked kernel fixtures",
+    "span_unit": "Oxc byte offsets into shape-deob stdout; every span verified once against catalogue source_snippet"
+  },
+  "seeds": {
+    "javascript_vm": {
+      "site": "javascript interpreter",
+      "seed_id": "javascript_vm",
+      "wasm": false,
+      "raw_seed": "tests/fixtures/kernels/javascript/kernel.raw.js",
+      "raw_sha256": "503fe94faf4b551102be0e74c2cafe9ac8432296268c4d4a83c36451710fc084",
+      "stdout_sha256": "e7c5f0a08df50fe6d05eb2f279894d17aeafe3f0fa26e3a50c6d9522bd9af517",
+      "stdout_bytes": 529802
+    },
+    "webassembly_vm_dual_module": {
+      "site": "dual-module interpreter",
+      "seed_id": "webassembly_vm_dual_module",
+      "wasm": true,
+      "raw_seed": "historical capture; no tracked raw source",
+      "source_artifact_id": "sha256:8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "raw_sha256": "8a68a492eb07fcda349d7b7e1bf9551b6ddcbbc8bfd457d942870fce864665b9",
+      "stdout_sha256": "1943fc288500094afe0573646b19d8db290e663b268bb7182059fe895b69ab98",
+      "stdout_bytes": 494053
+    },
+    "webassembly_vm_tracked": {
+      "site": "tracked webassembly interpreter",
+      "seed_id": "webassembly_vm_tracked",
+      "wasm": true,
+      "raw_seed": "tests/fixtures/kernels/webassembly/kernel.raw.js",
+      "raw_sha256": "2e9b94dcf73fa5fe55961a9c5bb22e6cadaa78f322f9c8a934187cb5517e0581",
+      "stdout_sha256": "48f111e31c70d17118b46dc7abea5d73cda42e1a80bbc51093f2506f15e5c49e",
+      "stdout_bytes": 509321
+    }
+  },
+  "catalogue_identity": {
+    "javascript_vm": {
+      "table_original_name": "BI",
+      "handler_entries": 241,
+      "source_hash": "e26a1fdcba4adf40"
+    },
+    "webassembly_vm_dual_module": {
+      "table_original_name": "Du",
+      "handler_entries": 207,
+      "source_hash": "47b480e410569181"
+    },
+    "webassembly_vm_tracked": {
+      "table_original_name": "Ou",
+      "handler_entries": 201,
+      "source_hash": "2c202a73fa366abd"
+    }
+  },
+  "module_identity": {
+    "webassembly_vm_dual_module": [
+      {
+        "role": "handler_table",
+        "source_binding": "vmHandlerTableBytes",
+        "byte_len": 1923,
+        "sha256_prefix": "66a3120b879b897c",
+        "layout_digest": "22f77172a56a6b4e",
+        "exports": [
+          "d"
+        ],
+        "namespace": "u",
+        "entries": 207
+      },
+      {
+        "role": "interpreter",
+        "source_binding": "vmInterpreterBytes",
+        "byte_len": 3090,
+        "sha256_prefix": "ef437a5b1d5aa752",
+        "layout_digest": "efdd7100e0f6ee56",
+        "exports": [
+          "Zc",
+          "x"
+        ],
+        "namespace": "v",
+        "image_base": 164866,
+        "dispatch_state_stride": 480
+      }
+    ],
+    "webassembly_vm_tracked": [
+      {
+        "role": "handler_table",
+        "source_binding": "vmHandlerTableBytes",
+        "byte_len": 1853,
+        "sha256_prefix": "8a3ce5970dd1596e",
+        "layout_digest": "4510c55ab218d5dd",
+        "exports": [
+          "Z"
+        ],
+        "namespace": "s",
+        "entries": 201
+      },
+      {
+        "role": "interpreter",
+        "source_binding": "vmInterpreterBytes",
+        "byte_len": 2997,
+        "sha256_prefix": "850a986f7107b081",
+        "layout_digest": "92a4ee11bdcde0ee",
+        "exports": [
+          "Te",
+          "W"
+        ],
+        "namespace": "f",
+        "image_base": 170845,
+        "dispatch_state_stride": 468
+      }
+    ]
+  },
+  "js_handler_entry_origin": {
+    "dispatch_source": "javascript_vm.std.js 13719: var O = BD[this.f][r[this.P++]]; this.f=O[0]; return O[1];",
+    "entry_pc": "context.P already incremented past opcode: entry P = opcode_pc + 1",
+    "handler_arity": "all JavaScript VM handlers are function(context) (arity 1)"
+  },
+  "wasm_opcode_relative_origin": {
+    "loop_top": "local0 = byte offset = opcode pc; dispatch does local.get 0; i32.load8_u (opcode at offset 0), then image-table lookup",
+    "webassembly_vm_dual_module": "image base 164866, stride 480 (2*240)",
+    "webassembly_vm_tracked": "image base 170845, stride 468 (2*234)",
+    "operand_reads": "i32.load8_u / i32.load16_u at local0+offset, offset starts at 1 (opcode is offset 0); pc advances by the operand width after the call",
+    "case_site_evidence": "webassembly_vm_tracked.interp.wat case: local.get 2; local.get 0; i32.load8_u offset=1..3; local.get 3; local.get 8; if call 5 else call_indirect (type 3); i32.const 4; local.get 0; i32.add; local.set 0",
+    "join": "the interpreter passes local3 (image-table branch operand) as the last call argument, but the br_table case / handler-table index to catalogue handler index correspondence is UNPROVEN here"
+  },
+  "pairs": [
+    {
+      "id": "readslot_push_u16le",
+      "family": "slot_read_push",
+      "variation": "slot index u16 little-endian; JavaScript VM decodes 2 operand bytes, WebAssembly VM variants take operand1",
+      "javascript_vm": {
+        "handler_index": 9,
+        "span": {
+          "start": 227493,
+          "end": 227674
+        },
+        "body": "function(context) {\n      var value1 = r[context.P] | r[context.P + 1] << 8;\n      context.P += 2;\n      context.stack[context.stack.length] = context.memory.readSlot(value1);\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 89,
+        "span": {
+          "start": 211279,
+          "end": 211420
+        },
+        "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.stack[context.stack.length] = context.memory.readSlot(value1);\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 52,
+        "span": {
+          "start": 208752,
+          "end": 208893
+        },
+        "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.stack[context.stack.length] = context.memory.readSlot(value1);\n    }"
+      },
+      "wasm_branch_to_handler_join": "unproven",
+      "js_entry_pc": "post-opcode: entry P = opcode_pc + 1 (dispatch r[this.P++])",
+      "wasm_origin": "opcode-relative: local0 = opcode_pc; operand byte j at local0 + 1 + offset",
+      "pc_delta": 2,
+      "example_opcode_pc": 1000,
+      "example_next_pc": 1003,
+      "operand_mapping": [
+        {
+          "part": "slot_index",
+          "width": 2,
+          "offset": 0,
+          "endian": "little",
+          "javascript_vm_local": "value1",
+          "webassembly_vm_dual_module_param": "operand1",
+          "webassembly_vm_tracked_param": "operand1",
+          "example": {
+            "bytes_hex": [
+              "0x34",
+              "0x12"
+            ],
+            "decoded_value": 4660,
+            "abs_byte_positions": [
+              1001,
+              1002
+            ],
+            "wasm_load": "i32.load16_u offset=1"
+          }
+        }
+      ],
+      "semantic": {
+        "javascript_vm": "stack.push(memory.readSlot(u16le))",
+        "webassembly_vm_dual_module": "stack.push(memory.readSlot(operand1))",
+        "webassembly_vm_tracked": "stack.push(memory.readSlot(operand1))"
+      }
+    },
+    {
+      "id": "writeslot_stacktop_u8",
+      "family": "slot_write_stack_top",
+      "variation": "slot index u8; webassembly_vm_dual_module has a duplicate occurrence (h59 and h94, identical body)",
+      "javascript_vm": {
+        "handler_index": 14,
+        "span": {
+          "start": 229844,
+          "end": 230038
+        },
+        "body": "function(context) {\n      var value1 = r[context.P];\n      context.P += 1;\n      context.memory.writeSlot(value1, context.stack[context.stack.length - 1]);\n      context.stack.length -= 1;\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 59,
+        "span": {
+          "start": 199973,
+          "end": 200151
+        },
+        "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.memory.writeSlot(value1, context.stack[context.stack.length - 1]);\n      context.stack.length -= 1;\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 22,
+        "span": {
+          "start": 196304,
+          "end": 196482
+        },
+        "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.memory.writeSlot(value1, context.stack[context.stack.length - 1]);\n      context.stack.length -= 1;\n    }"
+      },
+      "wasm_branch_to_handler_join": "unproven",
+      "js_entry_pc": "post-opcode: entry P = opcode_pc + 1 (dispatch r[this.P++])",
+      "wasm_origin": "opcode-relative: local0 = opcode_pc; operand byte j at local0 + 1 + offset",
+      "pc_delta": 1,
+      "example_opcode_pc": 1000,
+      "example_next_pc": 1002,
+      "operand_mapping": [
+        {
+          "part": "slot_index",
+          "width": 1,
+          "offset": 0,
+          "endian": "n/a",
+          "javascript_vm_local": "value1",
+          "webassembly_vm_dual_module_param": "operand1",
+          "webassembly_vm_tracked_param": "operand1",
+          "example": {
+            "bytes_hex": [
+              "0x2a"
+            ],
+            "decoded_value": 42,
+            "abs_byte_positions": [
+              1001
+            ],
+            "wasm_load": "i32.load8_u offset=1"
+          }
+        }
+      ],
+      "semantic": {
+        "javascript_vm": "memory.writeSlot(u8, stack.pop())",
+        "webassembly_vm_dual_module": "memory.writeSlot(operand1, stack.pop())",
+        "webassembly_vm_tracked": "memory.writeSlot(operand1, stack.pop())"
+      }
+    },
+    {
+      "id": "writeslot_then_readslot_u8x3",
+      "family": "slot_write_then_read",
+      "variation": "three u8 operands value,slot,slot; widths must not be unified across the family",
+      "javascript_vm": {
+        "handler_index": 64,
+        "span": {
+          "start": 248043,
+          "end": 248322
+        },
+        "body": "function(context) {\n      var value1 = r[context.P];\n      var value2 = r[context.P + 1];\n      var value3 = r[context.P + 2];\n      context.P += 3;\n      context.memory.writeSlot(value2, value1);\n      context.stack[context.stack.length] = context.memory.readSlot(value3);\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 122,
+        "span": {
+          "start": 221113,
+          "end": 221380
+        },
+        "body": "function(context, operand1, operand2, operand3) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = operand3;\n      context.memory.writeSlot(value2, value1);\n      context.stack[context.stack.length] = context.memory.readSlot(value3);\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 129,
+        "span": {
+          "start": 234186,
+          "end": 234453
+        },
+        "body": "function(context, operand1, operand2, operand3) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = operand3;\n      context.memory.writeSlot(value2, value1);\n      context.stack[context.stack.length] = context.memory.readSlot(value3);\n    }"
+      },
+      "wasm_branch_to_handler_join": "unproven",
+      "js_entry_pc": "post-opcode: entry P = opcode_pc + 1 (dispatch r[this.P++])",
+      "wasm_origin": "opcode-relative: local0 = opcode_pc; operand byte j at local0 + 1 + offset",
+      "pc_delta": 3,
+      "example_opcode_pc": 1000,
+      "example_next_pc": 1004,
+      "operand_mapping": [
+        {
+          "part": "value",
+          "width": 1,
+          "offset": 0,
+          "endian": "n/a",
+          "javascript_vm_local": "value1",
+          "webassembly_vm_dual_module_param": "operand1",
+          "webassembly_vm_tracked_param": "operand1",
+          "example": {
+            "bytes_hex": [
+              "0x07"
+            ],
+            "decoded_value": 7,
+            "abs_byte_positions": [
+              1001
+            ],
+            "wasm_load": "i32.load8_u offset=1"
+          }
+        },
+        {
+          "part": "slot_index_target",
+          "width": 1,
+          "offset": 1,
+          "endian": "n/a",
+          "javascript_vm_local": "value2",
+          "webassembly_vm_dual_module_param": "operand2",
+          "webassembly_vm_tracked_param": "operand2",
+          "example": {
+            "bytes_hex": [
+              "0x08"
+            ],
+            "decoded_value": 8,
+            "abs_byte_positions": [
+              1002
+            ],
+            "wasm_load": "i32.load8_u offset=2"
+          }
+        },
+        {
+          "part": "slot_index_source",
+          "width": 1,
+          "offset": 2,
+          "endian": "n/a",
+          "javascript_vm_local": "value3",
+          "webassembly_vm_dual_module_param": "operand3",
+          "webassembly_vm_tracked_param": "operand3",
+          "example": {
+            "bytes_hex": [
+              "0x09"
+            ],
+            "decoded_value": 9,
+            "abs_byte_positions": [
+              1003
+            ],
+            "wasm_load": "i32.load8_u offset=3"
+          }
+        }
+      ],
+      "semantic": {
+        "javascript_vm": "memory.writeSlot(value2,value1); stack.push(memory.readSlot(value3))",
+        "webassembly_vm_dual_module": "memory.writeSlot(operand2,operand1); stack.push(memory.readSlot(operand3))",
+        "webassembly_vm_tracked": "memory.writeSlot(operand2,operand1); stack.push(memory.readSlot(operand3))"
+      }
+    },
+    {
+      "id": "writeslot_array_then_readslot_mixed_width",
+      "family": "slot_write_then_read",
+      "variation": "mixed widths u8 + u16le (3 bytes) in the same family as u8x3; do not unify widths",
+      "javascript_vm": {
+        "handler_index": 190,
+        "span": {
+          "start": 295081,
+          "end": 295370
+        },
+        "body": "function(context) {\n      var value1 = r[context.P];\n      var value2 = r[context.P + 1] | r[context.P + 2] << 8;\n      context.P += 3;\n      var value3 = [];\n      context.memory.writeSlot(value1, value3);\n      context.stack[context.stack.length] = context.memory.readSlot(value2);\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 48,
+        "span": {
+          "start": 195889,
+          "end": 196140
+        },
+        "body": "function(context, operand1, operand2) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = [];\n      context.memory.writeSlot(value1, value3);\n      context.stack[context.stack.length] = context.memory.readSlot(value2);\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 181,
+        "span": {
+          "start": 254847,
+          "end": 255098
+        },
+        "body": "function(context, operand1, operand2) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = [];\n      context.memory.writeSlot(value1, value3);\n      context.stack[context.stack.length] = context.memory.readSlot(value2);\n    }"
+      },
+      "wasm_branch_to_handler_join": "unproven",
+      "js_entry_pc": "post-opcode: entry P = opcode_pc + 1 (dispatch r[this.P++])",
+      "wasm_origin": "opcode-relative: local0 = opcode_pc; operand byte j at local0 + 1 + offset",
+      "pc_delta": 3,
+      "example_opcode_pc": 1000,
+      "example_next_pc": 1004,
+      "operand_mapping": [
+        {
+          "part": "slot_index_target",
+          "width": 1,
+          "offset": 0,
+          "endian": "n/a",
+          "javascript_vm_local": "value1",
+          "webassembly_vm_dual_module_param": "operand1",
+          "webassembly_vm_tracked_param": "operand1",
+          "example": {
+            "bytes_hex": [
+              "0x05"
+            ],
+            "decoded_value": 5,
+            "abs_byte_positions": [
+              1001
+            ],
+            "wasm_load": "i32.load8_u offset=1"
+          }
+        },
+        {
+          "part": "slot_index_source",
+          "width": 2,
+          "offset": 1,
+          "endian": "little",
+          "javascript_vm_local": "value2",
+          "webassembly_vm_dual_module_param": "operand2",
+          "webassembly_vm_tracked_param": "operand2",
+          "example": {
+            "bytes_hex": [
+              "0x34",
+              "0x12"
+            ],
+            "decoded_value": 4660,
+            "abs_byte_positions": [
+              1002,
+              1003
+            ],
+            "wasm_load": "i32.load16_u offset=2"
+          }
+        }
+      ],
+      "semantic": {
+        "javascript_vm": "memory.writeSlot(value1,[]); stack.push(memory.readSlot(value2))",
+        "webassembly_vm_dual_module": "memory.writeSlot(operand1,[]); stack.push(memory.readSlot(operand2))",
+        "webassembly_vm_tracked": "memory.writeSlot(operand1,[]); stack.push(memory.readSlot(operand2))"
+      }
+    },
+    {
+      "id": "push_array_value_readslot_u8x2",
+      "family": "slot_read_push_composite",
+      "variation": "two u8 operands; push order array,value,read; permutation differs from readslot_push",
+      "javascript_vm": {
+        "handler_index": 216,
+        "span": {
+          "start": 303536,
+          "end": 303864
+        },
+        "body": "function(context) {\n      var value1 = r[context.P];\n      var value2 = r[context.P + 1];\n      context.P += 2;\n      var value3 = [];\n      var value4 = context.stack.length;\n      context.stack[value4] = value3;\n      context.stack[value4 + 1] = value1;\n      context.stack[value4 + 2] = context.memory.readSlot(value2);\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 103,
+        "span": {
+          "start": 215016,
+          "end": 215330
+        },
+        "body": "function(context, operand1, operand2) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = [];\n      var value4 = context.stack.length;\n      context.stack[value4] = value3;\n      context.stack[value4 + 1] = value1;\n      context.stack[value4 + 2] = context.memory.readSlot(value2);\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 111,
+        "span": {
+          "start": 228462,
+          "end": 228776
+        },
+        "body": "function(context, operand1, operand2) {\n      var value1 = operand1;\n      var value2 = operand2;\n      var value3 = [];\n      var value4 = context.stack.length;\n      context.stack[value4] = value3;\n      context.stack[value4 + 1] = value1;\n      context.stack[value4 + 2] = context.memory.readSlot(value2);\n    }"
+      },
+      "wasm_branch_to_handler_join": "unproven",
+      "js_entry_pc": "post-opcode: entry P = opcode_pc + 1 (dispatch r[this.P++])",
+      "wasm_origin": "opcode-relative: local0 = opcode_pc; operand byte j at local0 + 1 + offset",
+      "pc_delta": 2,
+      "example_opcode_pc": 1000,
+      "example_next_pc": 1003,
+      "operand_mapping": [
+        {
+          "part": "literal_value_pushed",
+          "width": 1,
+          "offset": 0,
+          "endian": "n/a",
+          "javascript_vm_local": "value1",
+          "webassembly_vm_dual_module_param": "operand1",
+          "webassembly_vm_tracked_param": "operand1",
+          "example": {
+            "bytes_hex": [
+              "0x03"
+            ],
+            "decoded_value": 3,
+            "abs_byte_positions": [
+              1001
+            ],
+            "wasm_load": "i32.load8_u offset=1"
+          }
+        },
+        {
+          "part": "slot_index_source",
+          "width": 1,
+          "offset": 1,
+          "endian": "n/a",
+          "javascript_vm_local": "value2",
+          "webassembly_vm_dual_module_param": "operand2",
+          "webassembly_vm_tracked_param": "operand2",
+          "example": {
+            "bytes_hex": [
+              "0x04"
+            ],
+            "decoded_value": 4,
+            "abs_byte_positions": [
+              1002
+            ],
+            "wasm_load": "i32.load8_u offset=2"
+          }
+        }
+      ],
+      "semantic": {
+        "javascript_vm": "stack.push([]); stack.push(value1); stack.push(memory.readSlot(value2))",
+        "webassembly_vm_dual_module": "stack.push([]); stack.push(operand1); stack.push(memory.readSlot(operand2))",
+        "webassembly_vm_tracked": "stack.push([]); stack.push(operand1); stack.push(memory.readSlot(operand2))"
+      }
+    }
+  ],
+  "negative_cases": [
+    {
+      "id": "bytecode_mutated",
+      "rule": "operand mutation changes decoded values, not width/pc_delta; opcode mutation changes the dispatched handler and is outside the operand contract",
+      "case": {
+        "based_on": "readslot_push_u16le",
+        "operand_mutation": {
+          "bytes_hex": [
+            "0xff",
+            "0x00"
+          ],
+          "decoded_value": 255,
+          "width_unchanged": 2,
+          "pc_delta_unchanged": 2,
+          "abs_byte_positions": [
+            1001,
+            1002
+          ],
+          "next_P": 1003
+        },
+        "opcode_mutation": {
+          "note": "opcode byte at opcode_pc selects BD[dispatchState][opcode] (JS) / image-table entry (WASM); operand contract is keyed to the dispatched opcode, not byte position",
+          "wasm_branch_to_handler_join": "unproven"
+        }
+      }
+    },
+    {
+      "id": "pc_explicit_branch_jump",
+      "rule": "a handler can write context.P explicitly, so pc_delta is not a straight-line increment; the decoder increment must compose with the explicit write",
+      "case": {
+        "seed": "javascript_vm",
+        "handler": {
+          "handler_index": 229,
+          "span": {
+            "start": 308680,
+            "end": 309274
+          },
+          "body": "function(context) {\n      var value1 = r[context.P];\n      var value2 = r[context.P + 1];\n      var value3 = r[context.P + 2] | (r[context.P + 3] | r[context.P + 4] << 8) << 8;\n      var value4 = r[context.P + 5];\n      context.P += 6;\n      var value5 = context.memory.readSlot(value1);\n      var value6 = context.memory.readSlot(value2);\n      context.I.push({\n        p: context.P,\n        A: context.f\n      });\n      context.P = value3;\n      context.f = value4;\n      var value7 = context.stack.length;\n      context.stack[value7] = value5;\n      context.stack[value7 + 1] = value6;\n    }"
+        },
+        "decoded_pc_operands": [
+          "value1 u8@0",
+          "value2 u8@1",
+          "value3 u8+u16@2..4",
+          "value4 u8@5"
+        ],
+        "pc_delta_before_write": 6,
+        "explicit_write": "context.I.push({p:context.P,A:context.f}); context.P=value3; context.f=value4;",
+        "next_pc": "decoded value3, not entry_P+6"
+      }
+    },
+    {
+      "id": "decode_interleaved_unknown_call",
+      "rule": "operand decode can be interleaved with calls that may throw; effect order must stay decode -> call -> memory",
+      "case": {
+        "seed": "javascript_vm",
+        "handler": {
+          "handler_index": 188,
+          "span": {
+            "start": 294340,
+            "end": 294912
+          },
+          "body": "function(context) {\n      var value1 = r[context.P] | r[context.P + 1] << 8;\n      var value2 = r[context.P + 2];\n      context.P += 3;\n      var value3 = context.stack[context.stack.length - 2];\n      var value4 = context.stack[context.stack.length - 1];\n      var value5 = vmCreateThread(value1, value4, value3, context.memory);\n      var value6 = context.stack[context.stack.length - 3];\n      var value7 = value6;\n      var value8 = value7(value5);\n      context.stack[context.stack.length - 3] = context.memory.readSlot(value2);\n      context.stack.length -= 2;\n    }"
+        },
+        "decoded": [
+          "value1 u16le@0..1",
+          "value2 u8@2"
+        ],
+        "pc_delta": 3,
+        "ordered_effects": [
+          "decode value1/value2",
+          "vmCreateThread(...) [possible throw]",
+          "computed call value7(value5) [possible throw]",
+          "memory.readSlot(value2)",
+          "stack.length -= 2"
+        ],
+        "unknown_fragments": 3,
+        "calls_unknown_possible_throw": true
+      }
+    },
+    {
+      "id": "captured_binding_differs_despite_identical_canonical_body",
+      "rule": "canonical_normalized_body equality is not semantic equality: captured free bindings are renamed to the same b-index per handler",
+      "case": {
+        "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }",
+        "javascript_vm": [
+          {
+            "handler_index": 77,
+            "span": {
+              "start": 253123,
+              "end": 253211
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmNativeFunctions;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          },
+          {
+            "handler_index": 165,
+            "span": {
+              "start": 286273,
+              "end": 286351
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmEntry;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          }
+        ],
+        "webassembly_vm_dual_module": [
+          {
+            "handler_index": 30,
+            "span": {
+              "start": 189603,
+              "end": 189681
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmEntry;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          },
+          {
+            "handler_index": 100,
+            "span": {
+              "start": 214564,
+              "end": 214652
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmNativeFunctions;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          }
+        ],
+        "webassembly_vm_tracked": [
+          {
+            "handler_index": 65,
+            "span": {
+              "start": 212778,
+              "end": 212856
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmEntry;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          },
+          {
+            "handler_index": 149,
+            "span": {
+              "start": 241320,
+              "end": 241408
+            },
+            "body": "function(context) {\n      context.stack[context.stack.length] = vmNativeFunctions;\n    }",
+            "canonical_normalized_body": "function(b1) { b1.stack[b1.stack.length] = b0; }"
+          }
+        ],
+        "captured_values_differ": [
+          "vmEntry",
+          "vmNativeFunctions"
+        ],
+        "consequence": "resolve the captured constant per seed; do not merge occurrences"
+      }
+    },
+    {
+      "id": "duplicate_occurrence_same_body",
+      "rule": "identical bodies appear at multiple numeric keys; the branch->handler join must choose the occurrence",
+      "case": {
+        "seed": "webassembly_vm_dual_module",
+        "handlers": [
+          {
+            "handler_index": 59,
+            "span": {
+              "start": 199973,
+              "end": 200151
+            },
+            "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.memory.writeSlot(value1, context.stack[context.stack.length - 1]);\n      context.stack.length -= 1;\n    }"
+          },
+          {
+            "handler_index": 94,
+            "span": {
+              "start": 212619,
+              "end": 212797
+            },
+            "body": "function(context, operand1) {\n      var value1 = operand1;\n      context.memory.writeSlot(value1, context.stack[context.stack.length - 1]);\n      context.stack.length -= 1;\n    }"
+          }
+        ],
+        "note": "both are writeslot_stacktop_u8"
+      }
+    }
+  ],
+  "signal_case": {
+    "id": "null_signal_invoked_inside_catch",
+    "push": {
+      "javascript_vm": {
+        "handler_index": 47,
+        "span": {
+          "start": 241209,
+          "end": 241301
+        },
+        "body": "function(context) {\n      context.stack.push(function() {\n        null[0]();\n      });\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 146,
+        "span": {
+          "start": 230486,
+          "end": 230578
+        },
+        "body": "function(context) {\n      context.stack.push(function() {\n        null[0]();\n      });\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 83,
+        "span": {
+          "start": 217871,
+          "end": 217963
+        },
+        "body": "function(context) {\n      context.stack.push(function() {\n        null[0]();\n      });\n    }"
+      }
+    },
+    "invoke": {
+      "javascript_vm": {
+        "handler_index": 29,
+        "span": {
+          "start": 234707,
+          "end": 234897
+        },
+        "body": "function(context) {\n      context.stack[context.stack.length - 2] = context.stack[context.stack.length - 2][context.stack[context.stack.length - 1]]();\n      context.stack.length -= 1;\n    }"
+      },
+      "webassembly_vm_dual_module": {
+        "handler_index": 118,
+        "span": {
+          "start": 220177,
+          "end": 220367
+        },
+        "body": "function(context) {\n      context.stack[context.stack.length - 2] = context.stack[context.stack.length - 2][context.stack[context.stack.length - 1]]();\n      context.stack.length -= 1;\n    }"
+      },
+      "webassembly_vm_tracked": {
+        "handler_index": 64,
+        "span": {
+          "start": 212578,
+          "end": 212768
+        },
+        "body": "function(context) {\n      context.stack[context.stack.length - 2] = context.stack[context.stack.length - 2][context.stack[context.stack.length - 1]]();\n      context.stack.length -= 1;\n    }"
+      }
+    },
+    "exception_protocol_javascript_vm": {
+      "dispatch_guard": "vmRun: context.G.length===0 ? vmOperations[v](context) : BH(vmOperations[v],context)",
+      "BH": "try { v(ctx) } catch (e) { Bn(e, ctx) } (javascript_vm.std.js 13734-13739)",
+      "Bn": "pops context.G, unwinds errorStack/j, pushes {e:true}+raw value, restores P/f (13741-13752)",
+      "try_entry": [
+        81,
+        221
+      ],
+      "pop_or_throw": 120,
+      "pop": 224,
+      "throw": 112
+    },
+    "semantics": "push closure does not throw; a later method-call handler invokes it inside the try/catch where null[0] raises the deliberate TypeError signal; preserve the failing expression and the caught raw value"
+  },
+  "recipe_and_exception_order": {
+    "rule": "decode steps precede memory/call steps in deterministic source-span order; a calls_unknown_possible_throw call keeps its position; exception effects keep order",
+    "reference": "docs/operations/handler-templates.md (RecipeStep sequence number + source span; Unknown is never a no-op)"
+  },
+  "unresolved": {
+    "wasm_branch_to_handler_join": "unproven; no br_table case is mapped to a catalogue handler index in this fixture",
+    "handler_index_scope": "seed-local numeric table key from shape-operation-catalogue, not a cross-seed operation name",
+    "operand_widths": "widths here are proved for the five listed pairs only"
+  }
+}
